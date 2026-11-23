@@ -44,7 +44,6 @@ A planilha tem 13 acórdãos, com o passo da árvore atribuído pela API e pelo 
 - **Passo 3.** Dos três acórdãos de Passo 3, dois foram confirmados (81831 e 68437), e o verificador mudou o 42155 para o Passo 2. A pertinência não muda, mas o Quadro A.2 do esboço e o texto da subseção 4.2.3 só mencionam a conferência dos não pertinentes. Convém dizer que os casos de Passo 3 também foram conferidos, e que um deles teve o passo alterado.
 - **Textos do verificador.** As justificativas do verificador no esboço em PDF estavam reescritas em redação mais elaborada. O CSV reproduz a planilha literalmente, inclusive a caixa baixa e um colchete solto no fim da justificativa da Rcl 43110. As justificativas da API conferem com o `filtro_por_acordao.csv` nos 13 casos.
 - **Rcl 55948.** O verificador registrou Passo 1 (reclamação conhecida), mas a justificativa fala de menção à ADPF 130 e à Súmula Vinculante 46, o que descreve o Passo 3, não o 1. O esboço dizia que a reclamação "foi de fato conhecida", o que não consta da planilha. Convém conferir qual passo se pretendia registrar.
-- A planilha se intitula "Verificação humana do filtro de admissibilidade". O restante da pesquisa o chama de filtro de pertinência.
 
 ## Pendências
 
