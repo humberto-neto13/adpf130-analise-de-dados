@@ -39,9 +39,21 @@ Pontos de atenção:
 - O texto da seção 5.2 da monografia informa 2.000 confirmados e 192 corrigidos (91,2%). A planilha dá 2.003 e 189. Nas variáveis citadas no texto, V15 aparece com 96,4% na planilha (5 correções) e 94,9% no texto (que corresponde a 7 correções).
 - Das 189 correções, 102 têm categoria de erro preenchida e 87 não têm. A tipologia, portanto, cobre pouco mais da metade das correções (ver a observação da seção 5.2 sobre categorização "ainda incompleta").
 
+## Agregação de 137 acórdãos em 133 reclamações
+
+Operação manual, sem código, segundo o autor. Descreve-se aqui a regra tal como aplicada (seção 5.1 da monografia), conferida contra a codificação bruta. Quatro reclamações geraram dois acórdãos cada (arquivos `.1` e `.2` em `dados/entrada/textos/`):
+
+| Reclamação | Acórdão 1 (data; V13/V14) | Acórdão 2 (data; V13/V14) | Registro mantido |
+| --- | --- | --- | --- |
+| Rcl 9.977 | 26/10/2017; não reconhecida / negado | 28/03/2019; ND / ND | Acórdão 1 (o segundo julgou embargos de declaração sem alterar o pronunciamento sobre a aderência) |
+| Rcl 23.899 | 29/09/2023; reconhecida / dado | 18/11/2024; ND / ND | Acórdão 1 (idem) |
+| Rcl 45.682 | 19/03/2021; ND / dado | 11/03/2022; reconhecida / dado | Acórdão 2, com a data do segundo julgamento (o primeiro apenas determinou o seguimento, sem julgar o mérito) |
+| Rcl 46.059 | 26/04/2021; ND / dado | 08/03/2022; reconhecida / dado | Acórdão 2, idem |
+
+As datas e os valores acima são os da codificação bruta do modelo, antes da verificação humana; a planilha de verificação pode tê-los corrigido. A matriz consolidada (133 registros) ainda não foi depositada, e é ela que permite conferir a aplicação da regra.
+
 ## A depositar
 
 - [ ] Tipologia de erros e critérios de atribuição de categoria (sustenta a Figura 3 e as Tabelas 3 e 4).
-- [ ] Regra e procedimento de agregação de 137 acórdãos em 133 reclamações (subseção 4.2.1 e nota 46), com o código ou o registro da operação manual.
 - [ ] Matriz consolidada (ou, se ficar em `E_analises`, referência cruzada).
 - [ ] Se algum passo usou embeddings (o README antigo citava uma chave da Voyage AI), documentar o uso.
