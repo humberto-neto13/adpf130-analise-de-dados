@@ -1,0 +1,26 @@
+Unidades: 94 sem autuação: 0
+           n  longos   mediana
+per                           
+2020      21       6  0.818617
+2021       7       0  0.577687
+2022+     52       5  0.629706
+até 2019  14       2  0.776181
+Fisher 2020 vs demais (>3 anos): [[6, 15], [7, 66]] p unilateral = 0.037 bicaudal = 0.066
+Mann-Whitney unilateral, tramitação 2020 maior que demais, p = 0.228
+Medianas de tramitação por desfecho:
+ y            0     1
+per                 
+2020      0.59  1.51
+2021      0.57  0.72
+2022+     0.56  0.82
+até 2019  0.78  1.49
+Negativas julgadas em até 6 meses da autuação:
+           sum  size
+per                
+2020        8    16
+2021        2     5
+2022+      11    25
+até 2019    2    10
+Casos longos de 2020: [15681, 16329, 18776, 19464, 21311, 23793]
+Teste principal datado por data: PS 0.613, p unilateral 0.032
+Teste principal datado por autuacao: PS 0.575, p unilateral 0.111

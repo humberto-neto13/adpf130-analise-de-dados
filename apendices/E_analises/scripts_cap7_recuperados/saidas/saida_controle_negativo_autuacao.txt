@@ -1,0 +1,1 @@
+Subconjunto imune datado pela autuação (data de autuação, Corte Aberta, 23/11/2026): 24 unidades, PS 0,861, p unilateral 0,0037. Obtido substituindo a coluna dt por autuacao em controle_negativo_imune.py.
