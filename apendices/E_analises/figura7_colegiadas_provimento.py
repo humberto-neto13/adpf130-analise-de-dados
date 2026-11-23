@@ -1,40 +1,32 @@
 """Figura 7 (provisória): decisões colegiadas por ano e taxa de provimento dos agravos (seção 7.1.2).
 
 RECONSTRUÇÃO escrita neste repositório a partir da descrição da conversa "Hipóteses rivais para
-padrão confirmatório" (claude.ai, 19/11/2026), onde a figura foi gerada a partir da base de decisões
-do Corte Aberta filtrada para a classe Rcl (script original g20/g22/g23.py não conservado).
-Definições (da conversa): decisões colegiadas = 'Indicador colegiado' COLEGIADA; agravo julgado =
-decisão colegiada em recurso interno, provido (total ou parcialmente) ou não provido, sem os não
-conhecidos; taxa de provimento = providos / (providos + não providos). Eixo esquerdo: número de
-decisões colegiadas (0 a 5.500); eixo direito: taxa de provimento (0 a 40%); linha tracejada na
-ER nº 53/2020 (18/03/2020).
-ATENÇÃO: o arquivo de decisões depositado/enviado em 23/11/2026 não tem a classe Rcl. O script foi
-testado apenas quanto à mecânica (com --classe ARE) e deve ser rodado sobre a exportação de
-decisões da classe Rcl. Confira contra a tabela da seção 7.1.2 (2018: 635 agravos, 13,8%;
-2019: 1.062, 4,8%; 2020: 1.647, 9,0%; 2021: 1.707, 13,4%; 2022: 1.363, 8,2%; 2023: 1.727, 6,0%).
-Uso: python3 figura7_colegiadas_provimento.py decisoes.csv [--classe Rcl] [pasta_saida]
+padrão confirmatório" (claude.ai, 19/11/2026). Fonte: exportação do Corte Aberta com as decisões da
+classe Rcl (colunas Processo, Data, Descrição, Subgrupo, Tipo Decisão), baixada em 23/11/2026.
+Definições, conferidas contra a tabela da seção 7.1.2: decisões colegiadas = 'Tipo Decisão'
+COLEGIADA; agravos julgados = colegiadas com Subgrupo 'Decisão em recurso interno' e Descrição
+iniciada por 'Agravo regimental' (provido, provido em parte, não provido e não conhecido); taxa de
+provimento = (providos + providos em parte) / (providos + providos em parte + não providos), sem os
+não conhecidos. Eixo esquerdo 0 a 5.500; eixo direito 0 a 40%; linha tracejada na ER nº 53/2020.
+Conferência: 2018 a 2023 reproduzem exatamente 635, 1.062, 1.647, 1.707, 1.363 e 1.727 agravos e
+taxas de 13,8%, 4,8%, 9,0%, 13,4%, 8,2% e 6,0%.
+Uso: python3 figura7_colegiadas_provimento.py decisoes_rcl.csv [pasta_saida]
 """
 import sys
 import pandas as pd
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-args = [a for a in sys.argv[1:] if not a.startswith("--")]
-classe = sys.argv[sys.argv.index("--classe") + 1] if "--classe" in sys.argv else "Rcl"
-if "--classe" in sys.argv: args.remove(classe)
-arq, out = args[0], (args[1] if len(args) > 1 else "saidas")
-d = pd.read_csv(arq, dtype=str, keep_default_na=False, usecols=["Processo", "Indicador colegiado", "Ano da decisão", "Tipo decisão", "Andamento decisão"])
-d = d[d.Processo.str.match(rf"^{classe} \d+$")].copy(); d["ano"] = d["Ano da decisão"].astype(int)
-print(f"decisões na classe {classe}: {len(d)}")
-col = d[d["Indicador colegiado"] == "COLEGIADA"]
-andam = col["Andamento decisão"].str.lower()
-rec = col[col["Tipo decisão"] == "Decisão em recurso interno"]; a = rec["Andamento decisão"].str.lower()
-prov = rec[a.str.contains("provido") & ~a.str.contains("não provido|negado provimento|improvido")]
-nao = rec[a.str.contains("não provido|negado provimento")]
-t = pd.DataFrame({"colegiadas": col.groupby("ano").size(), "providos": prov.groupby("ano").size(), "nao_providos": nao.groupby("ano").size()}).fillna(0)
-t["agravos"] = t.providos + t.nao_providos; t["taxa_provimento"] = 100 * t.providos / t.agravos
-print(t.round(1).to_string())
-t.to_csv(f"{out}/figura7_dados.csv")
+arq = sys.argv[1]; out = sys.argv[2] if len(sys.argv) > 2 else "saidas"
+d = pd.read_csv(arq, dtype=str, keep_default_na=False)
+d = d[(d.Data != "-") & (d["Tipo Decisão"] == "COLEGIADA")].copy(); d["ano"] = pd.to_datetime(d.Data.str[:10], format="%d/%m/%Y").dt.year
+ag = d[(d.Subgrupo == "Decisão em recurso interno") & d.Descrição.str.lower().str.startswith("agravo regimental")]
+dsc = ag.Descrição.str.lower()
+t = pd.DataFrame({"colegiadas": d.groupby("ano").size(), "agravos": ag.groupby("ano").size(),
+                  "providos": ag[dsc.str.contains("provido") & ~dsc.str.contains("não provido")].groupby("ano").size(),
+                  "nao_providos": ag[dsc.str.contains("não provido")].groupby("ano").size()}).fillna(0)
+t = t[t.index >= 2009]; t["taxa_provimento"] = 100 * t.providos / (t.providos + t.nao_providos)
+print(t.round(1).to_string()); t.to_csv(f"{out}/figura7_dados.csv")
 fig, ax = plt.subplots(figsize=(11, 5.5))
 l1, = ax.plot(t.index, t.colegiadas, color="#3d6a94", marker="o", lw=2, label="Decisões colegiadas em reclamações (eixo esquerdo)")
 ax.set_ylabel("Decisões colegiadas (nº)", fontsize=10); ax.set_ylim(0, 5500)
