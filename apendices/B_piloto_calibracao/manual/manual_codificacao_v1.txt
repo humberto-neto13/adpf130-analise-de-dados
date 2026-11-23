@@ -1,4 +1,4 @@
-Manual de codificação
+﻿Manual de codificação
 Sumário
 Parte 1 — Apresentação e uso do manual        3
 Parte 2 — Definições operacionais das variáveis        6

@@ -1,0 +1,34 @@
+[20:10:22] Consultando lote msgbatch_01Eyo1sHq1dNoJDSyjkXFjgh
+
+Status atual: ended
+Requisições em processamento: 0
+Requisições bem-sucedidas:    13
+Requisições com erro:         0
+
+Lote concluído! Baixando resultados...
+  ✓ 23899.1.txt
+  ✗ 28262.txt: JSON inválido (Expecting ',' delimiter: line 53 column 76 (char 3652))
+  ✗ 35549.txt: JSON inválido (Unterminated string starting at: line 12 column 22 (char 659))
+  ✗ 45682.1.txt: sem bloco de texto
+  ✗ 9977.1.txt: sem bloco de texto
+  ✓ 70430.txt
+  ✗ 41768.txt: JSON inválido (Unterminated string starting at: line 56 column 22 (char 3647))
+  ✗ 9977.2.txt: sem bloco de texto
+  ✓ 45682.2.txt
+  ✗ 23899.2.txt: sem bloco de texto
+  ✗ 79022.txt: sem bloco de texto
+  ✓ 91263.txt
+  ✗ 79907.txt: sem bloco de texto
+
+CSV salvo em: piloto_fase2.csv
+JSONL completo (com justificativas) salvo em: piloto_fase2_completo.jsonl
+
+=== Estatísticas ===
+Codificações bem-sucedidas: 4
+Codificações com erro:      9
+
+Tokens input:              866,605
+Tokens output:             93,018
+Tokens cache_read:         90,747
+Tokens cache_creation:     302,490
+Custo estimado (Sonnet 5 Batch): USD 2.5783

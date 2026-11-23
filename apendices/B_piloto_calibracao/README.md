@@ -2,7 +2,7 @@
 
 Corresponde à nota 42 da monografia (subseção 4.4.1). Reúne o procedimento do piloto (20 reclamações, 23 acórdãos, Claude Sonnet 5), o material de submissão, os padrões de discordância e o manual de codificação.
 
-> **Origem do material.** São originais do autor, idênticos byte a byte: `scripts/submeter_batch_fase2.py`, `scripts/processar_batch_fase2.py`, `manual/manual_codificacao_v1.txt` (manual usado pelo script) e `manual/manual_codificacao_v3.md`. Os arquivos em `prompts/` foram extraídos das constantes do script original. `scripts/submeter_batch_fase2_corrigido.py` foi reconstruído a partir do original, com as duas alterações descritas no esboço (Variável 2 como lista, e V2 na regra de codificação múltipla), e coincide com o texto do PDF, salvo as quebras de linha. Os quadros em `dados/` e `manual/registro_alteracoes.md` vêm do PDF do esboço.
+> **Origem do material.** São originais do autor, idênticos byte a byte: `scripts/submeter_batch_fase2.py`, `scripts/processar_batch_fase2.py`, `manual/manual_codificacao_v1.txt` (o manual lido pelo script, com a marca de ordem de bytes que entrou no prompt) e `manual/manual_codificacao_v3.md`, além de tudo em `execucoes/` (requisições, identificadores de lote, saídas e logs das cinco tentativas). Os arquivos em `prompts/` foram extraídos das constantes do script original. `scripts/submeter_batch_fase2_corrigido.py` foi reconstruído a partir do original, com as duas alterações descritas no esboço (Variável 2 como lista, e V2 na regra de codificação múltipla), e coincide com o texto do PDF, salvo as quebras de linha. Os quadros B.1 e B.2 e `manual/registro_alteracoes.md` vêm do PDF do esboço, e o Quadro B.1 foi **corrigido** com os dados de `execucoes/` (ver abaixo).
 
 ## Conteúdo
 
@@ -16,18 +16,42 @@ Corresponde à nota 42 da monografia (subseção 4.4.1). Reúne o procedimento d
 | `manual/manual_codificacao_v1.txt` | Manual de codificação, versão 1 (lido por `submeter_batch_fase2.py`), com Partes 1 a 3 | B.2 |
 | `manual/manual_codificacao_v3.md` | Manual de codificação, versão 3, íntegra | B.6 |
 | `manual/registro_alteracoes.md` | Registro de alterações V1 → V2 e V2 → V3 | B.6 |
-| `dados/quadro_B1_escalonamento_max_tokens.csv` | Escalonamento de `max_tokens` (8.000 → 32.000) | B.3 |
+| `execucoes/tentativa_1/` a `tentativa_5/` | Registro das cinco submissões à Batch API: `requisicoes_*.jsonl` (o que foi enviado), `batch_id_*.txt`, `piloto_fase2_*.csv`, `piloto_fase2_completo_*.jsonl` (com justificativas), `log_*.txt` e, na 4ª, `piloto_fase2_respostas_com_erro(4).txt` | B.3 |
+| `dados/quadro_B1_escalonamento_max_tokens.csv` | Escalonamento de `max_tokens` (8.000, 8.000, 16.000, 16.000, 32.000), refeito a partir de `execucoes/` | B.3 |
 | `dados/quadro_B2_diagnostico_discordancias.csv` | Discordâncias por variável (23 acórdãos) | B.4 |
 | `NOTAS.md` | Texto explicativo do esboço | B.1 a B.5, B.7 |
 
 O `prompt de sistema` do piloto é montado em tempo de execução por `INSTRUCOES_GERAIS` + texto do manual + `FORMATO_SAIDA`. O manual reproduzido em `manual/manual_codificacao_v3.md` corresponde à versão 3. O registro das alterações entre versões está em `manual/registro_alteracoes.md`.
 
+## Execuções do piloto
+
+As cinco tentativas usaram o mesmo prompt de sistema (75.711 caracteres, mesma soma de verificação nos cinco arquivos de requisição): `INSTRUCOES_GERAIS` + `manual_codificacao_v1.txt` + `FORMATO_SAIDA`, com o Sonnet 5 via Batch API. Só o `max_tokens` mudou. O `submeter_batch_fase2.py` depositado traz o valor da última tentativa (32.000). Nas anteriores, o valor foi editado no script entre uma submissão e outra, e consta nos arquivos de requisição.
+
+| Tentativa | max_tokens | Submetidos | Sucesso | Erros |
+|---|---|---|---|---|
+| 1ª | 8.000 | 23 | 15 | 8 (6 sem bloco de texto, 2 JSON inválido) |
+| 2ª | 8.000 | 13 | 4 | 9 |
+| 3ª | 16.000 | 13 | 12 | 1 (Rcl 45682.1) |
+| 4ª | 16.000 | 1 | 0 | 1 (saída de 16.000 tokens, igual ao teto) |
+| 5ª | 32.000 | 1 | 1 | 0 |
+
+A 4ª tentativa sustenta o diagnóstico de B.3: a resposta consumiu exatamente o teto de saída (16.000 tokens) e não chegou a produzir o texto final. A 5ª, com 32.000, usou 14.700 tokens de saída.
+
+## Divergências entre o esboço (B.3 e Quadro B.1) e os arquivos de `execucoes/`
+
+- A 3ª tentativa usou `max_tokens` = 16.000. O esboço indica 8.000.
+- A 1ª tentativa teve 6 erros "sem bloco de texto" e 2 "JSON inválido". O esboço indica 5 e 3.
+- A 2ª tentativa submeteu 13 acórdãos, não 8, e o arquivo de requisição foi preservado. Cinco deles (Rcl 23899.1, 70430, 45682.2, 9977.2 e 91263) já tinham sido codificados com sucesso na 1ª. A 9977.2, que tinha dado certo na 1ª, falhou na 2ª, e depois deu certo na 3ª.
+- Os acórdãos 23899.1, 91263, 45682.2 e 70430 foram codificados com sucesso nas três primeiras tentativas, e o 9977.2 em duas. Os arquivos preservam essas repetições. Falta registrar qual resultado entrou na comparação com a verificação humana.
+- O esboço descreve a 5ª tentativa como a que "encerra a rodada com os 23 acórdãos codificados". Isso procede apenas somando os êxitos das cinco tentativas, que cobrem os 23.
+- `execucoes/tentativa_4/piloto_fase2_completo(4).jsonl` tem 0 bytes, porque a tentativa não produziu codificação válida.
+
 ## Pendências de conteúdo
 
+- Explicar por que a 2ª tentativa reenviou 5 acórdãos já codificados, e dizer qual critério escolheu, entre as codificações repetidas, a que foi comparada com a verificação humana.
 - Depositar o manual **v2**. A v1 e a v3 estão no repositório.
-- Confirmar que `manual_codificacao_v1.txt` é a v1 (o registro V1 → V2 descreve a Variável 1 com 7 classes e a 2 com 8, o que confere com este arquivo).
-- Depositar a lista das 20 reclamações da amostra e o procedimento do sorteio. Os scripts leem a pasta `./textos`, preenchida "externamente".
-- Depositar as saídas brutas do piloto (`piloto_fase2_*.csv`, `requisicoes_batch_fase2*.jsonl`) e a planilha de confronto item a item com a verificação humana. Hoje existe só o quadro agregado.
+- Depositar a lista das 20 reclamações da amostra e o procedimento do sorteio. A lista, sem o procedimento, sai dos arquivos de requisição: Rcl 9977, 15243, 16329, 21504, 23899, 28262, 35549, 41768, 44616, 45682, 51153, 61746, 62174, 65002, 65925, 70430, 71028, 79022, 79907 e 91263 (23 acórdãos). O inteiro teor enviado está nas requisições, e a pasta `textos` da sua máquina estava vazia.
+- Depositar a planilha de confronto item a item com a verificação humana. Hoje existe só o quadro agregado (B.2).
 - Acrescentar a fundamentação de cada alteração V2 → V3, que a nota 42 promete e o registro cobre só em parte.
 - O script efetivamente usado na codificação integral (a monografia o descreve em 4.4.1) deve constar do Apêndice D. O de B.5.1 é descrito como "destinado" a ela, e foi reconstruído por falta do original.
 
