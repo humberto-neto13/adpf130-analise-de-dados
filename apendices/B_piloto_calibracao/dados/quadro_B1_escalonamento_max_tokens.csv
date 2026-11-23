@@ -1,6 +1,6 @@
-tentativa,max_tokens,resultado,evidencia_documental
-1ª,8.000,"15 de 23 acórdãos codificados com sucesso; 8 erros (5 ""sem bloco de texto"", 3 ""JSON inválido: Unterminated string"")",requisicoes_batch_fase2_primeira_tenta tiva.jsonl
-2ª,8.000,resubmissão parcial dos 8 casos com erro da 1ª tentativa (arquivo de requisição não preservado),—
-3ª,8.000,"12 de 13 acórdãos resubmetidos com sucesso; permanece 1 erro (Rcl 45682.1, ""JSON inválido: Unterminated string"")",piloto_fase2_3.csv
-4ª,16.000,"Rcl 45682.1 resubmetido isoladamente; ainda insuficiente (""sem bloco de texto"")",requisicoes_batch_fase2_4.jsonl; piloto_fase2_4.csv
-5ª,32.000,"Rcl 45682.1 codificado com sucesso, encerrando a rodada com os 23 acórdãos codificados",piloto_fase2_5.csv
+tentativa,max_tokens,acordaos_submetidos,codificados_com_sucesso,erros,tipo_dos_erros,batch_id,tokens_input,tokens_output,custo_estimado_usd,evidencia_documental
+1ª,8000,23,15,8,"6 sem bloco de texto; 2 JSON inválido",msgbatch_01Wz3yTwTw7TJsgsyLixRgnA,1406795,142114,3.3326,execucoes/tentativa_1/
+2ª,8000,13,4,9,"6 sem bloco de texto; 3 JSON inválido",msgbatch_01Eyo1sHq1dNoJDSyjkXFjgh,866605,93018,2.5783,execucoes/tentativa_2/
+3ª,16000,13,12,1,"1 JSON inválido (Rcl 45682.1)",msgbatch_01D5fhDz13FUSDAQuSodzviy,866605,121685,2.3237,execucoes/tentativa_3/
+4ª,16000,1,0,1,"1 sem bloco de texto (Rcl 45682.1; saída de 16.000 tokens, igual ao teto)",msgbatch_01BsJdxcRNowQhD44pE9Ax3S,86302,16000,0.3062,execucoes/tentativa_4/
+5ª,32000,1,1,0,,msgbatch_018LQwqReRi25VWJpwMnKeDz,86302,14700,0.2964,execucoes/tentativa_5/

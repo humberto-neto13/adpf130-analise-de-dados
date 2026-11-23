@@ -1,0 +1,38 @@
+A) vencido no acórdão prevalente PS 0.71 p 0.0085 pares 131
+     rel  n  voto_ader  pares   PS
+  Moraes 15          4     44 0.77
+ Toffoli 14          3     33 0.88
+  Gilmar  9          3     18 0.28
+  Fachin  6          3      9 1.00
+   Celso  5          3      6 0.67
+   Zanin  5          3      6 0.17
+    Rosa  6          1      5 1.00
+  Cármen  5          4      4 1.00
+ Barroso  4          1      3 0.00
+     Fux  4          1      3 0.67
+  Lewand  1          0      0  NaN
+    Dino  3          3      0  NaN
+  NunesM  9          0      0  NaN
+Mendonça  5          0      0  NaN
+  MarcoA  2          0      0  NaN
+   Teori  1          0      0  NaN
+  sem 2020 PS 0.634 p 0.0934
+B) + vencido no 1º acórdão (45682, 46059) PS 0.735 p 0.0053 pares 113
+     rel  n  voto_ader  pares   PS
+ Toffoli 14          3     33 0.88
+  Moraes 15          2     26 0.92
+  Gilmar  9          3     18 0.28
+  Fachin  6          3      9 1.00
+   Celso  5          3      6 0.67
+   Zanin  5          3      6 0.17
+    Rosa  6          1      5 1.00
+  Cármen  5          4      4 1.00
+ Barroso  4          1      3 0.00
+     Fux  4          1      3 0.67
+  Lewand  1          0      0  NaN
+    Dino  3          3      0  NaN
+  NunesM  9          0      0  NaN
+Mendonça  5          0      0  NaN
+  MarcoA  2          0      0  NaN
+   Teori  1          0      0  NaN
+  sem 2020 PS 0.703 p 0.0259

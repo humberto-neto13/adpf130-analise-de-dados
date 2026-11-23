@@ -1,0 +1,46 @@
+SCRIPTS DAS TABELAS E FIGURAS DOS CAPÍTULOS 5 E 6
+==================================================
+
+Todos leem diretamente a aba "Modelo" do modelo de dados e aplicam as mesmas
+regras (em comum.py): agregação das 137 linhas em 133 reclamações, estratos
+pela V3 ("anterior e posterior" no controle prévio; ND fora do teste) e
+exclusão da V13 = ND do teste.
+
+Requisitos: Python 3 com pandas, numpy, matplotlib e openpyxl
+  py -m pip install pandas numpy matplotlib openpyxl
+
+Como rodar (nesta pasta, com o modelo de dados copiado para ela):
+  py 01_tabelas_descritivas.py "modelo de dados.xlsx"
+  py 02_analise_confirmatoria.py "modelo de dados.xlsx"
+  py 03_figuras.py "modelo de dados.xlsx"
+
+ARQUIVOS
+--------
+comum.py
+  Funções compartilhadas: leitura, agregação, estratos, intervalo de Wilson.
+  Não se executa sozinho.
+
+01_tabelas_descritivas.py  ->  tabelas_capitulos_5_6.xlsx
+  Tabela 1 (unidades por ano e estrato), Tabela 3 (V1, V2, V4, V5),
+  Tabela 4 (V13 x V14), Tabela 5 (V13 por estrato), Tabela 6 (proporção anual
+  de 13-A no controle posterior, com Wilson), contagens univariadas citadas
+  nas seções 5.1, 5.3 e 5.4 e lista dos casos citados nominalmente.
+
+02_analise_confirmatoria.py  ->  resultados no terminal
+  Mann-Whitney exato (U, p unilateral e bilateral, probabilidade de
+  superioridade), Pettitt com p por 10.000 permutações (semente 20261012),
+  teste das 300 ordenações dos empates, sensibilidade à Rcl 23.899 e à
+  Rcl 9.068, e descrição do controle prévio. Valores da Tabela 7, das
+  seções 6.3 a 6.5 e das notas de rodapé.
+
+03_figuras.py  ->  figura_controle_posterior.png (Figura 3),
+                   figura_controle_previo.png (Figura 4), figura_geral.png
+
+Valores esperados (conferência)
+  Controle posterior: 94 unidades, 38 com 13-A
+  Mann-Whitney: U = 1304,5; p unilateral = 0,032; p bilateral = 0,064
+  Pettitt: K = 562; p = 0,068; ponto entre Rcl 49816 e Rcl 49506
+
+Fora desta pasta
+  Tabela 2 (verificação humana): sai da planilha de verificação, não do
+  modelo de dados.

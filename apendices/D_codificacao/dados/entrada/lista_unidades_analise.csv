@@ -1,0 +1,138 @@
+arquivo_texto,reclamacao,acordao_n,data_julgamento,relator,orgao_V8,acordao_prevalente_na_unidade,regra_de_agregacao,estrato
+9068.txt,9068,1,2011-12-01,Cármen Lúcia,a,sim,Acórdão único,fora do teste (V3 ND)
+9428.txt,9428,1,2009-12-10,Cezar Peluso,a,sim,Acórdão único,controle prévio
+9977.1.txt,9977,1,2017-10-26,Rosa Weber,b,sim,"Embargos de declaração rejeitados, sem efeitos modificativos; prevalece o agravo regimental e sua data",controle posterior
+9977.2.txt,9977,2,2019-03-28,Rosa Weber,b,não,"Embargos de declaração rejeitados, sem efeitos modificativos; prevalece o agravo regimental e sua data",controle posterior
+11305.txt,11305,1,2011-10-20,Gilmar Mendes,a,sim,Acórdão único,fora do teste (V3 ND)
+15243.txt,15243,1,2019-04-23,Celso de Mello,c,sim,Acórdão único,controle posterior
+15681.txt,15681,1,2020-09-04,Rosa Weber,b,sim,Acórdão único,controle posterior
+16074.txt,16074,1,2020-04-30,Celso de Mello,c,sim,Acórdão único,fora do teste (V3 ND)
+16296.txt,16296,1,2013-11-07,Cármen Lúcia,a,sim,Acórdão único,fora do teste (V3 ND)
+16329.txt,16329,1,2020-08-04,Rosa Weber,b,sim,Acórdão único,controle posterior
+16389.txt,16389,1,2014-05-14,Teori Zavascki,a,sim,Acórdão único,controle posterior
+16492.txt,16492,1,2014-09-02,Celso de Mello,c,sim,Acórdão único,controle posterior
+17196.txt,17196,1,2014-09-09,Cármen Lúcia,c,sim,Acórdão único,controle posterior
+17748.txt,17748,1,2016-02-16,Gilmar Mendes,c,sim,Acórdão único,controle posterior
+18776.txt,18776,1,2020-10-19,Dias Toffoli,c,sim,Acórdão único,controle posterior
+19464.txt,19464,1,2020-10-09,Dias Toffoli,c,sim,Acórdão único,controle posterior
+19548.txt,19548,1,2015-06-30,Celso de Mello,c,sim,Acórdão único,controle prévio
+19775.txt,19775,1,2017-04-06,Luiz Fux,b,sim,Acórdão único,controle posterior
+20757.txt,20757,1,2021-12-03,Nunes Marques,c,sim,Acórdão único,controle prévio
+21311.txt,21311,1,2020-10-19,Dias Toffoli,c,sim,Acórdão único,controle posterior
+21504.txt,21504,1,2015-11-17,Celso de Mello,c,sim,Acórdão único,controle posterior
+21724.txt,21724,1,2015-11-03,Teori Zavascki,c,sim,Acórdão único,controle prévio
+21827.txt,21827,1,2016-04-12,Edson Fachin,b,sim,Acórdão único,controle posterior
+22328.txt,22328,1,2018-03-06,Luís Roberto Barroso,b,sim,Acórdão único,controle posterior
+23731.txt,23731,1,2017-09-08,Alexandre de Moraes,b,sim,Acórdão único,controle posterior
+23793.txt,23793,1,2020-06-26,Celso de Mello,c,sim,Acórdão único,controle posterior
+23899.1.txt,23899,1,2023-09-29,Rosa Weber,a,sim,"Embargos de declaração rejeitados, sem efeitos modificativos; prevalece o primeiro acórdão e sua data",controle posterior
+23899.2.txt,23899,2,2024-11-18,Flávio Dino,a,não,"Embargos de declaração rejeitados, sem efeitos modificativos; prevalece o primeiro acórdão e sua data",controle posterior
+24459.txt,24459,1,2016-12-13,Edson Fachin,b,sim,Acórdão único,fora do teste (V3 ND)
+25596.txt,25596,1,2017-06-08,Dias Toffoli,c,sim,Acórdão único,fora do teste (V3 ND)
+28262.txt,28262,1,2018-09-27,Edson Fachin,c,sim,Acórdão único,controle prévio
+28308.txt,28308,1,2019-02-21,Rosa Weber,b,sim,Acórdão único,fora do teste (V3 ND)
+28747.txt,28747,1,2018-06-05,Alexandre de Moraes,b,sim,Acórdão único,controle posterior
+29158.txt,29158,1,2025-02-21,Nunes Marques,c,sim,Acórdão único,controle posterior
+29346.txt,29346,1,2018-05-04,Dias Toffoli,c,sim,Acórdão único,controle posterior
+31037.txt,31037,1,2022-04-08,Nunes Marques,c,sim,Acórdão único,controle posterior
+31117.txt,31117,1,2020-10-02,Celso de Mello,b,sim,Acórdão único,controle posterior
+31130.txt,31130,1,2020-09-08,Alexandre de Moraes,b,sim,Acórdão único,controle posterior
+31597.txt,31597,1,2020-02-20,Edson Fachin,c,sim,Acórdão único,controle posterior
+32052.txt,32052,1,2020-04-14,Gilmar Mendes,c,sim,Acórdão único,controle prévio
+33040.txt,33040,1,2026-06-09,Alexandre de Moraes,b,sim,Acórdão único,controle posterior
+35039.txt,35039,1,2020-11-27,Cármen Lúcia,c,sim,Acórdão único,controle posterior
+35549.txt,35549,1,2020-03-12,Rosa Weber,b,sim,Acórdão único,controle prévio
+36463.txt,36463,1,2019-11-19,Marco Aurélio,b,sim,Acórdão único,controle posterior
+37554.txt,37554,1,2020-03-12,Rosa Weber,b,sim,Acórdão único,controle posterior
+37918.txt,37918,1,2020-02-13,Rosa Weber,b,sim,Acórdão único,controle posterior
+38201.txt,38201,1,2020-02-20,Alexandre de Moraes,b,sim,Acórdão único,controle prévio
+38571.txt,38571,1,2020-09-25,Ricardo Lewandowski,c,sim,Acórdão único,controle posterior
+38782.txt,38782,1,2020-11-03,Gilmar Mendes,c,sim,Acórdão único,controle posterior
+39670.txt,39670,1,2020-11-20,Cármen Lúcia,c,sim,Acórdão único,controle posterior
+39712.txt,39712,1,2021-08-20,Gilmar Mendes,c,sim,Acórdão único,controle posterior
+40565.txt,40565,1,2021-04-26,Rosa Weber,b,sim,Acórdão único,controle prévio
+40700.txt,40700,1,2020-06-19,Alexandre de Moraes,b,sim,Acórdão único,controle posterior
+41768.txt,41768,1,2020-09-25,Marco Aurélio,b,sim,Acórdão único,controle posterior
+42155.txt,42155,1,2021-02-05,Luís Roberto Barroso,b,sim,Acórdão único,controle posterior
+42273.txt,42273,1,2020-10-23,Luís Roberto Barroso,b,sim,Acórdão único,controle posterior
+43110.txt,43110,1,2021-04-26,Dias Toffoli,b,sim,Acórdão único,controle posterior
+43220.txt,43220,1,2021-06-18,Dias Toffoli,b,sim,Acórdão único,controle posterior
+43949.txt,43949,1,2023-10-17,Ricardo Lewandowski,c,sim,Acórdão único,fora do teste (V3 ND)
+44244.txt,44244,1,2020-11-27,Alexandre de Moraes,b,sim,Acórdão único,controle posterior
+44402.txt,44402,1,2020-12-14,Alexandre de Moraes,b,sim,Acórdão único,controle posterior
+44616.txt,44616,1,2020-12-18,Alexandre de Moraes,b,sim,Acórdão único,controle posterior
+44809.txt,44809,1,2021-06-18,Dias Toffoli,b,sim,Acórdão único,controle posterior
+45682.1.txt,45682,1,2021-03-19,Alexandre de Moraes,b,não,Agravo provido apenas para dar seguimento; prevalece o acórdão de mérito e sua data,controle posterior
+45682.2.txt,45682,2,2022-03-11,Alexandre de Moraes,b,sim,Agravo provido apenas para dar seguimento; prevalece o acórdão de mérito e sua data,controle posterior
+46032.txt,46032,1,2021-06-18,Marco Aurélio,b,sim,Acórdão único,controle prévio
+46059.1.txt,46059,1,2021-04-26,Alexandre de Moraes,b,não,Agravo provido apenas para dar seguimento; prevalece o acórdão de mérito e sua data,controle posterior
+46059.2.txt,46059,2,2022-03-08,Alexandre de Moraes,b,sim,Agravo provido apenas para dar seguimento; prevalece o acórdão de mérito e sua data,controle posterior
+46275.txt,46275,1,2021-10-08,Nunes Marques,c,sim,Acórdão único,controle posterior
+47212.txt,47212,1,2021-09-17,Luís Roberto Barroso,b,sim,Acórdão único,controle posterior
+48589.txt,48589,1,2021-10-08,Cármen Lúcia,b,sim,Acórdão único,fora do teste (V3 ND)
+48882.txt,48882,1,2022-05-06,Nunes Marques,c,sim,Acórdão único,fora do teste (V3 ND)
+49506.txt,49506,1,2022-02-18,Gilmar Mendes,c,sim,Acórdão único,controle posterior
+49816.txt,49816,1,2021-11-26,Dias Toffoli,b,sim,Acórdão único,controle posterior
+50905.txt,50905,1,2023-03-24,Dias Toffoli,b,sim,Acórdão único,controle posterior
+51153.txt,51153,1,2022-05-20,Gilmar Mendes,c,sim,Acórdão único,controle prévio
+51514.txt,51514,1,2023-02-17,Luís Roberto Barroso,b,sim,Acórdão único,controle posterior
+52089.txt,52089,1,2026-03-06,André Mendonça,c,sim,Acórdão único,controle posterior
+55948.txt,55948,1,2024-10-25,Flávio Dino,b,sim,Acórdão único,controle posterior
+56907.txt,56907,1,2023-03-24,Gilmar Mendes,c,sim,Acórdão único,controle prévio
+57284.txt,57284,1,2023-12-11,Edson Fachin,c,sim,Acórdão único,controle posterior
+57785.txt,57785,1,2024-05-06,Gilmar Mendes,c,sim,Acórdão único,controle posterior
+58048.txt,58048,1,2023-04-17,Nunes Marques,c,sim,Acórdão único,controle posterior
+59320.txt,59320,1,2025-02-21,André Mendonça,c,sim,Acórdão único,fora do teste (V3 ND)
+59482.txt,59482,1,2023-09-29,Alexandre de Moraes,b,sim,Acórdão único,controle posterior
+60154.txt,60154,1,2023-10-17,Alexandre de Moraes,b,sim,Acórdão único,controle posterior
+61569.txt,61569,1,2024-05-24,André Mendonça,c,sim,Acórdão único,controle posterior
+61746.txt,61746,1,2024-08-16,Edson Fachin,c,sim,Acórdão único,controle posterior
+61999.txt,61999,1,2024-12-13,Edson Fachin,c,sim,Acórdão único,controle posterior
+62010.txt,62010,1,2024-06-10,Cristiano Zanin,b,sim,Acórdão único,controle posterior
+62174.txt,62174,1,2024-10-18,Flávio Dino,b,sim,Acórdão único,controle posterior
+63264.txt,63264,1,2024-12-06,Nunes Marques,c,sim,Acórdão único,controle posterior
+63418.txt,63418,1,2024-10-11,Luiz Fux,b,sim,Acórdão único,controle posterior
+64369.txt,64369,1,2024-06-04,Cristiano Zanin,b,sim,Acórdão único,controle posterior
+65002.txt,65002,1,2024-12-06,Cristiano Zanin,b,sim,Acórdão único,controle prévio
+65017.txt,65017,1,2024-08-09,Dias Toffoli,c,sim,Acórdão único,controle posterior
+65925.txt,65925,1,2024-04-19,Nunes Marques,c,sim,Acórdão único,controle posterior
+66246.txt,66246,1,2025-04-29,Cármen Lúcia,b,sim,Acórdão único,controle posterior
+66359.txt,66359,1,2024-06-04,Gilmar Mendes,c,sim,Acórdão único,controle posterior
+66974.txt,66974,1,2024-10-11,Cristiano Zanin,b,sim,Acórdão único,controle posterior
+67543.txt,67543,1,2026-05-29,André Mendonça,c,sim,Acórdão único,controle posterior
+68122.txt,68122,1,2024-10-25,Nunes Marques,c,sim,Acórdão único,controle posterior
+68437.txt,68437,1,2024-08-06,Luiz Fux,b,sim,Acórdão único,controle posterior
+68557.txt,68557,1,2024-08-16,Alexandre de Moraes,b,sim,Acórdão único,controle posterior
+68919.txt,68919,1,2024-08-06,Alexandre de Moraes,b,sim,Acórdão único,controle posterior
+70430.txt,70430,1,2025-02-21,Edson Fachin,c,sim,Acórdão único,controle posterior
+70705.txt,70705,1,2025-10-03,Nunes Marques,c,sim,Acórdão único,controle posterior
+70911.txt,70911,1,2025-03-28,Nunes Marques,c,sim,Acórdão único,controle prévio
+71028.txt,71028,1,2025-02-14,Flávio Dino,b,sim,Acórdão único,controle posterior
+71380.txt,71380,1,2024-12-06,Cristiano Zanin,b,sim,Acórdão único,fora do teste (V3 ND)
+73119.txt,73119,1,2025-06-30,Nunes Marques,c,sim,Acórdão único,controle posterior
+74009.txt,74009,1,2025-09-19,Alexandre de Moraes,b,sim,Acórdão único,controle posterior
+74482.txt,74482,1,2025-11-04,André Mendonça,c,sim,Acórdão único,controle posterior
+75129.txt,75129,1,2025-10-10,Edson Fachin,c,sim,Acórdão único,fora do teste (V3 ND)
+77996.txt,77996,1,2025-05-12,Cristiano Zanin,b,sim,Acórdão único,controle posterior
+79022.txt,79022,1,2026-05-15,André Mendonça,c,sim,Acórdão único,controle posterior
+79142.txt,79142,1,2025-11-25,Gilmar Mendes,c,sim,Acórdão único,controle posterior
+79317.txt,79317,1,2025-12-01,Cristiano Zanin,b,sim,Acórdão único,controle posterior
+79907.txt,79907,1,2025-11-25,Alexandre de Moraes,b,sim,Acórdão único,controle prévio
+80260.txt,80260,1,2025-09-05,Gilmar Mendes,c,sim,Acórdão único,controle posterior
+80681.txt,80681,1,2025-08-22,Luiz Fux,b,sim,Acórdão único,controle posterior
+81831.txt,81831,1,2026-04-17,Flávio Dino,b,sim,Acórdão único,fora do teste (V3 ND)
+82228.txt,82228,1,2025-09-26,Gilmar Mendes,c,sim,Acórdão único,controle posterior
+83604.txt,83604,1,2025-10-10,Dias Toffoli,c,sim,Acórdão único,fora do teste (V3 ND)
+84065.txt,84065,1,2026-02-06,Cármen Lúcia,b,sim,Acórdão único,controle posterior
+85266.txt,85266,1,2025-11-14,Dias Toffoli,c,sim,Acórdão único,controle posterior
+85617.txt,85617,1,2026-02-13,Nunes Marques,c,sim,Acórdão único,controle posterior
+86576.txt,86576,1,2026-02-24,Cristiano Zanin,b,sim,Acórdão único,controle prévio
+86817.txt,86817,1,2026-06-26,Flávio Dino,b,sim,Acórdão único,controle prévio
+90161.txt,90161,1,2026-06-19,Dias Toffoli,c,sim,Acórdão único,controle prévio
+91198.txt,91198,1,2026-04-28,Dias Toffoli,c,sim,Acórdão único,controle posterior
+91263.txt,91263,1,2026-06-19,Dias Toffoli,c,sim,Acórdão único,controle posterior
+91384.txt,91384,1,2026-03-27,Cristiano Zanin,b,sim,Acórdão único,controle prévio
+91767.txt,91767,1,2026-05-15,Dias Toffoli,c,sim,Acórdão único,controle posterior
+93111.txt,93111,1,2026-05-11,Cristiano Zanin,b,sim,Acórdão único,controle prévio
+93341.txt,93341,1,2026-08-05,Luiz Fux,c,sim,Acórdão único,fora do teste (V3 ND)
+93946.txt,93946,1,2026-05-22,Cristiano Zanin,b,sim,Acórdão único,fora do teste (V3 ND)

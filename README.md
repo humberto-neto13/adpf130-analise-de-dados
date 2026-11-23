@@ -17,11 +17,10 @@ apendices/
 ├── A_filtro_pertinencia/      # nota 40 e 41. Filtro de pertinência (Claude Opus 5) e verificação humana
 ├── B_piloto_calibracao/       # nota 42. Piloto de calibração e manual de codificação (v3)
 ├── C_piloto_estratificacao/   # nota 45. Piloto do desenho de oito estratos, abandonado
-├── D_codificacao/             # nota 47. Codificação integral e planilha de verificação (a depositar)
-└── E_analises/                # nota 49. Código das análises, dados e matriz consolidada (a depositar)
+├── D_codificacao/             # nota 47. Codificação integral, verificação humana e matriz de dados
+└── E_analises/                # nota 49. Matriz consolidada e código da etapa confirmatória (parcial)
 docs/
-└── esboco_apendices_A_B_C.pdf # esboço em PDF a partir do qual A, B e C foram reconstruídos
-testes.py                      # etapa confirmatória (a mover para apendices/E_analises/)
+└── esboco_apendices_A_B_C.pdf # esboço em PDF a partir do qual os quadros de A, B e C foram recuperados
 ```
 
 Cada pasta traz um `README.md` com o conteúdo, as pendências e as inconsistências conhecidas. A ordem alfabética dos apêndices não é a ordem cronológica de execução. O piloto de estratificação (C, Fase 1) antecede o piloto de calibração (B, Fase 2), e ambos antecedem a codificação integral (D).
@@ -41,8 +40,8 @@ Cada pasta traz um `README.md` com o conteúdo, as pendências e as inconsistên
 ## Requisitos
 
 - Python 3 (versão a confirmar)
-- Bibliotecas listadas em `requirements.txt` (a criar)
-- Chave de API da Anthropic. Se algum passo usou a Voyage AI, indicar a chave exigida e o passo (ver `apendices/D_codificacao/README.md`)
+- Bibliotecas listadas em `requirements.txt` (`anthropic`, `pandas` e `openpyxl` vêm do original do autor; `pypdf` e `numpy` foram acrescentadas a partir dos imports)
+- Chave de API da Anthropic (`ANTHROPIC_API_KEY`). Nenhum passo usa a Voyage AI ou embeddings
 
 As chaves devem ser definidas como variáveis de ambiente (`ANTHROPIC_API_KEY`) e nunca escritas no código.
 
@@ -61,7 +60,7 @@ Os pilotos (B e C) estão preservados como registro e não precisam ser reexecut
 
 O filtro de pertinência foi executado com o modelo Claude Opus 5 (Anthropic), e a codificação, com o Claude Sonnet 5, por requisições independentes à API, com prompt caching e ordem de submissão aleatorizada. Modelos de linguagem não produzem respostas idênticas a cada execução, de modo que uma nova rodada pode gerar resultados ligeiramente diferentes. Por isso, as respostas brutas obtidas na pesquisa estão preservadas neste repositório, e são elas que fundamentam as análises do trabalho.
 
-O filtro foi conferido pelo pesquisador em todos os acórdãos classificados como não pertinentes (Apêndice A), e a codificação foi verificada integralmente (Apêndice D). Em divergência, prevaleceu a codificação do pesquisador.
+O filtro foi conferido pelo pesquisador em todos os acórdãos classificados como não pertinentes e nos três de Passo 3 (Apêndice A), e a codificação foi verificada integralmente (Apêndice D). Em divergência, prevaleceu a codificação do pesquisador.
 
 ## Como citar
 

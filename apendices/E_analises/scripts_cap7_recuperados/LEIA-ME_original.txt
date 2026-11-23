@@ -1,0 +1,17 @@
+SCRIPTS RECUPERADOS - monografia (reclamações fundadas na ADPF 130)
+
+testes/   (rodar de dentro desta pasta: python3 org.py)
+  post.txt, relp.txt, v24.txt, v5.txt   dados das 94 unidades do controle posterior (rcl, data, V13, órgão; relator; V1/V4; V5)
+  org.py                                Mann-Whitney exato (U por permutação, postos médios) e estratificado por órgão (van Elteren, p por permutação exata)
+  bloco_cmd14_relator_vencidos.py       estratificado por relator, invertendo o voto quando vencido (cenários A e B)
+  bloco_cmd15/16/17_*.py                variações da análise por órgão/relator/cadeira (blocos exploratórios)
+  bloco_cmd22_*.py                      estratificação por reclamante e meio
+  bloco_cmd02_*.py                      cruzamento reclamante profissional x meio digital (Fisher); depende de strat.py (NÃO recuperado)
+  sensibilidade_sem_2020_aproximada.py  sensibilidade aproximada sem 2020/2021 (data = ano)
+docx/     (Node, pacote docx)
+  build.js + content712.js / c73.js     geram secao_7_1_2.docx e secao_7_3.docx (node build.js content712.js saida.docx)
+
+NÃO RECUPERADOS (ficaram em partes anteriores da conversa, sem registro disponível):
+  strat.py (estratificação por remoção x reclamante profissional), Mann-Whitney/Pettitt/Wilson iniciais (U=1.304,5; K=562),
+  séries e fluxos de agravo (Corte Aberta), gráfico colegiadas_e_taxa_de_provimento e demais figuras, redes de citação (V16),
+  mapa_remissivo_V16.xlsx, teste por cadeira (mapa Teori/Moraes etc.) em forma de script isolado.

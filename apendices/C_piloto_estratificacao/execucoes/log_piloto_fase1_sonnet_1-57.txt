@@ -1,0 +1,78 @@
+[09:04:07] Consultando lote msgbatch_01SyG7Nmx6meoprCkFHGhRXj
+
+Status atual: ended
+Requisições em processamento: 0
+Requisições bem-sucedidas:    57
+Requisições com erro:         0
+
+Lote concluído! Baixando resultados...
+  ✓ 36463: mom=b suj=b meio=ND
+  ✓ 42273: mom=b suj=c meio=ND
+  ✓ 68437: mom=b suj=c meio=d
+  ✓ 57284: mom=c suj=e meio=e,g
+  ✓ 15681: mom=b suj=a meio=a
+  ✗ 83604: Nenhum bloco de texto encontrado
+  ✓ 44244: mom=b suj=b meio=d
+  ✗ 9977_1: Erro ao extrair: Unterminated string starting at: line 4 column 3 (char 365)
+  ✓ 33040: mom=c suj=a meio=b
+  ✓ 91767: mom=b suj=b meio=g
+  ✓ 79142: mom=b suj=c meio=d
+  ✓ 60154: mom=c suj=c meio=e
+  ✓ 45682_1: mom=b suj=a meio=c
+  ✓ 31597: mom=b suj=g meio=e,g
+  ✓ 35549: mom=c suj=c meio=d,g
+  ✓ 44402: mom=b suj=a meio=c
+  ✓ 81831: mom=c suj=c meio=e
+  ✓ 23899_2: mom=b suj=a meio=c
+  ✓ 16296: mom=c suj=c meio=d
+  ✓ 48882: mom=ND suj=a meio=b
+  ✓ 77996: mom=b suj=b meio=e
+  ✓ 70705: mom=b suj=a meio=c
+  ✓ 74009: mom=b suj=a meio=c
+  ✓ 48589: mom=ND suj=ND meio=ND
+  ✓ 93946: mom=b suj=a meio=ND
+  ✓ 82228: mom=c suj=ND meio=c,e
+  ✓ 55948: mom=b suj=c meio=g
+  ✓ 45682_2: mom=b suj=a meio=c
+  ✓ 21504: mom=b suj=a meio=b,c
+  ✓ 63418: mom=b suj=c meio=e
+  ✓ 37554: mom=b suj=c meio=d,g
+  ✓ 42155: mom=b suj=c meio=d
+  ✓ 47212: mom=b suj=c meio=e
+  ✓ 68557: mom=b suj=c meio=d
+  ✓ 43110: mom=b suj=c meio=d,e
+  ✓ 84065: mom=b suj=a meio=c
+  ✓ 20757: mom=a suj=a meio=c
+  ✓ 46032: mom=c suj=c meio=d
+  ✓ 29346: mom=b suj=c meio=d
+  ✓ 41768: mom=b suj=b meio=e
+  ✓ 15243: mom=b suj=b meio=d
+  ✓ 37918: mom=b suj=a meio=a
+  ✓ 79022: mom=b suj=b meio=ND
+  ✓ 16492: mom=b suj=a meio=a
+  ✓ 79907: mom=c suj=b meio=d,e
+  ✓ 21827: mom=b suj=a meio=a
+  ✓ 61999: mom=b suj=a meio=a
+  ✓ 79317: mom=b suj=b meio=c
+  ✓ 17748: mom=b suj=e meio=ND
+  ✓ 62010: mom=b suj=b meio=e
+  ✓ 66359: mom=b suj=c meio=e
+  ✓ 51514: mom=b suj=b meio=g
+  ✓ 31037: mom=b suj=c meio=d
+  ✓ 85617: mom=b suj=a meio=c
+  ✓ 31117: mom=b suj=a meio=b,c
+  ✓ 23793: mom=b suj=c meio=ND
+  ✓ 46059_2: mom=b suj=a meio=c
+
+Resultado salvo em: piloto_fase1_sonnet.csv
+
+=== Estatísticas ===
+Tokens input total: 2,230,106
+Tokens output total: 45,221
+Tokens cache_read: 7,638
+Tokens cache_creation: 132,392
+Custo estimado (Batch API Sonnet 5, 50% desconto): USD 3.9337
+
+Acórdãos codificados com sucesso: 55
+Acórdãos com erro: 2
+Casos com pelo menos uma variável ND: 2

@@ -1,0 +1,145 @@
+[06:44:40] Lote msgbatch_01TajHJmYShqCoz3VhdgwQ3r: ended
+Em processamento: 0 | sucesso: 137 | erro: 0 | expiradas: 0 | canceladas: 0
+  ✓ 25596.txt
+  ✓ 28747.txt
+  ⚠ 74009.txt (1 alerta(s))
+  ✓ 23899.1.txt
+  ✓ 31597.txt
+  ✓ 61999.txt
+  ✓ 47212.txt
+  ✓ 35549.txt
+  ⚠ 91198.txt (1 alerta(s))
+  ✓ 43220.txt
+  ✓ 66359.txt
+  ✓ 51153.txt
+  ✓ 35039.txt
+  ✓ 44244.txt
+  ✓ 63264.txt
+  ✓ 91263.txt
+  ✓ 40700.txt
+  ✓ 93946.txt
+  ✓ 42273.txt
+  ✓ 79907.txt
+  ✓ 71028.txt
+  ✓ 93341.txt
+  ✓ 70430.txt
+  ⚠ 66246.txt (1 alerta(s))
+  ✓ 21724.txt
+  ✓ 46059.2.txt
+  ✓ 40565.txt
+  ✓ 44402.txt
+  ✓ 86817.txt
+  ✓ 59320.txt
+  ✓ 16389.txt
+  ✓ 23899.2.txt
+  ✓ 9977.1.txt
+  ✓ 48589.txt
+  ✓ 36463.txt
+  ✓ 19548.txt
+  ✓ 29346.txt
+  ✓ 85266.txt
+  ✓ 77996.txt
+  ✓ 45682.1.txt
+  ✓ 68919.txt
+  ✓ 44809.txt
+  ✓ 57284.txt
+  ✓ 85617.txt
+  ✓ 23793.txt
+  ✓ 80681.txt
+  ✓ 16329.txt
+  ✓ 37554.txt
+  ✓ 38201.txt
+  ✓ 17748.txt
+  ✓ 33040.txt
+  ✓ 38571.txt
+  ✓ 62174.txt
+  ✓ 93111.txt
+  ✓ 9977.2.txt
+  ✓ 52089.txt
+  ✓ 46032.txt
+  ✓ 41768.txt
+  ✓ 68122.txt
+  ✓ 68557.txt
+  ✓ 68437.txt
+  ✓ 11305.txt
+  ✓ 31037.txt
+  ✓ 19775.txt
+  ✓ 9428.txt
+  ✓ 49506.txt
+  ✓ 20757.txt
+  ✓ 23731.txt
+  ✓ 59482.txt
+  ✓ 37918.txt
+  ✓ 22328.txt
+  ⚠ 15243.txt (1 alerta(s))
+  ✓ 91767.txt
+  ✓ 48882.txt
+  ✓ 31130.txt
+  ✓ 32052.txt
+  ✓ 70705.txt
+  ✓ 46275.txt
+  ✓ 75129.txt
+  ✓ 46059.1.txt
+  ✓ 49816.txt
+  ✓ 74482.txt
+  ✓ 70911.txt
+  ✓ 43949.txt
+  ✓ 64369.txt
+  ✓ 91384.txt
+  ✓ 18776.txt
+  ✓ 56907.txt
+  ✓ 50905.txt
+  ✓ 39670.txt
+  ✓ 39712.txt
+  ✓ 29158.txt
+  ✓ 71380.txt
+  ⚠ 79317.txt (1 alerta(s))
+  ⚠ 38782.txt (1 alerta(s))
+  ✓ 86576.txt
+  ✓ 55948.txt
+  ✓ 19464.txt
+  ⚠ 57785.txt (1 alerta(s))
+  ✓ 62010.txt
+  ✓ 21504.txt
+  ⚠ 21827.txt (1 alerta(s))
+  ✓ 21311.txt
+  ⚠ 16492.txt (2 alerta(s))
+  ✓ 66974.txt
+  ✓ 65925.txt
+  ✓ 90161.txt
+  ✓ 16296.txt
+  ✓ 16074.txt
+  ✓ 65002.txt
+  ✓ 63418.txt
+  ✓ 67543.txt
+  ✓ 83604.txt
+  ✓ 84065.txt
+  ✓ 65017.txt
+  ✓ 28308.txt
+  ✓ 61569.txt
+  ✓ 81831.txt
+  ✓ 82228.txt
+  ⚠ 43110.txt (1 alerta(s))
+  ✓ 79142.txt
+  ✓ 44616.txt
+  ✓ 79022.txt
+  ✓ 60154.txt
+  ✓ 51514.txt
+  ✓ 61746.txt
+  ✓ 73119.txt
+  ⚠ 15681.txt (1 alerta(s))
+  ✓ 80260.txt
+  ✓ 31117.txt
+  ✓ 28262.txt
+  ✓ 42155.txt
+  ✓ 17196.txt
+  ✓ 9068.txt
+  ✓ 24459.txt
+  ✓ 58048.txt
+  ✓ 45682.2.txt
+
+=== Resumo ===
+Codificados: 137 (com alerta: 11) | falhas: 0 | sem resultado: 0
+Tokens — input: 5,841,476 | output: 1,579,862 | cache read: 4,065,192 | cache creation: 186,192
+
+Arquivos: codificacao_v3.csv, codificacao_v3_completo.jsonl, alertas_v3.csv

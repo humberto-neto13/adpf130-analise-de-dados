@@ -1,0 +1,6 @@
+A sem ['Moraes'] PS 0.678 p 0.039 pares 87
+A sem ['Toffoli'] PS 0.653 p 0.067 pares 98
+A sem ['Moraes', 'Toffoli'] PS 0.556 p 0.336 pares 54
+B sem ['Moraes'] PS 0.678 p 0.039 pares 87
+B sem ['Toffoli'] PS 0.675 p 0.052 pares 80
+B sem ['Moraes', 'Toffoli'] PS 0.556 p 0.336 pares 54

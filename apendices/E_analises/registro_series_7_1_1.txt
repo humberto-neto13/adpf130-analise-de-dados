@@ -1,0 +1,8 @@
+Original: 94 observações (38 / 56); PS 0.61; p unilateral 0.032
+Regra principal: 89 observações (37 / 52); PS 0.60; p unilateral 0.049
+   série de 2: Rcl 16329, 37554 (primeiro julgamento 12/03/2020)
+   série de 2: Rcl 35039, 39670 (primeiro julgamento 20/11/2020)
+   série de 4: Rcl 40700, 44244, 44402, 44616 (primeiro julgamento 19/06/2020)
+Regra estrita: 93 observações (38 / 55); PS 0.61; p unilateral 0.038
+   série de 2: Rcl 18776, 21311 (primeiro julgamento 19/10/2020)
+2020 pela regra principal: 16 observações, 4 com 13-A (25%)

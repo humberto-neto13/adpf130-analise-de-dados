@@ -1,0 +1,22 @@
+[10:46:52] Consultando lote msgbatch_018LQwqReRi25VWJpwMnKeDz
+
+Status atual: ended
+Requisições em processamento: 0
+Requisições bem-sucedidas:    1
+Requisições com erro:         0
+
+Lote concluído! Baixando resultados...
+  ✓ 45682.1.txt
+
+CSV salvo em: piloto_fase2.csv
+JSONL completo (com justificativas) salvo em: piloto_fase2_completo.jsonl
+
+=== Estatísticas ===
+Codificações bem-sucedidas: 1
+Codificações com erro:      0
+
+Tokens input:              86,302
+Tokens output:             14,700
+Tokens cache_read:         0
+Tokens cache_creation:     30,249
+Custo estimado (Sonnet 5 Batch): USD 0.2964

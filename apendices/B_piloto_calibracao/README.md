@@ -2,39 +2,79 @@
 
 Corresponde à nota 42 da monografia (subseção 4.4.1). Reúne o procedimento do piloto (20 reclamações, 23 acórdãos, Claude Sonnet 5), o material de submissão, os padrões de discordância e o manual de codificação.
 
-> **Origem do material.** Os scripts, prompts, manual e quadros desta pasta foram recuperados do PDF do esboço dos apêndices (`docs/esboco_apendices_A_B_C.pdf`) e validados por análise sintática e por contagem de linhas. Linhas de código que o PDF quebrou foram reunidas. Os arquivos originais, que estão na máquina do autor, devem substituir as reconstruções antes do depósito definitivo. As remissões internas do texto (antes `seção 8.x`) foram atualizadas para a numeração atual da monografia (4.x).
+> **Origem do material.** São originais do autor, idênticos byte a byte: `scripts/submeter_batch_fase2.py`, `scripts/processar_batch_fase2.py`, `manual/manual_codificacao_v1.txt` (o manual lido pelo script, com a marca de ordem de bytes que entrou no prompt) e `manual/manual_codificacao_v3.md`, além de tudo em `execucoes/` (requisições, identificadores de lote, saídas e logs das cinco tentativas). Os arquivos em `prompts/` foram extraídos das constantes do script original. `scripts/submeter_batch_fase2_corrigido.py` foi reconstruído a partir do original, com as duas alterações descritas no esboço (Variável 2 como lista, e V2 na regra de codificação múltipla), e coincide com o texto do PDF, salvo as quebras de linha. Os quadros B.1 e B.2 e `manual/registro_alteracoes.md` vêm do PDF do esboço, e o Quadro B.1 foi **corrigido** com os dados de `execucoes/` (ver abaixo).
 
 ## Conteúdo
 
 | Arquivo | O que é | Seção do esboço |
 |---|---|---|
-| `scripts/submeter_batch_fase2_v1.py` | Script de submissão do piloto (manual v1) | B.2.1 |
+| `scripts/submeter_batch_fase2.py` | Script de submissão do piloto (manual v1) | B.2.1 |
 | `scripts/processar_batch_fase2.py` | Processamento dos resultados do lote | B.2.2 |
-| `scripts/submeter_batch_fase2_corrigido.py` | Script corrigido, destinado à codificação integral | B.5.1 |
+| `scripts/submeter_batch_fase2_corrigido.py` | Script corrigido, destinado à codificação integral (reconstruído, ver nota acima) | B.5.1 |
 | `prompts/instrucoes_gerais.txt` | `INSTRUCOES_GERAIS` (idêntica nas duas versões do script) | B.2.1, B.5.1 |
 | `prompts/formato_saida_v1.txt`, `prompts/formato_saida_corrigido.txt` | `FORMATO_SAIDA` antes e depois do ajuste da Variável 2 (classe única → lista) | B.2.1, B.5.1 |
+| `manual/manual_codificacao_v1.txt` | Manual de codificação, versão 1 (lido por `submeter_batch_fase2.py`), com Partes 1 a 3 | B.2 |
 | `manual/manual_codificacao_v3.md` | Manual de codificação, versão 3, íntegra | B.6 |
 | `manual/registro_alteracoes.md` | Registro de alterações V1 → V2 e V2 → V3 | B.6 |
-| `dados/quadro_B1_escalonamento_max_tokens.csv` | Escalonamento de `max_tokens` (8.000 → 32.000) | B.3 |
+| `execucoes/tentativa_1/` a `tentativa_5/` | Registro das cinco submissões à Batch API: `requisicoes_*.jsonl` (o que foi enviado), `batch_id_*.txt`, `piloto_fase2_*.csv`, `piloto_fase2_completo_*.jsonl` (com justificativas), `log_*.txt` e, na 4ª, `piloto_fase2_respostas_com_erro(4).txt` | B.3 |
+| `dados/quadro_B1_escalonamento_max_tokens.csv` | Escalonamento de `max_tokens` (8.000, 8.000, 16.000, 16.000, 32.000), refeito a partir de `execucoes/` | B.3 |
 | `dados/quadro_B2_diagnostico_discordancias.csv` | Discordâncias por variável (23 acórdãos) | B.4 |
 | `NOTAS.md` | Texto explicativo do esboço | B.1 a B.5, B.7 |
 
 O `prompt de sistema` do piloto é montado em tempo de execução por `INSTRUCOES_GERAIS` + texto do manual + `FORMATO_SAIDA`. O manual reproduzido em `manual/manual_codificacao_v3.md` corresponde à versão 3. O registro das alterações entre versões está em `manual/registro_alteracoes.md`.
 
+## Execuções do piloto
+
+As cinco tentativas usaram o mesmo prompt de sistema (75.711 caracteres, mesma soma de verificação nos cinco arquivos de requisição): `INSTRUCOES_GERAIS` + `manual_codificacao_v1.txt` + `FORMATO_SAIDA`, com o Sonnet 5 via Batch API. Só o `max_tokens` mudou. O `submeter_batch_fase2.py` depositado traz o valor da última tentativa (32.000). Nas anteriores, o valor foi editado no script entre uma submissão e outra, e consta nos arquivos de requisição.
+
+| Tentativa | max_tokens | Submetidos | Sucesso | Erros |
+|---|---|---|---|---|
+| 1ª | 8.000 | 23 | 15 | 8 (6 sem bloco de texto, 2 JSON inválido) |
+| 2ª | 8.000 | 13 | 4 | 9 |
+| 3ª | 16.000 | 13 | 12 | 1 (Rcl 45682.1) |
+| 4ª | 16.000 | 1 | 0 | 1 (saída de 16.000 tokens, igual ao teto) |
+| 5ª | 32.000 | 1 | 1 | 0 |
+
+A 4ª tentativa sustenta o diagnóstico de B.3: a resposta consumiu exatamente o teto de saída (16.000 tokens) e não chegou a produzir o texto final. A 5ª, com 32.000, usou 14.700 tokens de saída.
+
+## Divergências entre o esboço (B.3 e Quadro B.1) e os arquivos de `execucoes/`
+
+- A 3ª tentativa usou `max_tokens` = 16.000. O esboço indica 8.000.
+- A 1ª tentativa teve 6 erros "sem bloco de texto" e 2 "JSON inválido". O esboço indica 5 e 3.
+- A 2ª tentativa submeteu 13 acórdãos, não 8, e o arquivo de requisição foi preservado. Cinco deles (Rcl 23899.1, 70430, 45682.2, 9977.2 e 91263) já tinham sido codificados com sucesso na 1ª. A 9977.2, que tinha dado certo na 1ª, falhou na 2ª, e depois deu certo na 3ª. Segundo o autor, a 2ª tentativa foi a simples resubmissão do mesmo prompt, e os cinco acórdãos já codificados foram junto porque estavam no mesmo documento de entrada que os pendentes.
+- Os acórdãos 23899.1, 91263, 45682.2 e 70430 foram codificados com sucesso nas três primeiras tentativas, e o 9977.2 em duas. Os arquivos preservam essas repetições. Falta registrar qual resultado entrou na comparação com a verificação humana.
+- O esboço descreve a 5ª tentativa como a que "encerra a rodada com os 23 acórdãos codificados". Isso procede apenas somando os êxitos das cinco tentativas, que cobrem os 23.
+- `execucoes/tentativa_4/piloto_fase2_completo(4).jsonl` tem 0 bytes, porque a tentativa não produziu codificação válida.
+
+## Cotejo item a item (piloto × verificação humana)
+
+`dados/cotejo/piloto_fase2_cotejo.xlsx` (original do autor). Aba `piloto_fase2`: codificação do modelo para os 23 acórdãos, já normalizada. Aba `Verificação Humana`: valores do verificador. Uma aba por variável (V1 a V16) com as duas respostas lado a lado e, em V1, V2, V3, V7, V8 e V9, observações do autor sobre o que a discordância revela no manual (fusão das classes b e c da V1, classe penal, proibição de republicação como controle prévio, desempate entre mérito e conhecimento na V7, data do Extrato de Ata na V9).
+
+Conferência feita neste repositório:
+- **Proveniência da codificação do cotejo.** Comparando a aba `piloto_fase2` com os CSV de `execucoes/`, a codificação de cada acórdão provém de uma ou mais tentativas: da 1ª tentativa, 12 acórdãos; da 3ª, 7; da última, a Rcl 45.682.1; três acórdãos têm saída idêntica em mais de uma tentativa (ver `dados/cotejo_origem_codificacao_derivado.csv`). Para os dois acórdãos codificados mais de uma vez com resultados distintos (23899.1 e 9977.2), a planilha usa a saída da 1ª tentativa. Isso confirma o critério declarado pelo autor: havendo repetição, prevaleceu a primeira codificação obtida.
+- **Contagem de discordâncias.** Recontadas, coincidem com o Quadro B.2 as variáveis V3 (8), V4 (6), V7 (7), V8 (2), V9 (8), V12 (1), V13 (1), V14 (2), V15 (3), V2 (14, descontando a anotação textual da classe h) e V6, V10 e V11 (0). Divergem por pouco V1 (13 pelo cotejo, 12 no quadro) e V5 (7 contra 5). As diferenças desaparecem se, na V1 da Rcl 91263 (modelo g, humano n/a) e na V5 das duas partes da Rcl 9.977 (modelo ND, humano n/a), os pares forem tratados como equivalentes. O autor confirmou que esse foi o critério adotado (ND ou g, no modelo, contra n/a, no humano, contam como concordância); convém dizê-lo no quadro B.2.
+- A V16 não pode ser comparada por contagem simples: o modelo registra a razão de distinção em texto livre e o verificador registra outro texto. O quadro B.2 informa só um caso de aplicabilidade.
+
+Alterações feitas neste repositório na planilha (23/11/2026, a pedido do autor). A cópia original foi sobrescrita, e o que mudou é só o seguinte:
+- Em `piloto_fase2` e em cada aba de variável (V1 a V16), o Excel havia convertido os números `9977.1` e `9977.2` em datas (9977-01-01 e 9977-02-01). As 34 células (duas em cada uma das 17 abas) foram trocadas pelo texto `9977.1` e `9977.2`, em formato de texto. A aba `Verificação Humana` já trazia `9977.1.txt` e `9977.2.txt`.
+- Em `piloto_fase2`, a coluna `erro` marcava a Rcl 28262 com "sem bloco de texto", embora a codificação dela venha da 3ª tentativa, que deu certo. A marca era resíduo da tentativa anterior, e a célula foi esvaziada.
+Nenhum valor de codificação ou de verificação foi alterado (35 células no total).
+
 ## Pendências de conteúdo
 
-- Depositar os manuais **v1** e **v2**. O piloto rodou com a v1, e só a v3 está reproduzida.
-- Depositar a lista das 20 reclamações da amostra e o procedimento do sorteio. Os scripts leem a pasta `./textos`, preenchida "externamente".
-- Depositar as saídas brutas do piloto (`piloto_fase2_*.csv`, `requisicoes_batch_fase2*.jsonl`) e a planilha de confronto item a item com a verificação humana. Hoje existe só o quadro agregado.
-- Acrescentar a fundamentação de cada alteração V2 → V3, que a nota 42 promete e o registro cobre só em parte.
-- O script efetivamente usado na codificação integral (a monografia o descreve em 4.4.1) deve constar do Apêndice D. O de B.5.1 é descrito como "destinado" a ela.
+- ~~Reenvio de 5 acórdãos na 2ª tentativa e critério da codificação que prevaleceu~~ respondido pelo autor (ver acima): resubmissão do mesmo prompt, com os acórdãos já codificados no mesmo documento, e prevaleceu a primeira codificação obtida. O texto de B.5 pode incorporar isso.
+- **Manual v2 não existe mais.** Segundo o autor, o texto revisado depois do piloto (a "versão 2" do esboço) serviu de base para a redação da v3 e se perdeu. O registro de alterações (`manual/registro_alteracoes.md`) é o único documento remanescente das alterações V1 → V2. O texto de B.6 e o da monografia devem dizer isso expressamente, em vez de apresentar a v2 como reproduzida.
+- **Sorteio da amostra: procedimento a registrar como declaração do autor.** Segundo o autor, a população sorteada foi a dos 137 acórdãos, dispostos em ordem crescente de número, e o gerador de números aleatórios do random.org recebeu vários pedidos de números entre 1 e 137, até se completarem 20 reclamações (23 acórdãos). Não há registro da geração. Ordenados os 137 arquivos de `../D_codificacao/dados/entrada/textos/` por número da reclamação (o `.1` antes do `.2`), as posições da amostra são: 3 (9977.1); 4 (9977.2); 6 (15243); 10 (16329); 21 (21504); 27 (23899.1); 28 (23899.2); 31 (28262); 43 (35549); 54 (41768); 62 (44616); 64 (45682.1); 65 (45682.2); 76 (51153); 88 (61746); 91 (62174); 95 (65002); 97 (65925); 106 (70430); 109 (71028); 116 (79022); 119 (79907); 132 (91263). Os três pares (9977, 23899 e 45682) ocupam posições consecutivas. Quando o número sorteado correspondia a um acórdão de reclamação com dois acórdãos, ambos entraram na amostra (confirmado pelo autor), o que explica 23 acórdãos para 20 reclamações. O sorteio foi feito em 25/08/2026 (data informada pelo autor). Observe-se que, nesse desenho, a probabilidade de seleção de uma reclamação com dois acórdãos é um pouco maior que a das demais.
+- ~~Planilha de confronto item a item~~ depositada (ver acima).
+- **Motivação das versões (declaração do autor).** As mudanças V1 → V2 e V2 → V3 fizeram parte de um fluxo de trabalho praticamente único. Tiveram como motivação corrigir os pontos mais fracos revelados pelo piloto de codificação. Concluída a v2, o autor constatou que o manual não era suficientemente autoexplicativo para que um leitor leigo pudesse lê-lo e codificar. Dessa constatação, incorporou as alterações da v2 e elaborou a v3 (reescrita integral, não uma revisão pontual). A fundamentação individual de cada alteração não pode ser reconstruída, segundo o autor, porque as duas revisões foram feitas num mesmo fluxo e a v2 se perdeu. **Pendência de texto:** a nota 42 (e o B.4 e o B.6) não deve prometer essa fundamentação. Deve dizer apenas que as alterações visaram os pontos mais fracos do piloto e que a v3 resultou da constatação de que a v2 não era autoexplicativa. As observações do autor nas abas V1, V2, V3, V7, V8 e V9 do cotejo documentam parte dos pontos fracos e podem ser citadas como exemplos.
+- O original de `submeter_batch_fase2_corrigido.py` não existe mais, segundo o autor. O arquivo depositado é uma reconstrução e assim permanece. O script efetivamente usado na codificação integral está no Apêndice D (`submeter_batch_v3.py`), e o texto de B.5.1, que o descreve como "destinado" a ela, pode remeter a esse.
 
 ## Inconsistências a resolver
 
 - B.1 diz que B.6 reproduz a "versão 2". B.6 reproduz a versão 3.
-- B.6 justifica a v3 por uma "medição de confiabilidade" com codificador sem formação jurídica (subseção 4.4.2). A monografia não a descreve, e o capítulo 7 afirma que não houve confiabilidade entre codificadores independentes.
+- B.6 justifica a v3 por uma "medição de confiabilidade" com codificador sem formação jurídica (subseção 4.4.2). A monografia não a descreve, e o capítulo 7 afirma que não houve confiabilidade entre codificadores independentes. Pela declaração do autor, a v3 teve outra origem: a constatação, após a v2, de que o manual não era autoexplicativo para um leigo, e não uma medição. O texto de B.6 deve ser reescrito nesse sentido.
 - A nota 42 fala em "sete variáveis" revisadas. B.4 lista seis variáveis (V1, V2, V3, V4, V7, V9) e uma regra geral de leitura de citação aninhada.
-- A subseção 4.4.1 diz que o manual traz as regras de agregação. A v3 as suprimiu (Parte 3 passou ao capítulo metodológico).
+- A subseção 4.4.1 diz que o manual traz as regras de agregação. A v1 as traz (Parte 3), mas a v3 não tem essa parte.
 - A subseção 4.4.1 diz que o pesquisador codificou a amostra em paralelo. B descreve a verificação da saída do modelo.
 - B.5.1 declara que não se fez nova rodada do piloto após os ajustes da v2. O esboço não informa se a v3, reescrita integralmente depois, foi testada antes da codificação integral.
 - B.7 está no futuro ("será submetida").

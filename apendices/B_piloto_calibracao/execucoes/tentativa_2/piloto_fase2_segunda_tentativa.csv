@@ -1,0 +1,14 @@
+arquivo,V1_FUND,V2_MOD_REST,V3_MOM_REST,V4_SUJ_COM,V5_MEIO,V6_TRANSC,V7_DIVERG,V8_ORG,V9_DATA,V10_REL,V11_RED,V12_VENCIDOS,V13_ADER,V14_CONHEC,V15_MERITO,V16_DIST,erro
+23899.1.txt,c,f,b,a,"a,c",b,d,a,29/09/2023,Rosa Weber,coincide,Alexandre de Moraes; Nunes Marques,a,a,a,não aplicável,
+28262.txt,,,,,,,,,,,,,,,,,"JSON inválido: Expecting ',' delimiter: line 53 column 76 (char 3652)"
+35549.txt,,,,,,,,,,,,,,,,,JSON inválido: Unterminated string starting at: line 12 column 22 (char 659)
+45682.1.txt,,,,,,,,,,,,,,,,,sem bloco de texto
+9977.1.txt,,,,,,,,,,,,,,,,,sem bloco de texto
+70430.txt,c,f,b,a,"b,c",e,a,c,21/02/2025,Edson Fachin,coincide,unânime,a,a,a,não aplicável,
+41768.txt,,,,,,,,,,,,,,,,,JSON inválido: Unterminated string starting at: line 56 column 22 (char 3647)
+9977.2.txt,,,,,,,,,,,,,,,,,sem bloco de texto
+45682.2.txt,b,c,b,a,c,e,a,b,14/03/2022,Alexandre de Moraes,coincide,unânime,a,a,a,não aplicável,
+23899.2.txt,,,,,,,,,,,,,,,,,sem bloco de texto
+79022.txt,,,,,,,,,,,,,,,,,sem bloco de texto
+91263.txt,g,f,b,a,c,e,a,c,19/06/2026,Dias Toffoli,coincide,unânime,a,a,a,não aplicável,
+79907.txt,,,,,,,,,,,,,,,,,sem bloco de texto

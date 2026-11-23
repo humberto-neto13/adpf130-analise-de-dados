@@ -1,0 +1,15 @@
+Citações internas: 198
+v13_citado       não reconhecida  reconhecida  All
+v13_citante                                       
+ND                             1            0    1
+não reconhecida               85           10   95
+reconhecida                    7           95  102
+All                           93          105  198
+
+Acórdãos de reconhecimento que citam a Rcl 22.328, por período:
+                sum  size
+periodo                  
+até 2019          1     6
+2020-2021         2    13
+2022-2023         5     9
+2024 em diante    7    27

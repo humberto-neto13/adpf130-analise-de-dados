@@ -1,0 +1,13 @@
+C.4: 36 combinações com razão de duração < 2,0 (de 48)
+per              I  II  III  Total
+grupo (recalc)                    
+G1               1   2    3      6
+G2               3   7    7     17
+G3               0   3    4      7
+G4               0   1    0      1
+G5               1  16   20     37
+G6               0   1    0      1
+G7               2   2    7     11
+G8               1  15   16     32
+NC               4   9   12     25
+Total           12  56   69    137

@@ -1,16 +1,63 @@
 # Apêndice E. Análises
 
-Corresponde à nota 49 da monografia (subseção 6.1.2.1). **Ainda vazio nesta pasta.** O código da etapa confirmatória (`testes.py`) já está na raiz do repositório e deve ser movido para cá.
+Corresponde à nota 49 da monografia (subseção 6.1.2.1). Contém os scripts e a matriz da etapa confirmatória (seção 6.1). O resto das análises ainda não foi depositado.
 
-## A depositar
+## Conteúdo
 
-- [ ] `matriz_consolidada_v3.xlsx` (aba `Unidades`), da qual `testes.py` depende.
-- [ ] Código das tabelas e figuras do capítulo 5 e do capítulo 6 (Figuras 3 a 10, Tabelas 1 a 24).
-- [ ] Código da etapa exploratória: Mann-Whitney estratificado (van Elteren adaptado, nota 59), permutações, sensibilidade à exclusão de 2020 e 2021, estratificação por relator e por órgão.
-- [ ] Dados das figuras e tabelas intermediárias.
-- [ ] Dados externos da etapa exploratória, com fonte, critério de coleta e período (subseção 4.5.2). Inclui o CSV do painel Corte Aberta (Tabela 15 e Figura 7, nota 56, consulta em 27/10/2026) e as datas de autuação usadas na Tabela 21.
+| Arquivo | O que faz | Onde aparece na monografia |
+|---|---|---|
+| `matriz_consolidada_v3.xlsx` | Matriz consolidada. Aba `Matriz`: 137 acórdãos. Aba `Unidades`: 133 reclamações agregadas, com estrato. Abas `Registro de alterações` (75 normalizações de forma em relação à planilha de verificação) e `Notas` (origem, regras de agregação, regra de estrato) | Base de todas as análises |
+| `testes.py` | Mann-Whitney exato (unilateral e bilateral), probabilidade de superioridade, Pettitt com p-valor por 10.000 permutações (semente 20261012), tabela anual com intervalos de Wilson | Subseções 6.1.1, 6.1.2.1, 6.1.2.2 e 6.1.2.3; Tabelas 10 e 12; notas 49, 50 e 52 |
+| `figuras.py` | Gera as figuras a partir de `testes.py` | Figura 4 (`figura_controle_posterior.png`) e Figura 6 (`figura_controle_previo.png`) |
+| `scripts_cap5_6/` | **Originais do autor** (`LEIAME.txt`, `comum.py`, `01_tabelas_descritivas.py`, `02_analise_confirmatoria.py`, `03_figuras.py`). Leem a aba `Modelo` de `modelo_de_dados.xlsx` (cópia em `../D_codificacao/dados/matriz/`), agregam as 137 linhas em 133 reclamações e aplicam os estratos pela V3. Saídas da reexecução em `scripts_cap5_6/saidas/` | Capítulo 5 (Tabelas 1, 3, 4, 5), Tabela 6, Tabela 7, seções 6.3 a 6.5, notas 51 e de sensibilidade, Figuras 3 e 4 |
+| `mapa_remissivo_V16.py` | Mapa remissivo das menções a reclamações na V16, a partir da matriz. **Reconstrução** escrita neste repositório (o script original não foi conservado). Reproduz os totais da conversa original: 558 menções, 198 a unidades da população, 61 das 133 unidades citadas, e as mais citadas (Rcl 22.328 com 15 citações; 21.504 e 28.747 com 10; 16.074 e 23.731 com 9) | Seção 7.4 (V16) |
+| `mapa_remissivo_V16_reconstruido.xlsx`, `registro_mapa_remissivo_V16.txt` | Saída do script (abas Remissivo, Citações e Rcl externas) e seu registro | Seção 7.4 |
+| `autuacao_133.csv`, `autuacao_7_1_2.py`, `registro_autuacao_7_1_2.txt` | **Reconstrução.** Datas de autuação das 133 reclamações, extraídas em 23/11/2026 da base de processos da classe Rcl do Corte Aberta (101.371 reclamações; a base integral não foi depositada), e a análise da seção 7.1.2. Reproduz o texto: 6 de 21 unidades de 2020 com mais de três anos de tramitação contra 7 de 73 nos demais anos (Fisher unilateral p = 0,037); medianas de tramitação de 2020 em 0,82 ano; Mann-Whitney unilateral p = 0,23 entre as distribuições de tramitação; medianas de 1,51 e 0,59 ano (reconhecimentos e negativas em 2020), 1,49 e 0,78 (até 2019), 0,82 e 0,56 (2022 em diante); 8 de 16 negativas de 2020 julgadas em até seis meses (11 de 25 em 2022 em diante); teste principal datado pela autuação com PS 0,575 e p 0,111; as seis Rcl longas de 2020 (15.681, 16.329, 18.776, 19.464, 21.311 e 23.793). O controle negativo datado pela autuação dá PS 0,861 e p 0,0037 | Seção 7.1.2, 7.4.1 |
+| `figura7_colegiadas_provimento.py`, `registro_figura7.txt`, `saidas/figura7/` | **Reconstrução conferida.** Decisões colegiadas por ano e taxa de provimento dos agravos em reclamações, a partir da exportação das decisões da classe Rcl do Corte Aberta (baixada em 23/11/2026; 158.688 linhas, 101.371 reclamações; não depositada). Reproduz exatamente a tabela da seção 7.1.2 (2018 a 2023): 635, 1.062, 1.647, 1.707, 1.363 e 1.727 agravos (providos, providos em parte, não providos e não conhecidos) e taxas de provimento de 13,8%, 4,8%, 9,0%, 13,4%, 8,2% e 6,0% (sem os não conhecidos). Mostra também 2009 a 2026; o ponto de 2010 (36%) decorre do pequeno número de agravos | Seção 7.1.2, Figura 7 (provisória) |
+| `sensibilidade_e_ligacao_cap7.py`, `registro_sensibilidade_e_ligacao_cap7.txt` | **Reconstrução.** (1) Mann-Whitney exato sem 2020 e sem 2020–2021 (tabela de sensibilidade da seção 7.1): 94 (38/56), U 1.304,5, p 0,032, PS 0,61; 73 (33/40), U 735,0, p 0,205, PS 0,56; 66 (31/35), U 579,5, p 0,319 (o texto traz 0,320), PS 0,53; medianas das datas idênticas às do texto. (2) Ligação dos 28 reconhecimentos posteriores a 29/09/2023 com os cinco julgados de adesão (Rcl 22.328, 23.899, 40.565, 42.273 e 59.482): 9 diretas, 7 por julgado intermediário, 11 sem citação à população e 1 só por caminho espúrio (Rcl 91.198), com as mesmas Rcl das notas de rodapé do texto. A lista dos cinco julgados vem de um script da conversa (`roots.py`) | Seção 7.1 (Tabela de sensibilidade); seção 7.4.3 (Tabela de ligação) |
+| `figuras_V16_8_10.py`, `registro_figuras_V16_8_10.txt`, `saidas/figuras_V16/` | **Reconstrução.** Diagrama de arcos das citações internas, citações por ano dos 15 julgados citados ao menos cinco vezes e citações acumuladas, com a data candidata de Pettitt (26/11/2021). Reproduz as 198 citações e as contagens de citações recebidas (22.328 com 15; 21.504 e 28.747 com 10). O aspecto gráfico segue as convenções descritas na conversa e pode diferir das figuras do texto. Mapeamento do órgão: V8 a, Plenário; b, Primeira Turma; c, Segunda Turma | Seção 7.4.3, Figuras 8 a 10 (numeração provisória) |
+| `series_7_1_1.py`, `registro_series_7_1_1.txt` | **Reconstrução** escrita neste repositório. Fundamentação em série (seção 7.1.1): agrupa as unidades em séries (mesmo relator, mesmo desfecho, até 180 dias e sobreposição >= 0,5 dos julgados da V16, por encadeamento) e refaz o Mann-Whitney exato. Reproduz o texto: regra principal com 89 observações (37 / 52), PS 0,60 e p 0,049; regra estrita com 93 (38 / 55), PS 0,61 e p 0,038; as mesmas séries (Rcl 40.700, 44.244, 44.402 e 44.616; 37.554 e 16.329; 39.670 e 35.039; e, na regra estrita, 18.776 e 21.311); 2020 passa de 21 para 16 observações, 4 com 13-A (25%) | Seção 7.1.1, Tabela 9 (provisória) |
+| `citacoes_V16_contagens.py`, `registro_citacoes_V16_contagens.txt` | **Reconstrução.** Citações internas da V16 por desfecho do citante e do citado e parcela de reconhecimentos que citam a Rcl 22.328 por período. Reproduz o texto: 95 de reconhecimentos a reconhecimentos, 7 a negativas, 85 de negativas a negativas, 10 a reconhecimentos (mais uma citação de acórdão com V13 ND); Rcl 22.328 citada por 1 de 6 reconhecimentos até 2019, 2 de 13 em 2020 e 2021, 5 de 9 em 2022 e 2023 e 7 de 27 de 2024 em diante | Seção 7.4 (V16), Figuras 8 a 10 |
+| `scripts_cap7_recuperados/` | **Originais do autor**, recuperados de conversas anteriores: testes da etapa exploratória por órgão, relator (com o voto do relator), cadeira, reclamante e meio, e sensibilidade sem 2020. Dados de entrada, saídas e README próprio | Capítulo 7 (seções 7.1 a 7.3) |
+| `registro_testes.txt` | Saída de `testes.py` na reexecução de 23/11/2026 | Confere com os valores reportados |
+| `dados_externos/corte_aberta/dados_publicos_rcl_corte_aberta.xlsx` | Exportação do painel Corte Aberta (transparencia.stf.jus.br), consulta de 27/10/2026. Aba 1: 157.276 decisões em reclamações (colunas Processo, Número Único, Descrição, Data, Origem, Observação, Subgrupo, Tipo Decisão). As demais abas são resumos com fórmulas feitos a partir dela | Tabela 15, Figura 7, nota 56 |
+| `tabela15_corte_aberta.py` | Reproduz a Tabela 15 e a série anual da Figura 7 a partir do arquivo acima. **Escrito neste repositório**, não é o código original do autor | Tabela 15, Figura 7 |
+| `registro_tabela15.txt` | Saída de `tabela15_corte_aberta.py` (2009 a 2026) | Confere com a Tabela 15 |
+| `requirements.txt` | Versões das bibliotecas da reexecução (Python 3.13) | Nota 49 |
+
+`figuras.py` também grava cinco figuras que não entraram no texto (degrau, logística, bienais e censo geral). A curva logística exige `statsmodels`.
+
+## Como executar
+
+Com os arquivos na mesma pasta: `py -m pip install -r requirements.txt`, `py testes.py` e `py figuras.py`.
+
+## Conferência feita neste repositório
+
+- `testes.py` foi reexecutado com `matriz_consolidada_v3.xlsx` e as versões de `requirements.txt` (numpy 2.5.3, pandas 3.0.5, openpyxl 3.1.5). A saída coincide linha a linha com `registro_testes.txt`.
+- Os valores do estrato de controle posterior conferem com a Tabela 7 do capítulo 6: 94 unidades (38 / 56), U = 1.304,5, p unilateral 0,032, p bilateral 0,064, probabilidade de superioridade 0,61, Pettitt K = 562 com p = 0,068, ponto candidato entre 26/11/2021 e 18/02/2022, proporções de 11/42 antes e 27/52 depois.
+- A aba `Matriz` é idêntica a `../D_codificacao/dados/matriz/modelo_de_dados.xlsx`, e o estrato resulta em 96 unidades de controle posterior, 20 de controle prévio e 17 fora do teste.
+- A Tabela 15 foi reproduzida a partir do arquivo do Corte Aberta: agravos julgados (635, 1.062, 1.647, 1.707, 1.363 e 1.727 em 2018 a 2023), parcela de julgamentos virtuais (0,5%, 55,5%, 93,3%, 94,8%, 98,3% e 99,6%) e taxa de provimento (13,8%, 4,8%, 9,0%, 13,4%, 8,2% e 6,0%). Os critérios de contagem estão no cabeçalho do script. O texto de 6.2.1.1 também confere: crescimento de 55% em 2020 sobre 2019 e patamar superado a partir de 2024 (3.018 agravos).
+- `figuras.py` gerou a Figura 4 e a versão com degrau; a versão logística não rodou aqui por falta de `statsmodels`.
+
+- `01_tabelas_descritivas.py` reproduz a Tabela 1 (133 unidades: 20 de controle prévio, 96 de controle posterior, 17 ND), a Tabela 4 (V13 × V14), a Tabela 5 (13-A em 55,0% do controle prévio, 11/20, e 40,4% do posterior, 38/94) e a Tabela 6 (proporções anuais com Wilson, de 2014 a 2026). Os números conferem com os de `testes.py` e `matriz_consolidada_v3.xlsx`. A Tabela 3 e as contagens univariadas saem na planilha `tabelas_capitulos_5_6.xlsx`, e devem ser conferidas com o texto das seções 5.1, 5.3 e 5.4.
+- A numeração das figuras difere entre os dois conjuntos de scripts: `03_figuras.py` rotula o controle posterior como Figura 3 e o prévio como Figura 4, enquanto `figuras.py` os grava como Figuras 4 e 6. O docstring de `03_figuras.py` o chama de `figuras_modelo.py`. Convém confirmar a numeração final na monografia.
+- Os três scripts de `scripts_cap5_6/` foram executados com `modelo_de_dados.xlsx` (Python 3.13). `02_analise_confirmatoria.py` coincide com `testes.py` no controle posterior (U = 1.304,5; p unilateral 0,0320; p bilateral 0,0640; K = 562, p = 0,0680; 11/42 antes e 27/52 depois). As 300 ordenações dos empates (24 unidades com data repetida) produziram sempre K = 562 e o mesmo ponto de mudança (26/11/2021), o que sustenta a nota 51. Sensibilidade do p unilateral do Mann-Whitney: 0,0268 (Rcl 23.899 com a data do 2º acórdão), 0,0323 (excluída), 0,0331 (recodificada como 13-B) e 0,0243 (Rcl 9.068 incluída como posterior). Confira esses valores com as notas de rodapé do capítulo 6. O controle prévio lista 20 unidades (11 com adesão reconhecida, 10 delas a partir de 2020).
+
+## O que não está nesta pasta
+
+Segundo o autor, os scripts abaixo foram executados em outras sessões e precisam ser recuperados ou reconstruídos:
+
+- [ ] Figura 5 (proporção anual em barras).
+- [ ] Capítulo 5: Tabela 2 (verificação humana, que sai da planilha de verificação), Tabelas 7 e 8 (conferir se a 7 sai de `02_analise_confirmatoria.py`; a 8 não foi localizada). As Tabelas 1, 3, 4, 5 e 6 e as Figuras 3 e 4 saem dos scripts originais depositados.
+- [ ] Capítulo 7 (etapa exploratória; as tabelas e figuras eram listadas aqui como das "seções 6.2 e 6.3", o que estava errado). Depositados: testes por órgão, relator, cadeira, reclamante e meio, `strat.py` (Mann-Whitney estratificado, pela data do acórdão e pela data de autuação), o controle negativo da seção 7.4.1, as séries da seção 7.1.1, o mapa remissivo e as contagens de citações da V16. As datas de autuação foram obtidas e reproduzem os valores do texto (7.1.2 e 7.4.1). Nada resta pendente quanto aos scripts do capítulo 7. Todos são reconstruções, conferidas contra os números do texto (o original não foi conservado).
+- [ ] Datas de autuação das reclamações (Tabela 21 e datação por autuação). O arquivo do Corte Aberta depositado traz só a data das decisões, não a de autuação; indicar a fonte das datas de autuação.
 - [ ] Classe processual de cada acórdão, extraída da planilha do filtro (A).
 - [ ] Matriz de citações (Variável 16 invertida, subseção 6.3, nota 70), com a conferência do pesquisador.
 - [ ] Registro da leitura dirigida dos acórdãos com menção à transcendência em votos distintos do condutor (subseção 4.5.2).
-- [ ] Programa da etapa exploratória com os critérios de veredito, versionado com data anterior aos cálculos.
-- [ ] Registros de execução e versões das bibliotecas (`requirements.txt`).
+- [ ] Programa da etapa exploratória, com os critérios de veredito e data anterior aos cálculos.
+
+## Observações sobre o arquivo do Corte Aberta
+
+- A nota 56 e a referência bibliográfica falam em arquivo `.csv`, o gerado pelo painel. O arquivo depositado é uma conversão desse CSV para `.xlsx` feita pelo autor, com abas de resumo acrescentadas. O CSV original não foi localizado nesta pasta.
+- Na aba de dados, a coluna `Número Único` está como número de ponto flutuante (por exemplo `1.89e+18`), com perda de precisão, provavelmente efeito da conversão. Não é usada na Tabela 15.
+- O arquivo tem 13,8 MB. Se for preciso reduzir o repositório, ele pode ser substituído por um CSV compactado.
