@@ -1,0 +1,8 @@
+# Dependências do repositório.
+# anthropic, pandas e openpyxl: arquivo original do autor (apendices/A_filtro_pertinencia/requirements.txt).
+# pypdf (converter_pdfs.py) e numpy (testes.py): acrescentados a partir dos imports, sem versão fixada.
+anthropic>=0.40.0
+pandas>=2.0.0
+openpyxl>=3.1.0
+pypdf
+numpy

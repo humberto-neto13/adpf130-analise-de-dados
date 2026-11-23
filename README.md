@@ -41,7 +41,7 @@ Cada pasta traz um `README.md` com o conteúdo, as pendências e as inconsistên
 ## Requisitos
 
 - Python 3 (versão a confirmar)
-- Bibliotecas listadas em `requirements.txt` (a criar)
+- Bibliotecas listadas em `requirements.txt` (`anthropic`, `pandas` e `openpyxl` vêm do original do autor; `pypdf` e `numpy` foram acrescentadas a partir dos imports)
 - Chave de API da Anthropic. Se algum passo usou a Voyage AI, indicar a chave exigida e o passo (ver `apendices/D_codificacao/README.md`)
 
 As chaves devem ser definidas como variáveis de ambiente (`ANTHROPIC_API_KEY`) e nunca escritas no código.
