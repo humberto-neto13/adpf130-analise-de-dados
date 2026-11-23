@@ -1,0 +1,11 @@
+Subconjunto imune: 24 unidades, 18 com 13-A, 108 pares, PS 0.833, p unilateral 0.007
+          sum  size
+per                
+2022-26    12    13
+até 2021    6    11
+                      sum  size
+REM         per                
+remoção     2022-26     6     6
+            até 2021    6     6
+sem remoção 2022-26     6     7
+            até 2021    0     5
