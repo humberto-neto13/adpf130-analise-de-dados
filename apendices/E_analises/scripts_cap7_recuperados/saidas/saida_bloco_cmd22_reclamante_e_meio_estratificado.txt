@@ -1,0 +1,12 @@
+
+ rec
+a empresa                           n= 34 13A=22 PS=0.73 p=0.015  ate2021 6/14  2022+ 16/20
+b individual                        n= 30 13A=10 PS=0.62 p=0.141  ate2021 2/12  2022+ 8/18
+c não profissional                  n= 18 13A= 4 PS=0.52 p=0.479  ate2021 2/10  2022+ 2/8
+outros/ND                           n= 12 13A= 2 PS=0.45 p=0.621  ate2021 1/6  2022+ 1/6
+
+ meio
+ND                                  n= 15 13A= 1 PS=0.86 p=0.2  ate2021 0/8  2022+ 1/7
+clássico (a,b,c)                    n= 30 13A=19 PS=0.68 p=0.05  ate2021 6/13  2022+ 13/17
+digital não jornalístico (d,e,f)    n= 45 13A=16 PS=0.61 p=0.111  ate2021 4/20  2022+ 12/25
+outro (g)                           n=  4 13A= 2 PS=0.25 p=0.833  ate2021 1/1  2022+ 1/3
