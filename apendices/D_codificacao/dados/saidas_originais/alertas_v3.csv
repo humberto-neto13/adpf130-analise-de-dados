@@ -1,0 +1,13 @@
+﻿arquivo,variavel,tipo,mensagem
+15243.txt,V3_MOM_REST,consistência,V2 combina (g) com ['e']; conferir V3='posterior' no texto
+15681.txt,V3_MOM_REST,consistência,V2 combina (g) com ['e']; conferir V3='posterior' no texto
+16492.txt,V16_JURIS,formato,citação fora do formato 'classe número': 'AI 2019542-19.2013.8.26.0000'
+16492.txt,V3_MOM_REST,consistência,V2 combina (g) com ['e']; conferir V3='posterior' no texto
+21827.txt,V3_MOM_REST,consistência,V2 combina (g) com ['e']; conferir V3='posterior' no texto
+38782.txt,V3_MOM_REST,consistência,V2 combina (g) com ['b']; conferir V3='posterior' no texto
+43110.txt,V16_JURIS,formato,campo 'citacoes' ausente ou não é lista
+57785.txt,V3_MOM_REST,consistência,"V2 combina (g) com ['b', 'e']; conferir V3='posterior' no texto"
+66246.txt,V3_MOM_REST,consistência,V2 combina (g) com ['b']; conferir V3='posterior' no texto
+74009.txt,V3_MOM_REST,consistência,"V2 combina (g) com ['d', 'e']; conferir V3='posterior' no texto"
+79317.txt,V3_MOM_REST,consistência,V2 combina (g) com ['b']; conferir V3='posterior' no texto
+91198.txt,V13_ADER,consistência,V15 procedente com V13='não reconhecida'
