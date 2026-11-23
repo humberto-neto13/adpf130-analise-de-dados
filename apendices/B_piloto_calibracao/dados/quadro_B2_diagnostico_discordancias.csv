@@ -1,0 +1,16 @@
+variavel,discordancias,taxa,padrao_predominante_observacao
+V2 (MOD_REST),14/23,61%,Sub-registro sistemático de classes secundárias; identificado como incompatibilidade entre o schema de submissão (múltiplo) e a definição operacional então vigente (única) — não erro de leitura do modelo.
+V1 (FUND),12/23,52%,"Confusão sistemática entre as classes (b) e (c), por adição ou substituição, em ambas as direções — indício de lacuna de definição, não de erro do codificador."
+V9 (DATA),8/23,35%,Dois subtipos: seis desvios pequenos (1–7 dias) e dois outliers (34 e 39 dias) — consistente com fonte textual ambígua (cabeçalho vs. Extrato de Ata).
+V3 (MOM_REST),8/23,35%,"Padrão unidirecional: o modelo marca (b) posterior onde o humano marca (c) ambos, por não distinguir proibição de republicação autônoma de proibição meramente acessória."
+V7 (DIVERG),7/23,30%,"Em 5 dos 7 casos, o modelo marca divergência de mérito onde o humano marca divergência quanto à admissibilidade; 2 casos adicionais de aplicabilidade (voto divergente indisponível)."
+V4 (SUJ_COM),6/23,26%,"Divergência bidirecional entre as classes (b) profissional individual e (c) sujeito privado não profissional, nos mesmos três casos — sem direção única."
+V5 (MEIO),5/23,22%,"O modelo registra ""ND"" onde o verificador humano determina classe. Não gerou alteração de manual."
+V15 (MERITO),3/23,13%,"Concentrado no acórdão Rcl 44.616, em efeito cascata com V1, V13 e V14 (ver observação abaixo). Não gerou alteração de manual."
+V8 (ORG),2/23,9%,Confusão Plenário/Turma em 2 casos isolados. Não gerou alteração de manual.
+V14 (CONHEC),2/23,9%,Concentrado no mesmo efeito cascata do acórdão Rcl 44.616. Não gerou alteração de manual.
+V12 (VENCIDOS),1/23,4%,"Caso isolado (Rcl 45682.1): o modelo lista quatro ministros vencidos: onde o verificador humano registra dois. Tratado como caso residual, sem alteração de manual."
+V13 (ADER),1/23,4%,"Caso isolado, parte do mesmo efeito cascata da Rcl 44.616. Não gerou alteração de manual."
+V16 (DIST) — aplicabilidade,1/23,4%,Um caso em que o modelo extrai razão de distinção onde o verificador humano considera a variável inaplicável. Não gerou alteração de manual.
+V6 (TRANSC),0/23,0%,"Nenhuma divergência — variável central para a segunda hipótese da pesquisa, e integralmente estável no piloto."
+V10 (REL) / V11 (RED),0/23,0%,"Nenhuma divergência de conteúdo; variação observada limitada à forma do nome (ex. ""Rosa"" vs. ""Rosa Weber"")."

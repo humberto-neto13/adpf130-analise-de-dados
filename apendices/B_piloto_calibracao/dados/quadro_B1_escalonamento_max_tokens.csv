@@ -1,0 +1,6 @@
+tentativa,max_tokens,resultado,evidencia_documental
+1ª,8.000,"15 de 23 acórdãos codificados com sucesso; 8 erros (5 ""sem bloco de texto"", 3 ""JSON inválido: Unterminated string"")",requisicoes_batch_fase2_primeira_tenta tiva.jsonl
+2ª,8.000,resubmissão parcial dos 8 casos com erro da 1ª tentativa (arquivo de requisição não preservado),—
+3ª,8.000,"12 de 13 acórdãos resubmetidos com sucesso; permanece 1 erro (Rcl 45682.1, ""JSON inválido: Unterminated string"")",piloto_fase2_3.csv
+4ª,16.000,"Rcl 45682.1 resubmetido isoladamente; ainda insuficiente (""sem bloco de texto"")",requisicoes_batch_fase2_4.jsonl; piloto_fase2_4.csv
+5ª,32.000,"Rcl 45682.1 codificado com sucesso, encerrando a rodada com os 23 acórdãos codificados",piloto_fase2_5.csv
