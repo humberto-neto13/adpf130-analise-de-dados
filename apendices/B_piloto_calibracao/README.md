@@ -55,9 +55,10 @@ Conferência feita neste repositório:
 - **Contagem de discordâncias.** Recontadas, coincidem com o Quadro B.2 as variáveis V3 (8), V4 (6), V7 (7), V8 (2), V9 (8), V12 (1), V13 (1), V14 (2), V15 (3), V2 (14, descontando a anotação textual da classe h) e V6, V10 e V11 (0). Divergem por pouco V1 (13 pelo cotejo, 12 no quadro) e V5 (7 contra 5). As diferenças desaparecem se, na V1 da Rcl 91263 (modelo g, humano n/a) e na V5 das duas partes da Rcl 9.977 (modelo ND, humano n/a), os pares forem tratados como equivalentes. O autor confirmou que esse foi o critério adotado (ND ou g, no modelo, contra n/a, no humano, contam como concordância); convém dizê-lo no quadro B.2.
 - A V16 não pode ser comparada por contagem simples: o modelo registra a razão de distinção em texto livre e o verificador registra outro texto. O quadro B.2 informa só um caso de aplicabilidade.
 
-Problemas na planilha:
-- Nas abas `piloto_fase2` e `Verificação Humana`, o Excel converteu os números `9977.1` e `9977.2` em datas (9977-01-01 e 9977-02-01). As demais abas trazem o texto correto. Convém corrigir a célula.
-- Na aba `piloto_fase2`, a coluna `erro` marca a Rcl 28262 com "sem bloco de texto", embora a codificação dela venha da 3ª tentativa, que teve sucesso. A marca parece resíduo da tentativa anterior.
+Alterações feitas neste repositório na planilha (23/11/2026, a pedido do autor). A cópia original foi sobrescrita, e o que mudou é só o seguinte:
+- Em `piloto_fase2` e em cada aba de variável (V1 a V16), o Excel havia convertido os números `9977.1` e `9977.2` em datas (9977-01-01 e 9977-02-01). As 34 células (duas em cada uma das 17 abas) foram trocadas pelo texto `9977.1` e `9977.2`, em formato de texto. A aba `Verificação Humana` já trazia `9977.1.txt` e `9977.2.txt`.
+- Em `piloto_fase2`, a coluna `erro` marcava a Rcl 28262 com "sem bloco de texto", embora a codificação dela venha da 3ª tentativa, que deu certo. A marca era resíduo da tentativa anterior, e a célula foi esvaziada.
+Nenhum valor de codificação ou de verificação foi alterado (35 células no total).
 
 ## Pendências de conteúdo
 
