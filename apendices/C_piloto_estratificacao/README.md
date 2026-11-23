@@ -74,7 +74,7 @@ Essas requisições confirmam que as classificações da Fase 1 vieram de **Sonn
 ## Pendências de conteúdo
 
 - O `piloto_fase1.py` (Opus 5) chegou a rodar, mas após poucas codificações (duas ou três) o script apresentou erros sistemáticos. Na correção, decidiu-se trocar o Opus pelo Sonnet 5 e migrar para a Batch API (scripts `submeter_batch_sonnet.py` e `processar_batch_sonnet.py`). Dessa execução inicial não há saída depositada.
-- Depositar o log da execução e, se existir, o JSONL bruto. O CSV das duas partes está depositado. A Rcl 9.428 tem como causa um PDF digitalizado (ver D). Os PDFs estão na pasta `piloto` do autor (137 arquivos, 70 MB) e não foram depositados.
+- Depositar o log da execução e, se existir, o JSONL bruto. O CSV das duas partes está depositado. A Rcl 9.428 tem como causa um PDF digitalizado (ver D). Os PDFs (137 arquivos, 70 MB) não serão depositados, por decisão do autor. No lugar, consta a lista das unidades de análise em `../D_codificacao/dados/entrada/lista_unidades_analise.csv`.
 - Registrar expressamente o diagnóstico de massa insuficiente da partição de seis grupos, que a nota 45 invoca. C.7 só justifica a agregação de G4 e G6 (um caso cada). O Quadro C.3 já mostra a evidência (G_prev_trad com um caso no Período I, e 25 acórdãos não classificados).
 
 ## Inconsistências a resolver
