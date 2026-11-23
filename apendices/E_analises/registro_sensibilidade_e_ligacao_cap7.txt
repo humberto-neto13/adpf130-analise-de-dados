@@ -1,0 +1,10 @@
+Tabela de sensibilidade (Mann-Whitney exato, p unilateral)
+Série completa: 94 (38 / 56); U 1,304.5; p 0.032; PS 0.61; mediana 13-A 07/06/2024; mediana 13-B 03/09/2021
+Sem 2020: 73 (33 / 40); U 735.0; p 0.205; PS 0.56; mediana 13-A 16/08/2024; mediana 13-B 27/04/2024
+Sem 2020 e 2021: 66 (31 / 35); U 579.5; p 0.319; PS 0.53; mediana 13-A 16/08/2024; mediana 13-B 04/06/2024
+
+Ligação dos 28 reconhecimentos posteriores a 29/09/2023
+Citação direta: 9  Rcl 29158, 61999, 62174, 63264, 65017, 68557, 70705, 74009, 90161
+Por um julgado intermediário: 7  Rcl 52089, 62010, 63418, 70430, 70911, 71380, 79907
+Sem citação a julgados da população: 11  Rcl 43949, 55948, 61746, 64369, 65002, 71028, 77996, 84065, 86576, 91263, 91384
+Apenas por caminho espúrio: 1  Rcl 91198
