@@ -57,7 +57,7 @@ Os scripts `scripts/submeter_batch_sonnet.py` e `scripts/processar_batch_sonnet.
 Os dois lotes terminaram com todas as requisições bem-sucedidas na API (0 erros de lote). As seis falhas são de extração do JSON no `processar_batch_sonnet.py` (três sem bloco de texto e três com JSON inválido). Custo total estimado: USD 9,32. Os totais dos logs coincidem com os dos CSV (5.536.529 tokens de entrada e 97.088 de saída).
 
 Observações:
-- O script lê todos os `.txt` de `./textos` e embaralha com semente 42. Nada nele separa 57 de 80 arquivos, então a divisão em dois lotes foi feita pelo autor fora do script (por exemplo, rodando-o com subconjuntos da pasta `textos`). Convém registrar como foi feita.
+- O script lê todos os `.txt` de `./textos` e embaralha com semente 42. Nada nele separa 57 de 80 arquivos. Segundo o autor, a primeira submissão precisou ser interrompida por causa de um erro, e por isso as submissões ficaram divididas em dois lotes (1–57 e 58–137).
 - O `custom_id` troca o ponto por sublinhado (`9977_1`), e as requisições depositadas trazem `custom_id` sem sufixo para os acórdãos únicos.
 - O script e o processador mencionam um `verificar_batch.py`, que não foi depositado.
 - O processador estima o custo com preços unitários fixos no código (USD 3, 15, 3,75 e 0,30 por milhão de tokens, com 50% de desconto). Os valores em dólar acima são essas estimativas, não faturamento.
@@ -70,7 +70,7 @@ Essas requisições confirmam que as classificações da Fase 1 vieram de **Sonn
 
 ## Pendências de conteúdo
 
-- Registrar como se dividiu a pasta `textos` nos dois lotes (57 e 80), e depositar `verificar_batch.py`, se existir. A execução do `piloto_fase1.py` com Opus 5 não deixou saída depositada, e convém dizer se chegou a rodar.
+- Registrar como se dividiu a pasta `textos` nos dois lotes (57 e 80), e depositar `verificar_batch.py`, se existir. O `piloto_fase1.py` (Opus 5) chegou a rodar, mas após poucas codificações (duas ou três) o script apresentou erros sistemáticos. Na correção, decidiu-se trocar o Opus pelo Sonnet 5 e migrar para a Batch API (scripts `submeter_batch_sonnet.py` e `processar_batch_sonnet.py`). Dessa execução inicial não há saída depositada.
 - Depositar o log da execução e, se existir, o JSONL bruto. O CSV das duas partes está depositado. A Rcl 9.428 tem como causa um PDF digitalizado (ver D). Os PDFs estão na pasta `piloto` do autor (137 arquivos, 70 MB) e não foram depositados.
 - Registrar expressamente o diagnóstico de massa insuficiente da partição de seis grupos, que a nota 45 invoca. C.7 só justifica a agregação de G4 e G6 (um caso cada). O Quadro C.3 já mostra a evidência (G_prev_trad com um caso no Período I, e 25 acórdãos não classificados).
 
