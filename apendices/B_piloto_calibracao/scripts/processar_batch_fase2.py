@@ -178,8 +178,7 @@ def main():
                 respostas_com_erro.append(
                     f"=== {nome_arquivo} ===\n"
                     f"Erro: sem bloco de texto\n"
-                    f"Blocos de conteúdo brutos:\n{json.dumps(content,
-ensure_ascii=False, indent=2)}\n"
+                    f"Blocos de conteúdo brutos:\n{json.dumps(content, ensure_ascii=False, indent=2)}\n"
                 )
                 contagem_erro += 1
                 continue
@@ -263,8 +262,7 @@ ensure_ascii=False, indent=2)}\n"
     log(f"Tokens cache_read:         {total_cache_read:,}")
     log(f"Tokens cache_creation:     {total_cache_creation:,}")
 
-    custo = estimar_custo_batch(total_input, total_output, total_cache_read,
-total_cache_creation)
+    custo = estimar_custo_batch(total_input, total_output, total_cache_read, total_cache_creation)
     log(f"Custo estimado (Sonnet 5 Batch): USD {custo:.4f}")
 
     Path(ARQUIVO_LOG).write_text("\n".join(log_lines), encoding="utf-8")
@@ -272,4 +270,3 @@ total_cache_creation)
 
 if __name__ == "__main__":
     main()
-

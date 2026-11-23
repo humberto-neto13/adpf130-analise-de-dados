@@ -1,0 +1,417 @@
+Manual de codificação
+Sumário
+Parte 1 — Apresentação e uso do manual        3
+Parte 2 — Definições operacionais das variáveis        6
+Variável 1 (FUND). Fundamento normativo do ato reclamado.        7
+Variável 2 (MOD_REST). Modalidade específica de restrição.        9
+Variável 3 (MOM_REST). Momento da restrição em relação ao ato comunicativo.        11
+Variável 4 (SUJ_COM). Natureza do sujeito comunicativo protegido.        12
+Variável 5 (MEIO). Meio comunicativo atingido pela restrição.        15
+Variável 6 (TRANSC). Menção expressa à teoria da transcendência dos motivos determinantes.        18
+Variável 7 (DIVERG). Existência e teor de divergência entre os votos.        20
+Variável 13 (ADER). Reconhecimento da aderência ao paradigma.        22
+Variável 14 (CONHEC). Conhecimento da reclamação.        24
+Variável 15 (MERITO). Resultado do julgamento de mérito.        25
+Variável 16 (DIST). Razões de distinção entre a hipótese dos autos e o paradigma.        26
+Variável 8 (ORG). Órgão julgador.        29
+Variável 9 (DATA). Data do julgamento.        30
+Variável 10 (REL). Ministro relator.        30
+Variável 11 (RED). Ministro redator do voto condutor.        31
+Variável 12 (VENCIDOS). Ministros vencidos.        32
+Parte 3 — Regras de agregação para reclamações com múltiplos acórdãos        33
+Parte 1 — Apresentação e uso do manual
+Finalidade do manual
+Este manual disciplina a codificação dos acórdãos submetidos ao codificador, orientando a extração e a classificação das informações segundo o esquema de dezesseis variáveis estabelecido para a matriz de codificação.
+O manual se organiza em três partes. A Parte 1 apresenta o manual e fixa as convenções gerais que atravessam a codificação. A Parte 2 define operacionalmente cada uma das dezesseis variáveis da matriz, com as classes que admite, os casos-fronteira típicos e as regras de resolução aplicáveis. A Parte 3 disciplina as regras de agregação para reclamações representadas por mais de um acórdão colegiado.
+Convenções gerais
+Fonte textual da codificação. A codificação opera sobre o texto do acórdão colegiado, na versão integral submetida ao codificador. A hierarquia de fontes textuais, para cada variável, obedece à indicação da definição operacional respectiva, tipicamente na ordem: cabeçalho do acórdão, dispositivo, relatório, fundamentação do voto condutor, votos vencidos e concorrentes.
+Codificação múltipla. Três variáveis admitem codificação múltipla, isto é, atribuição de mais de uma classe ao mesmo acórdão: Variável 1 (FUND), Variável 5 (MEIO) e Variável 7 (DIVERG). Nessas variáveis, o codificador registra todas as classes pertinentes, na forma indicada pela definição operacional respectiva.
+Codificação aberta. A Variável 16 (DIST) opera em codificação aberta, isto é, sem atribuição a classes pré-definidas. O codificador extrai a razão de distinção mobilizada pelo Tribunal em sua formulação textual concreta, na forma indicada pela definição operacional respectiva.
+Casos não determináveis. Quando o texto do acórdão for insuficiente para permitir a codificação de uma variável, o codificador registra a variável como não determinável, sem tentativa de inferência a partir de dados externos ao acórdão.
+Preservação da linguagem do Tribunal. Nas variáveis que admitem registro textual (notadamente a Variável 16), a codificação preserva a formulação empregada pelo Tribunal, sem reformulação pelo codificador. Categorias jurídicas específicas mobilizadas pelo Tribunal (por exemplo, "ausência de identidade fática", "aderência estrita", "distinção material") são registradas na forma pela qual o Tribunal as empregou.
+Registro em campo próprio versus registro em nota. A codificação principal de cada variável é registrada em campo próprio da matriz, segundo o formato indicado. Informações complementares, quando pertinentes (por exemplo, procedência parcial, razões acessórias, votos disponíveis ou não), são registradas em campos secundários ou em notas, sem alterar a codificação principal.
+Sequência recomendada de codificação por acórdão
+Para cada acórdão submetido à codificação, recomenda-se a seguinte sequência.
+Primeira etapa. Leitura completa do acórdão, com identificação preliminar das passagens pertinentes a cada variável.
+Segunda etapa. Codificação das variáveis operacionalmente simples (Variáveis 8 a 12), extraídas do cabeçalho e do dispositivo.
+Terceira etapa. Codificação das variáveis materiais (Variáveis 1 a 5), extraídas do relatório e da fundamentação do voto condutor.
+Quarta etapa. Codificação das variáveis interpretativas (Variáveis 6, 7, 13, 14 e 15), extraídas da fundamentação do voto condutor, do dispositivo e, quando aplicável, dos votos divergentes e concorrentes.
+Quinta etapa. Codificação da Variável 16, quando aplicável ao caso, extraída da fundamentação do voto condutor e, quando pertinente, dos votos divergentes e concorrentes.
+Sexta etapa. Revisão final da codificação do acórdão, com verificação da consistência entre as variáveis (por exemplo, coerência entre Variáveis 13, 14 e 15; consistência entre Variável 7 e a existência de votos divergentes ou concorrentes registrados).
+Registro da codificação
+A codificação de cada acórdão é registrada em linha da matriz, com uma coluna para cada variável. Variáveis com codificação múltipla admitem colunas específicas por classe ou codificação em formato composto, conforme a estrutura da base. Variáveis com codificação aberta admitem colunas de texto livre, com colunas adicionais para citação de passagem e identificação da origem do acórdão em reclamações com múltiplos acórdãos.
+Concluída a codificação individual dos acórdãos, a agregação em matriz consolidada por reclamação é executada segundo a Parte 3 do manual.
+Parte 2 — Definições operacionais das variáveis
+Esta parte define operacionalmente cada uma das dezesseis variáveis da matriz de codificação, organizadas em quatro blocos: variáveis materiais do ato reclamado (Bloco A), variáveis materiais do sujeito e do meio (Bloco B), variáveis interpretativas do pronunciamento colegiado (Bloco C.1) e variáveis operacionalmente simples do pronunciamento colegiado (Bloco C.2).
+Quadro 1 — Síntese das variáveis da matriz
+Nº
+	Código
+	Denominação
+	Bloco
+	Classes
+	1
+	FUND
+	Fundamento normativo do ato reclamado
+	A — Ato reclamado
+	7 (múltipla)
+	2
+	MOD_REST
+	Modalidade específica de restrição
+	A — Ato reclamado
+	8
+	3
+	MOM_REST
+	Momento da restrição
+	A — Ato reclamado
+	3
+	4
+	SUJ_COM
+	Sujeito comunicativo protegido
+	B — Sujeito e meio
+	7
+	5
+	MEIO
+	Meio comunicativo
+	B — Sujeito e meio
+	7 (múltipla)
+	6
+	TRANSC
+	Menção à teoria da transcendência
+	C.1 — Interpretativas
+	5
+	7
+	DIVERG
+	Divergência entre votos
+	C.1 — Interpretativas
+	5 (múltipla)
+	8
+	ORG
+	Órgão julgador
+	C.2 — Simples
+	3
+	9
+	DATA
+	Data do julgamento
+	C.2 — Simples
+	—
+	10
+	REL
+	Ministro relator
+	C.2 — Simples
+	—
+	11
+	RED
+	Ministro redator do voto condutor
+	C.2 — Simples
+	—
+	12
+	VENCIDOS
+	Ministros vencidos
+	C.2 — Simples
+	—
+	13
+	ADER
+	Reconhecimento da aderência ao paradigma
+	C.1 — Interpretativas
+	3
+	14
+	CONHEC
+	Conhecimento da reclamação
+	C.1 — Interpretativas
+	3
+	15
+	MERITO
+	Resultado do julgamento de mérito
+	C.1 — Interpretativas
+	3
+	16
+	DIST
+	Razões de distinção entre a hipótese dos autos e o paradigma
+	C.1 — Interpretativas
+	aberta
+	 
+Bloco A — Variáveis materiais do ato reclamado
+Este bloco compreende as três variáveis que caracterizam o ato judicial contra o qual a reclamação foi ajuizada. A codificação dessas variáveis opera sobre a descrição do ato reclamado, tal como consta na ementa, no relatório do acórdão ou, quando insuficiente, na fundamentação do voto condutor. Não se codifica o teor da restrição a partir da descrição feita pela reclamante em sua petição inicial, mas a partir da caracterização adotada pelo Tribunal no acórdão colegiado sob análise.
+Variável 1 (FUND). Fundamento normativo do ato reclamado.
+Definição conceitual.
+Captura o dispositivo normativo ou os dispositivos normativos em que se fundamentou a decisão judicial que impôs a restrição comunicativa contra a qual a reclamação foi ajuizada. A variável registra a base jurídica invocada pelo órgão prolator do ato reclamado, e não a base jurídica invocada pelo reclamante ou pelo STF no julgamento da reclamação.
+Definição operacional.
+Extrai-se do relatório do acórdão, que tipicamente reproduz a fundamentação da decisão reclamada. Quando o relatório for insuficiente, consulta-se a fundamentação do voto condutor. A codificação é múltipla, isto é, registram-se todas as classes correspondentes aos fundamentos efetivamente invocados no ato reclamado. Havendo pluralidade de fundamentos, o codificador marca cada classe pertinente.
+Classes.
+(a) Dispositivo da Lei nº 5.250/1967 (Lei de Imprensa), com menção expressa. Aplica-se quando o ato reclamado invoca artigo específico da revogada Lei de Imprensa, ou quando invoca princípio geral da Lei de Imprensa reconhecidamente atribuído àquele diploma. Exemplo: decisão que aplica o direito de resposta invocando o art. 29 da Lei nº 5.250/67, ainda que reconhecendo a não recepção parcial da lei.
+(b) Dispositivo constitucional de proteção a direitos de personalidade. Aplica-se quando o ato reclamado invoca art. 5º, incisos V (indenização por dano material, moral ou à imagem) e X (inviolabilidade da intimidade, vida privada, honra e imagem) da Constituição, ou fundamentos análogos. Exemplo: decisão que determina remoção de conteúdo com fundamento na proteção constitucional à imagem.
+(c) Dispositivo do Código Civil ou de legislação civil sobre responsabilidade civil. Aplica-se quando o ato reclamado invoca arts. 186 (ato ilícito), 187 (abuso de direito), 927 (dever de indenizar) do Código Civil, ou legislação especial sobre responsabilidade civil. Exemplo: condenação em indenização por danos morais com fundamento em ato ilícito civil.
+(d) Dispositivo do Marco Civil da Internet ou legislação análoga sobre ambiente digital. Aplica-se quando o ato reclamado invoca a Lei nº 12.965/2014 (especialmente arts. 19 e 21, sobre responsabilidade de provedores) ou legislação análoga (Lei Geral de Proteção de Dados, Lei nº 13.709/2018, quando invocada em contexto comunicativo). Exemplo: ordem de remoção fundada no art. 19 do Marco Civil.
+(e) Dispositivo eleitoral ou de legislação de propaganda política. Aplica-se quando o ato reclamado é decisão de justiça eleitoral fundada no Código Eleitoral (Lei nº 4.737/65), na Lei das Eleições (Lei nº 9.504/97) ou em resoluções do TSE sobre propaganda. Exemplo: ordem de remoção de propaganda eleitoral fundada em resolução do TSE.
+(f) Outro fundamento normativo. Aplica-se quando o ato reclamado invoca dispositivo não abrangido pelas classes anteriores. Exemplo: decisão fundada em legislação de proteção ao consumidor, em legislação penal (para conteúdo criminalizado), em legislação de propriedade intelectual.
+(g) Sem indicação de fundamento normativo específico. Aplica-se quando o ato reclamado não identifica dispositivo normativo específico, apoiando-se em fórmulas genéricas ("ponderação de princípios", "proteção de direitos fundamentais em colisão") sem citação de artigo determinado.
+Regras de combinação entre as classes.
+As classes (a) a (f) admitem combinação livre entre si, na medida em que refletem a pluralidade normativa efetiva do ato reclamado. A classe (g) sem indicação de fundamento normativo específico é mutuamente exclusiva com todas as demais, aplicando-se apenas quando o ato reclamado não invoca qualquer dispositivo determinado, e caracterizando-se por incompatibilidade lógica com qualquer outra classe.
+Casos-fronteira e regras de resolução.
+Fundamentos combinados. Todos os fundamentos efetivamente invocados são registrados. Uma decisão que se funda simultaneamente em Marco Civil da Internet e em dispositivos constitucionais de direitos de personalidade é codificada com as classes (b) e (d) marcadas.
+Menção residual à Lei nº 5.250/67 como referência histórica. Quando o ato reclamado menciona a Lei nº 5.250/67 apenas para reconhecer sua não recepção pelo ordenamento vigente e decidir com base em outro dispositivo, a Lei de Imprensa não é codificada como fundamento; codifica-se apenas o dispositivo efetivamente aplicado. A menção residual à Lei de Imprensa como referência histórica ou como objeto de afastamento pelo próprio ato reclamado não configura fundamentação nela.
+Legislação eleitoral em caso de propaganda comercial disfarçada. Quando o ato reclamado é decisão de justiça comum sobre conteúdo com dimensão política mas sem tramitação eleitoral, codifica-se conforme os dispositivos efetivamente invocados, ainda que a matéria material tenha conotação eleitoral.
+Fundamento constitucional genérico e fundamento infraconstitucional específico. Quando o ato reclamado invoca simultaneamente art. 5º da Constituição (por exemplo, inciso X sobre inviolabilidade) e dispositivo infraconstitucional específico (por exemplo, art. 186 do Código Civil), ambos são registrados — respectivamente nas classes (b) e (c). A menção ao dispositivo constitucional não é subsumida no infraconstitucional.
+Variável 2 (MOD_REST). Modalidade específica de restrição.
+Definição conceitual.
+Captura o tipo específico de restrição comunicativa imposta pelo ato reclamado. A variável distingue entre modalidades qualitativamente distintas de intervenção sobre o ato comunicativo, das mais restritivas (proibição de publicar) às mais atenuadas (dever de retificar), passando pela remoção compulsória e pela imposição de deveres reparatórios.
+Definição operacional.
+Extrai-se da parte dispositiva da decisão reclamada, tal como reproduzida no relatório do acórdão da reclamação. Registra-se a modalidade predominante; havendo cumulação de modalidades no mesmo ato, adota-se aquela de maior gravidade restritiva, seguindo a ordem: proibição prévia > remoção > direito de resposta > retificação > indenização.
+Classes.
+(a) Proibição prévia de publicar conteúdo determinado. Aplica-se quando o ato reclamado veda a publicação de conteúdo específico e identificado, antes de sua veiculação. Exemplo: decisão que proíbe a divulgação de matéria jornalística já finalizada mas ainda não publicada, mediante indicação do teor específico do que não pode ser publicado.
+(b) Proibição prévia de publicar sobre matéria ou pessoa determinada. Aplica-se quando o ato reclamado veda genericamente a publicação de qualquer conteúdo sobre determinado tema, fato ou pessoa, sem especificar o teor concreto do que fica interditado. Distingue-se da anterior por operar em nível de matéria (assunto), e não em nível de conteúdo (texto específico). Exemplo: decisão que proíbe qualquer nova publicação sobre determinada pessoa, sem especificar quais conteúdos concretos ficam interditados.
+(c) Ordem de remoção compulsória de conteúdo já publicado. Aplica-se quando o ato reclamado determina a retirada de conteúdo que já foi veiculado. Exemplo: ordem para que empresa jornalística remova matéria de seu site, ou para que plataforma digital exclua post de rede social.
+(d) Imposição de direito de resposta. Aplica-se quando o ato reclamado determina que a parte reclamante veicule resposta apresentada por terceiro, na forma prevista pela Lei nº 13.188/2015 ou por regime análogo. Exemplo: decisão que determina publicação de resposta de igual destaque e extensão à matéria originária.
+(e) Imposição de dever de retificação. Aplica-se quando o ato reclamado determina que a parte reclamante corrija informação por ela veiculada, publicando retificação. Distingue-se do direito de resposta por operar sobre conteúdo autoral (correção do próprio dizente), e não sobre inclusão de fala de terceiro. Exemplo: decisão que determina publicação de errata corrigindo informação factual equivocada.
+(f) Condenação em indenização por danos morais com efeito inibitório potencial. Aplica-se quando o ato reclamado condena a parte reclamante ao pagamento de indenização por dano moral em razão do ato comunicativo. A variável captura essa modalidade porque, ainda que não interdite diretamente a publicação, produz efeito potencialmente inibitório sobre atividade comunicativa futura. Exemplo: condenação em indenização de valor elevado por matéria jornalística considerada ofensiva.
+(g) Bloqueio de sítio, canal ou conta. Aplica-se quando o ato reclamado determina o bloqueio total ou suspensão de sítio eletrônico, canal em plataforma digital ou conta em rede social. Distingue-se da remoção de conteúdo (classe c) por operar sobre o veículo, e não sobre conteúdo específico. Exemplo: ordem de bloqueio de canal no YouTube, ou suspensão de conta em rede social.
+(h) Outra modalidade. Aplica-se quando a restrição imposta não se enquadra nas classes anteriores. Exemplos possíveis: obrigação de indicar autoria em publicação, obrigação de publicar aviso judicial, restrição a horário de veiculação, obrigação de descaracterizar imagem.
+Casos-fronteira e regras de resolução.
+Combinação de remoção e proibição de nova publicação. Comum: o ato reclamado ordena remoção de conteúdo já publicado e proíbe nova veiculação sobre a matéria. Codifica-se conforme a incidência principal: se a proibição de nova publicação é acessória (por exemplo, veda republicar exatamente o mesmo conteúdo removido), codifica-se como (c) remoção. Se a proibição de nova publicação é ampla (veda qualquer publicação futura sobre a matéria), codifica-se como (b) proibição prévia de publicar sobre matéria determinada.
+Indenização acessória a outras medidas. Quando o ato reclamado impõe simultaneamente indenização e uma medida mais restritiva (proibição, remoção), codifica-se pela medida mais restritiva, seguindo a hierarquia da definição operacional. A indenização isolada, sem outras medidas, é que se codifica como (f).
+Astreintes e multas cominatórias. Não são codificadas como modalidade autônoma; são acessórias à medida principal (por exemplo, multa diária pelo descumprimento da ordem de remoção). Codifica-se pela medida principal.
+Direito de resposta ou retificação cumulados com indenização. Codifica-se pela medida específica (direito de resposta ou retificação), e não pela indenização acessória.
+Variável 3 (MOM_REST). Momento da restrição em relação ao ato comunicativo.
+Definição conceitual.
+Captura o momento em que a restrição opera em relação ao ato comunicativo: se anterior à publicação, se posterior à publicação, ou se abrange ambos os momentos.
+Definição operacional.
+Extrai-se da parte dispositiva da decisão reclamada, examinando-se se a restrição opera sobre conteúdo ainda não publicado (anterior), sobre conteúdo já publicado (posterior), ou sobre ambos. A cumulação (ambos) é reservada aos casos em que o ato reclamado, no mesmo comando, incide sobre conteúdo já publicado e sobre conteúdo futuro.
+Classes.
+(a) Anterior à publicação. Aplica-se quando o ato reclamado impede a publicação de conteúdo que ainda não foi veiculado. Exemplo: decisão que determina, antes da publicação, que matéria jornalística não seja veiculada.
+(b) Posterior à publicação. Aplica-se quando o ato reclamado incide sobre conteúdo já veiculado, impondo remoção, direito de resposta, retificação, indenização ou bloqueio. Exemplo: ordem de remoção de post em rede social já publicado; condenação em indenização por matéria jornalística já veiculada.
+(c) Ambos. Aplica-se quando o ato reclamado incide simultaneamente sobre conteúdo já publicado e sobre conteúdo futuro. Exemplo: decisão que ordena remoção de conteúdo já publicado e simultaneamente proíbe qualquer publicação futura sobre a matéria.
+Casos-fronteira e regras de resolução.
+Remoção com proibição acessória de republicação idêntica. Codifica-se como (b) posterior, porque a proibição de republicação idêntica é acessória à remoção do conteúdo específico já publicado.
+Remoção com proibição ampla de novas publicações sobre a matéria. Codifica-se como (c) ambos, porque as duas incidências são autônomas: a remoção opera sobre o conteúdo já publicado, e a proibição ampla opera sobre conteúdo futuro indeterminado.
+Indenização isolada por conteúdo já publicado. Codifica-se como (b) posterior.
+Ordem de retirada com prazo antes de publicação prevista. Codifica-se como (a) anterior, porque o ato reclamado impede publicação ainda não realizada.
+Bloco B — Variáveis materiais do sujeito e do meio
+Este bloco compreende as duas variáveis que caracterizam quem foi restringido pelo ato reclamado e por meio de qual canal a comunicação restringida circulava. A codificação opera sobre a caracterização do sujeito e do meio tal como constam no acórdão da reclamação, tipicamente extraídas do relatório ou da fundamentação do voto condutor.
+Variável 4 (SUJ_COM). Natureza do sujeito comunicativo protegido.
+Definição conceitual.
+Captura a natureza do sujeito cuja liberdade de expressão foi restringida pelo ato reclamado. A variável identifica quem é o sujeito comunicativo tutelado pela reclamação, e não quem é o reclamante em sentido processual (que pode ser terceiro que defende o interesse comunicativo do sujeito restringido).
+Definição operacional.
+Extrai-se do relatório do acórdão, que tipicamente descreve o autor da atividade comunicativa objeto da restrição. Quando o relatório for insuficiente, consulta-se a fundamentação do voto condutor.
+Classes.
+(a) Empresa de imprensa profissional. Aplica-se quando o sujeito comunicativo é pessoa jurídica que exerce atividade jornalística em caráter profissional, tal como jornal, revista, portal jornalístico com estrutura editorial identificada, emissora de rádio ou de televisão, ou agência de notícias. Caracterizam-se por estrutura editorial institucionalizada, finalidade jornalística declarada e produção regular de conteúdo com autoria assumida. Exemplo: Folha de S.Paulo, Grupo Globo, revista Veja, portal UOL na sua atividade jornalística.
+(b) Profissional de imprensa individual. Aplica-se quando o sujeito comunicativo é pessoa natural que exerce jornalismo em caráter profissional, com ou sem vínculo com veículo de imprensa. Compreende jornalistas em atividade profissional, colunistas, correspondentes e assemelhados. Exemplo: jornalista que assina coluna em veículo profissional; correspondente internacional; repórter em atividade profissional individual.
+(c) Sujeito privado não profissional. Aplica-se quando o sujeito comunicativo é pessoa natural que exerce atividade comunicativa sem caráter jornalístico profissional, ainda que sobre matérias de interesse público. Compreende cidadãos comuns, blogueiros pessoais, influenciadores digitais sem estrutura editorial, artistas em manifestações comunicativas não profissionais, e demais indivíduos que se manifestam na esfera pública sem vínculo com atividade jornalística profissional. Exemplo: cidadão que publica opinião em rede social; blogueiro pessoal; influenciador digital que produz conteúdo sem estrutura editorial.
+(d) Órgão público institucional. Aplica-se quando o sujeito comunicativo é órgão da administração pública direta ou indireta, poder da República, ou entidade estatal em sentido amplo, no exercício de atividade comunicativa institucional. Exemplo: Presidência da República; Ministério; Poder Legislativo em sua atividade de comunicação institucional; empresa pública em comunicação corporativa.
+(e) Partido político, associação, sindicato ou entidade coletiva. Aplica-se quando o sujeito comunicativo é pessoa jurídica de direito privado com finalidade não jornalística, que exerce atividade comunicativa como manifestação de posição institucional. Compreende partidos políticos, associações civis, sindicatos, entidades religiosas, organizações da sociedade civil, e demais coletividades organizadas. Exemplo: partido político em manifestação institucional; sindicato em publicação corporativa; associação profissional em nota pública.
+(f) Plataforma digital como intermediária. Aplica-se quando o sujeito comunicativo é pessoa jurídica que hospeda ou intermedia comunicação alheia, sem produzir conteúdo próprio em sentido editorial. Compreende redes sociais, plataformas de vídeo, provedores de aplicações, marketplaces com componente comunicativo, e assemelhados, quando a restrição incide sobre sua atividade de intermediação. Exemplo: Google, Meta (Facebook, Instagram), YouTube, X (Twitter), TikTok, quando reclamam contra decisões que lhes impõem obrigações relacionadas a conteúdo hospedado.
+(g) Pessoa jurídica de direito privado sem atividade comunicativa profissional. Aplica-se quando o sujeito comunicativo é pessoa jurídica de direito privado com finalidade econômica ou de outra natureza, que se manifesta comunicativamente sem que a atividade comunicativa seja seu objeto profissional. Compreende empresas em geral em suas manifestações institucionais, publicidade corporativa, ou manifestações em rede social. Exemplo: empresa que publica nota pública em rede social; corporação que veicula peça publicitária; pessoa jurídica em ação comunicativa institucional isolada.
+Casos-fronteira e regras de resolução.
+Portal digital de nicho sem estrutura editorial claramente identificada. Situação comum na base atual: portais que veiculam matéria jornalística mas cuja estrutura editorial é rarefeita ou ambígua. Codifica-se como (a) empresa de imprensa profissional quando o veículo declara finalidade jornalística e apresenta autoria assumida em suas publicações, ainda que a estrutura seja enxuta. Codifica-se como (c) sujeito privado não profissional quando o veículo se apresenta como blog, canal pessoal ou similar, sem finalidade jornalística declarada.
+Influenciador digital que produz conteúdo de dimensão jornalística. Situação recorrente: sujeitos individuais que produzem conteúdo informativo, opinativo ou investigativo em plataformas digitais, sem vínculo com veículo profissional tradicional. Codifica-se como (c) sujeito privado não profissional. A classe (b) profissional de imprensa individual reserva-se aos casos em que há evidência de exercício profissional do jornalismo (formação, vínculo com veículo profissional em algum momento, atuação declarada como jornalista).
+Coletivo de comunicação alternativa. Codifica-se conforme sua estrutura: se organizado como pessoa jurídica com finalidade jornalística e produção editorial regular, (a) empresa de imprensa profissional; se organizado como coletivo informal sem estrutura editorial institucionalizada, (e) partido político, associação, sindicato ou entidade coletiva.
+Órgão público em manifestação de agente político individual. Quando a restrição incide sobre manifestação de agente político individual (parlamentar, prefeito, ministro) em contexto que pode ser lido como institucional ou como pessoal, codifica-se como (d) órgão público institucional se a manifestação é feita no exercício da função e por meio institucional (site oficial, coletiva de imprensa institucional); codifica-se como (c) sujeito privado não profissional se a manifestação é feita em conta pessoal em rede social ou em contexto claramente pessoal, ainda que sobre matéria pública.
+Plataforma digital em posição de sujeito passivo do ato reclamado. Situação em que a plataforma é destinatária da ordem judicial de remoção ou bloqueio e reclama dessa ordem. Codifica-se como (f) plataforma digital como intermediária. A classe capta especificamente essa posição de intermediação.
+Empresa reclamante em razão de publicidade institucional restringida. Codifica-se como (g) pessoa jurídica de direito privado sem atividade comunicativa profissional, ainda que a peça específica objeto da restrição tenha sido produzida por agência de publicidade contratada.
+Variável 5 (MEIO). Meio comunicativo atingido pela restrição.
+Definição conceitual.
+Captura o meio ou os meios comunicativos por meio dos quais circulava a comunicação restringida pelo ato reclamado. A variável identifica o canal material, e não o conteúdo da comunicação.
+Definição operacional.
+Extrai-se do relatório do acórdão, que tipicamente descreve onde o conteúdo foi ou seria veiculado. Quando o relatório for insuficiente, consulta-se a fundamentação do voto condutor. A codificação é múltipla, isto é, registram-se todas as classes correspondentes aos meios efetivamente atingidos pela restrição. Havendo pluralidade de meios, o codificador marca cada classe pertinente.
+Classes.
+(a) Mídia impressa. Aplica-se quando o meio é jornal, revista, boletim, livro, panfleto ou outro suporte impresso. Exemplo: matéria em edição impressa de jornal; artigo em revista impressa.
+(b) Mídia audiovisual tradicional. Aplica-se quando o meio é rádio ou televisão, em qualquer de seus modos de difusão tradicional (aberta, por assinatura, por radiodifusão). Exemplo: programa de rádio; reportagem em telejornal; entrevista em programa de televisão.
+(c) Portal jornalístico digital com editor identificado. Aplica-se quando o meio é sítio eletrônico com finalidade jornalística declarada, autoria assumida das publicações e estrutura editorial identificável. Compreende as versões digitais de veículos profissionais tradicionais e portais nativos digitais com estrutura jornalística. Exemplo: folha.uol.com.br, g1.globo.com, portais nativos como Nexo, Intercept, Poder360.
+(d) Blog ou sítio pessoal. Aplica-se quando o meio é sítio eletrônico pessoal, blog individual ou similar, sem estrutura editorial institucionalizada, ainda que se dedique a conteúdo de interesse público. Distingue-se de (c) pela ausência de estrutura editorial e pela natureza pessoal do meio. Exemplo: blog pessoal em plataforma de hospedagem; sítio de opinião individual sem editor identificado.
+(e) Rede social. Aplica-se quando o meio é plataforma digital de rede social, compreendendo Facebook, Instagram, X (Twitter), TikTok, LinkedIn, YouTube em sua função de rede social, e assemelhados. Aplica-se independentemente de o conteúdo veiculado ser produzido por sujeito profissional ou não profissional. O critério é o meio, não o autor.
+(f) Aplicativo de mensageria. Aplica-se quando o meio é aplicativo de troca de mensagens em grupos ou canais, compreendendo WhatsApp, Telegram, Signal e assemelhados. Aplica-se especialmente aos casos em que a restrição incide sobre difusão de conteúdo em grupos, canais ou listas de transmissão.
+(g) Outro meio. Aplica-se quando o meio não se enquadra nas classes anteriores. Exemplos possíveis: podcast em plataforma de streaming, sem componente de rede social; publicação em plataforma de conteúdo pago tipo Substack; documento distribuído por e-mail em lista corporativa; manifestação em ato público presencial cuja repercussão está em causa.
+Regras de combinação entre as classes.
+Todas as classes admitem combinação livre entre si. Cada classe marcada indica que o meio correspondente foi atingido pela restrição, isolada ou cumulativamente com outros.
+Casos-fronteira e regras de resolução.
+Versão digital de veículo tradicional. Uma matéria publicada tanto na edição impressa quanto no portal digital do mesmo veículo, e cuja restrição incide sobre ambas, codifica-se com as classes (a) e (c) marcadas. Se a restrição incide apenas sobre a versão digital, marca-se apenas (c).
+Conteúdo em veículo tradicional replicado em rede social. Um mesmo conteúdo veiculado em jornal impresso e simultaneamente nas contas do veículo em redes sociais, e cuja restrição incide sobre ambos, codifica-se com as classes (a) e (e) marcadas. Se a restrição incide apenas sobre as contas em redes sociais, marca-se apenas (e).
+YouTube em posição ambígua. YouTube tem função de plataforma de vídeo e função de rede social. Codifica-se como (e) rede social quando o canal específico é gerido por usuário individual ou coletivo com dimensão de rede social. Codifica-se como (c) portal jornalístico digital quando o canal é vinculado a veículo profissional com estrutura editorial declarada (por exemplo, canal oficial de jornal ou de emissora de televisão).
+Blog hospedado em plataforma de rede social. Situações em que sujeito individual mantém blog cuja hospedagem é feita em plataforma de rede social (por exemplo, blog no Medium, canal no Substack). Codifica-se como (d) blog ou sítio pessoal se a estrutura é predominantemente de blog individual, ainda que a plataforma tenha componente social. Codifica-se como (e) rede social se a interação social é predominante e o blog opera como funcionalidade acessória.
+Coleção de posts em rede social equiparada a matéria jornalística. Casos em que sujeito individual publica série de posts com estrutura investigativa ou informativa em rede social. Codifica-se como (e) rede social, porque o critério é o meio material, independentemente da natureza jornalística do conteúdo.
+Portal jornalístico com distribuição paralela por aplicativo de mensageria. Casos em que o veículo distribui o mesmo conteúdo por sítio jornalístico e por lista de transmissão em aplicativo de mensageria. Se a restrição incide sobre os dois canais, codifica-se com as classes (c) e (f) marcadas. Se incide apenas sobre um deles, marca-se apenas o pertinente.
+Bloco C.1 — Variáveis interpretativas do pronunciamento colegiado
+Este subgrupo compreende as variáveis que exigem juízo interpretativo sobre o conteúdo argumentativo e dispositivo do acórdão. A codificação opera sobre a fundamentação do voto condutor e sobre o dispositivo, com atenção também aos votos divergentes e concorrentes quando os houver. O manual identifica, para cada variável, a fonte textual primária e a fonte textual secundária, para orientar o codificador quando a primeira for insuficiente.
+Variável 6 (TRANSC). Menção expressa à teoria da transcendência dos motivos determinantes.
+Definição conceitual.
+Captura se e como o acórdão menciona explicitamente a teoria da transcendência dos motivos determinantes. A teoria, na dogmática processual brasileira, sustenta que o efeito vinculante das decisões do Supremo Tribunal Federal alcança não apenas o dispositivo, mas também os fundamentos determinantes (tragende Gründe) da decisão.
+Definição operacional.
+Extrai-se da fundamentação do voto condutor, com consulta aos votos vencidos ou concorrentes quando disponíveis. Considera-se menção expressa a referência nominal à teoria, à doutrina, ou à figura da transcendência dos motivos determinantes, ainda que por sinonímia reconhecida (efeito vinculante dos fundamentos, vinculação da ratio decidendi, tragende Gründe). Não configura menção a mera aplicação do que a teoria descreve, sem nomeação; a variável captura o discurso do Tribunal sobre a teoria, e não a operação dogmática que a teoria descreve.
+Classes.
+(a) Menção com adesão à teoria em caráter geral. Aplica-se quando o acórdão menciona a teoria da transcendência dos motivos determinantes e a acolhe como orientação vinculante para o caso em análise, sem qualificação restritiva. Compreende passagens que afirmam a extensão do efeito vinculante aos fundamentos determinantes como regra jurisprudencial adotada pelo Tribunal, sem ressalvas. Exemplo: passagem que afirma "os fundamentos determinantes do paradigma vinculam também os órgãos aos quais se dirige o efeito vinculante das decisões desta Corte".
+(b) Menção com adesão à teoria em caráter excepcional. Aplica-se quando o acórdão menciona a teoria e a acolhe apenas para o caso concreto ou para categoria específica de casos, sinalizando que se trata de aplicação excepcional que não se generaliza. Compreende passagens que reconhecem a operação da transcendência em determinado contexto sem afirmá-la como regra jurisprudencial geral. Exemplo: passagem que afirma "excepcionalmente, na matéria de liberdade de expressão, admite-se a extensão do efeito vinculante aos fundamentos".
+(c) Menção com rejeição da teoria. Aplica-se quando o acórdão menciona a teoria expressamente para rejeitá-la, sustentando que o efeito vinculante se restringe ao dispositivo do paradigma e não alcança os fundamentos determinantes. Exemplo: passagem que afirma "a jurisprudência desta Corte não admite a teoria da transcendência dos motivos determinantes".
+(d) Menção sem tomada de posição explícita. Aplica-se quando o acórdão faz referência à teoria em contexto descritivo ou histórico, sem afirmar sua adoção nem sua rejeição para o caso em análise. Compreende menções em citação doutrinária, em referência a precedentes anteriores, ou em discussão teórica que não se traduz em decisão sobre a teoria. Exemplo: passagem que descreve o debate doutrinário sobre a transcendência sem tomar posição.
+(e) Ausência de menção. Aplica-se quando o acórdão não menciona a teoria da transcendência dos motivos determinantes em nenhuma passagem, seja na fundamentação do voto condutor, seja nos votos divergentes ou concorrentes disponíveis.
+Casos-fronteira e regras de resolução.
+Menção por sinonímia reconhecida. A referência a "efeito vinculante dos fundamentos determinantes", "vinculação da ratio decidendi", "extensão do efeito vinculante ao motivo da decisão" ou "tragende Gründe" configura menção à teoria, ainda que sem uso da expressão "transcendência dos motivos determinantes". Codifica-se conforme a natureza da menção (adesão geral, excepcional, rejeição, sem tomada de posição).
+Menção em voto divergente ou concorrente sem correspondente no voto condutor. Quando a menção aparece apenas em voto que não é o condutor, codifica-se conforme a natureza da menção nesse voto, com registro adicional na Variável 7 (DIVERG) da divergência ou concorrência quanto ao fundamento. Exemplo: voto vencido que sustenta a aplicação da transcendência e voto condutor que decide sem mencioná-la.
+Menção como referência a julgados que tratam do tema. Passagens que citam decisões anteriores do STF sobre a teoria (por exemplo, Rcl 3.014/SP, Rcl 8.168/SC) sem tomar posição própria sobre a teoria configuram (d) menção sem tomada de posição, ainda que o julgado citado tenha rejeitado a teoria. A variável captura a posição do acórdão em análise, não a posição do julgado que ele cita.
+Discussão implícita da estrutura da teoria sem nomeação. Quando o acórdão discute a extensão do efeito vinculante a fundamentos ou motivos, ou a distinção entre dispositivo e razão de decidir, sem nomear a teoria da transcendência, codifica-se como (e) ausência de menção. A variável exige menção expressa, na forma da definição operacional.
+Variável 7 (DIVERG). Existência e teor de divergência entre os votos.
+Definição conceitual.
+Captura se o acórdão foi decidido por unanimidade ou por maioria, e, no caso de decisão por maioria, o teor da divergência: se foi voto concorrente (que acompanha o resultado com fundamentação diversa) ou voto vencido (que diverge no resultado); e sobre que dimensão do julgamento a divergência incidiu (mérito ou admissibilidade).
+Definição operacional.
+Extrai-se da parte dispositiva do acórdão, que indica se a decisão foi unânime ou por maioria, e do teor dos votos divergentes ou concorrentes, quando existentes e disponíveis. Voto concorrente é aquele que acompanha o dispositivo do voto condutor com fundamentação distinta; voto vencido é aquele cujo dispositivo diverge do resultado do julgamento no ponto em questão. A distinção entre divergência sobre mérito e sobre admissibilidade opera pela dimensão a que o voto se dirige: mérito se refere à procedência ou improcedência da reclamação; admissibilidade se refere ao conhecimento ou não conhecimento.
+Classes.
+(a) Decisão unânime. Aplica-se quando todos os ministros participantes do julgamento acompanharam o dispositivo do voto condutor, sem voto concorrente com fundamentação distinta e sem voto vencido. Exemplo: acórdão em que a Turma, por unanimidade, conhece da reclamação e julga procedente.
+(b) Decisão por maioria com voto concorrente quanto ao mérito. Aplica-se quando o acórdão foi decidido por maioria, e a divergência incidiu sobre a fundamentação do julgamento de mérito, com um ou mais votos acompanhando o dispositivo por fundamentação distinta. Exemplo: acórdão em que a Turma julga procedente por maioria, com voto concorrente que acompanha a procedência por fundamentos distintos dos do relator.
+(c) Decisão por maioria com voto concorrente quanto à admissibilidade. Aplica-se quando o acórdão foi decidido por maioria, e a divergência incidiu sobre a fundamentação do juízo de admissibilidade, com um ou mais votos acompanhando o dispositivo (conhecer ou não conhecer) por fundamentação distinta. Exemplo: acórdão em que a Turma não conhece da reclamação por maioria, com voto concorrente que acompanha o não conhecimento por outra razão processual, distinta da apontada pelo relator.
+(d) Decisão por maioria com voto vencido no mérito. Aplica-se quando o acórdão foi decidido por maioria, e a divergência incidiu sobre o julgamento de mérito, com um ou mais votos divergindo do dispositivo do voto condutor quanto à procedência ou improcedência da reclamação. Exemplo: acórdão em que a Turma julga procedente por maioria, com voto vencido que teria julgado improcedente.
+(e) Decisão por maioria com voto vencido quanto à admissibilidade. Aplica-se quando o acórdão foi decidido por maioria, e a divergência incidiu sobre o juízo de admissibilidade, com um ou mais votos divergindo do dispositivo do voto condutor quanto ao conhecimento ou não conhecimento da reclamação. Exemplo: acórdão em que a Turma não conhece por maioria, com voto vencido que teria conhecido.
+Casos-fronteira e regras de resolução.
+Divergências simultâneas em mais de uma dimensão. Uma decisão pode conter divergência tanto sobre admissibilidade quanto sobre mérito (por exemplo, ministro que teria conhecido e julgado procedente, quando o Tribunal não conheceu). Nesse caso, codifica-se pela dimensão da divergência que produz o dispositivo divergente principal: se o ponto central da divergência é o não conhecimento, codifica-se como (e); se é o mérito, codifica-se como (d). Quando as duas dimensões são autonomamente controvertidas, codifica-se conforme aquela que teria alterado o desfecho principal do julgamento.
+Divergência quanto ao fundamento sem divergência quanto ao resultado. Quando um ministro acompanha o dispositivo mas fundamenta seu voto em razões distintas das do voto condutor, sem que haja divergência de resultado, codifica-se como voto concorrente (classes b ou c, conforme a dimensão). A distinção da classe (a) unânime opera pela existência ou não de fundamentação diversa registrada em voto autônomo.
+Decisão unânime com ministros ausentes ou impedidos. A unanimidade se afere entre os ministros que efetivamente votaram no julgamento. Ministros ausentes, impedidos ou suspeitos não contam para a definição da unanimidade. Codifica-se como (a) unânime quando todos os que votaram acompanharam o dispositivo.
+Decisão por maioria com voto concorrente e voto vencido simultâneos. Uma decisão pode ter simultaneamente voto concorrente (que acompanha o resultado com fundamentação diversa) e voto vencido (que diverge do resultado). Codifica-se pela combinação: registra-se a classe (b) ou (c) referente ao voto concorrente e adicionalmente a classe (d) ou (e) referente ao voto vencido, aplicando-se codificação múltipla.
+Regras de combinação entre classes.
+As classes (b), (c), (d) e (e) admitem combinação livre entre si, refletindo a possibilidade de divergências simultâneas de teor distinto no mesmo acórdão. A classe (a) unânime é mutuamente exclusiva com as demais.
+Regra sobre a disponibilidade dos votos.
+Nem todos os acórdãos disponibilizam os votos divergentes ou concorrentes em texto integral. Quando a decisão é anunciada como por maioria sem que o teor da divergência seja acessível, o codificador registra a existência da maioria (isto é, exclui a classe a) sem poder codificar a natureza específica da divergência. Nesses casos, marca-se a codificação como incompleta para esta variável.
+Variável 13 (ADER). Reconhecimento da aderência ao paradigma.
+Definição conceitual.
+Captura se o Tribunal reconheceu, no acórdão, que o ato reclamado incide sobre matéria regida pelo paradigma da ADPF nº 130. É juízo material sobre a compatibilidade entre o ato reclamado e o precedente invocado.
+Definição operacional.
+Extrai-se da fundamentação do voto condutor. Considera-se reconhecimento da aderência quando o Tribunal, no acórdão, afirma expressamente ou implica de modo inequívoco que a matéria discutida no ato reclamado está compreendida no âmbito de proteção do paradigma. Considera-se não reconhecimento quando o Tribunal, expressa ou implicitamente, afirma que a matéria não está compreendida no paradigma. Considera-se não tematização quando o acórdão não examina a questão da aderência, decidindo a reclamação por outros fundamentos que dispensam esse exame.
+Classes.
+(a) Aderência reconhecida. Aplica-se quando o acórdão afirma que o ato reclamado incide sobre matéria regida pelo paradigma da ADPF 130, seja para conhecer da reclamação, seja para reconhecer a aderência ainda que sem conhecer por outra razão. Compreende passagens que afirmam expressamente a compatibilidade da matéria com o paradigma. Exemplo: passagem que afirma "o ato reclamado incide sobre matéria de liberdade de expressão, compreendida no âmbito de proteção do paradigma invocado".
+(b) Aderência não reconhecida. Aplica-se quando o acórdão afirma que o ato reclamado não incide sobre matéria regida pelo paradigma, seja porque a matéria é distinta, seja porque a decisão reclamada se fundamenta em dispositivo estranho ao paradigma, seja porque a hipótese fática diverge da que o paradigma tratou. Exemplo: passagem que afirma "o ato reclamado não guarda aderência estrita com o paradigma invocado, uma vez que a matéria discutida difere daquela decidida na ADPF 130".
+(c) Aderência não tematizada. Aplica-se quando o acórdão decide a reclamação sem examinar a questão da aderência, seja por acolher preliminar processual que dispensa o exame, seja por decidir por outros fundamentos, seja por operar em cognição sumária ou colateral que não requer o pronunciamento sobre aderência. Exemplo: acórdão que não conhece da reclamação por perda de objeto, sem examinar a compatibilidade da matéria com o paradigma.
+Casos-fronteira e regras de resolução.
+Reconhecimento implícito por dedução do conhecimento. Quando o acórdão conhece da reclamação e adentra o mérito sem afirmar expressamente o reconhecimento da aderência, codifica-se como (a) aderência reconhecida, porque o conhecimento pressupõe o exame prévio da aderência, ainda que sinalizado apenas pela decisão de conhecer. A classe (c) reserva-se aos casos em que o não conhecimento se dá por razão que dispensa o exame da aderência.
+Não conhecimento por ausência de aderência versus não conhecimento por outra razão processual sem exame da aderência. A distinção importa: no primeiro caso, o Tribunal examinou a aderência e a rejeitou (classe b); no segundo, o Tribunal decidiu por preliminar processual anterior e não chegou a examinar a aderência (classe c). Exemplo do primeiro: "não se conhece da reclamação por ausência de aderência estrita ao paradigma". Exemplo do segundo: "não se conhece da reclamação por perda superveniente do objeto".
+Reconhecimento parcial. Situação em que o Tribunal reconhece aderência quanto a algum aspecto e não reconhece quanto a outro. Codifica-se pela orientação predominante no acórdão. Se o reconhecimento parcial resulta em conhecimento da reclamação, codifica-se como (a); se resulta em não conhecimento, codifica-se como (b).
+Variável 14 (CONHEC). Conhecimento da reclamação.
+Definição conceitual.
+Captura se o Tribunal admitiu processar a reclamação. É juízo processual sobre os requisitos de cabimento e admissibilidade da via reclamatória.
+Definição operacional.
+Extrai-se da parte dispositiva do acórdão. A decisão de conhecer ou não conhecer é tipicamente expressa no dispositivo com fórmula clara ("conheço da reclamação", "não conheço da reclamação", "conheço da reclamação e a julgo procedente"). Quando a fórmula é implícita (por exemplo, quando o dispositivo julga procedente sem afirmar expressamente o conhecimento), entende-se que o conhecimento é pressuposto do julgamento de mérito.
+Classes.
+(a) Reclamação conhecida. Aplica-se quando o Tribunal admitiu processar a reclamação, seja para julgá-la procedente, seja para julgá-la improcedente. O conhecimento é a decisão sobre a admissibilidade processual, distinta do juízo de mérito. Exemplo: acórdão que conhece da reclamação e a julga procedente; acórdão que conhece da reclamação e a julga improcedente.
+(b) Reclamação não conhecida por ausência de aderência. Aplica-se quando o Tribunal não conheceu da reclamação especificamente porque considerou ausente a aderência do ato reclamado ao paradigma. Compreende a hipótese em que a ausência de aderência é fundamento do não conhecimento. Exemplo: acórdão que não conhece por afirmar a ausência de identidade material entre o ato reclamado e o paradigma.
+(c) Reclamação não conhecida por outra razão processual. Aplica-se quando o Tribunal não conheceu da reclamação por razão distinta da ausência de aderência. Compreende hipóteses como perda de objeto, ausência de esgotamento das instâncias ordinárias, ilegitimidade ativa ou passiva, litispendência, coisa julgada, uso do reclamatório como sucedâneo recursal, e demais preliminares processuais. Exemplo: acórdão que não conhece por perda superveniente de objeto; acórdão que não conhece por reconhecer o uso da reclamação como sucedâneo recursal.
+Casos-fronteira e regras de resolução.
+Conhecimento parcial. Situações em que o Tribunal conhece da reclamação quanto a parte do pedido e não conhece quanto a outra parte. Codifica-se pela orientação predominante no dispositivo. Se a maior parte do pedido é conhecida, codifica-se como (a); se a maior parte não é conhecida por ausência de aderência, codifica-se como (b); se a maior parte não é conhecida por outra razão, codifica-se como (c).
+Não conhecimento com fundamentação combinada. Casos em que o Tribunal não conhece por combinar ausência de aderência com outra razão processual. Nessas hipóteses, prevalece a classe (b) reclamação não conhecida por ausência de aderência, independentemente da ordem de exposição das razões no acórdão.
+Variável 15 (MERITO). Resultado do julgamento de mérito.
+Definição conceitual.
+Captura, entre as reclamações conhecidas, o resultado do juízo de mérito: se a reclamação foi julgada procedente (reconhecendo a violação ao paradigma), improcedente (não reconhecendo a violação), ou se a variável não se aplica ao caso (reclamação não conhecida).
+Definição operacional.
+Extrai-se da parte dispositiva do acórdão. A decisão de mérito é tipicamente expressa com fórmula clara ("julgo procedente a reclamação", "julgo improcedente a reclamação"). Quando o Tribunal não conheceu da reclamação, a Variável 15 é registrada como não aplicável, porque não houve juízo de mérito.
+Classes.
+(a) Reclamação julgada procedente. Aplica-se quando o Tribunal, tendo conhecido da reclamação, reconheceu a violação ao paradigma pelo ato reclamado. Exemplo: acórdão que julga procedente a reclamação, cassando o ato reclamado por afronta ao paradigma.
+(b) Reclamação julgada improcedente. Aplica-se quando o Tribunal, tendo conhecido da reclamação, não reconheceu a violação ao paradigma pelo ato reclamado. Exemplo: acórdão que conhece da reclamação, examina o mérito e conclui que o ato reclamado não afrontou o paradigma.
+(c) Não aplicável. Aplica-se quando o Tribunal não conheceu da reclamação, o que impede o juízo de mérito. É a codificação padrão para os casos em que a Variável 14 registrou (b) ou (c).
+Casos-fronteira e regras de resolução.
+Procedência parcial. Situação em que o Tribunal julga procedente a reclamação apenas quanto a parte do pedido, mantendo o ato reclamado quanto a outra parte. Codifica-se como (a) julgada procedente, com nota de que a procedência é parcial. A distinção fina entre procedência total e parcial pode ser objeto de campo adicional na base de dados, mas não altera a classe da variável.
+Julgamento de mérito prejudicado por questão superveniente. Situação em que o Tribunal, tendo conhecido da reclamação, considera prejudicada a análise de mérito por questão superveniente (por exemplo, revogação do ato reclamado). Codifica-se como (c) não aplicável, com nota de que o prejuízo se deu no plano do mérito, distinto do não conhecimento por perda de objeto (que se registra na Variável 14).
+Julgamento de mérito com determinação de providência a outro juízo. Situação em que o Tribunal julga procedente a reclamação e determina que o juízo de origem profira nova decisão em conformidade com o paradigma. Codifica-se como (a) julgada procedente. A determinação de providência ao juízo de origem é consequência processual da procedência, não altera a classe.
+Variável 16 (DIST). Razões de distinção entre a hipótese dos autos e o paradigma.
+Definição conceitual.
+Captura, em codificação aberta, as razões efetivamente mobilizadas pelo Tribunal para caracterizar distinção (distinguishing) entre a hipótese fática ou jurídica dos autos da reclamação e a hipótese decidida pelo paradigma da ADPF nº 130. A variável se aplica aos acórdãos em que o Tribunal não conheceu da reclamação por ausência de aderência ou julgou improcedente a reclamação por reconhecer que o ato reclamado não afronta o paradigma. Nos demais casos, a variável é registrada como não aplicável.
+Definição operacional.
+Extrai-se da fundamentação do voto condutor, com consulta aos votos vencidos ou concorrentes quando disponíveis e quando neles se sustente distinção diversa da apontada no voto condutor. A codificação é aberta: o codificador não atribui o caso a classe pré-definida, mas extrai a descrição textual da razão ou razões de distinção mobilizadas, com identificação da passagem do acórdão em que a razão é articulada. Havendo mais de uma razão autônoma no mesmo acórdão, todas são registradas.
+Formato do registro.
+Para cada acórdão em que a variável se aplica, o codificador registra:
+Um. A descrição textual da razão de distinção, formulada em linguagem sintética que preserve o núcleo argumentativo do que o Tribunal afirmou.
+Dois. A citação da passagem do acórdão em que a razão é articulada, com indicação da página ou parágrafo.
+Três. Havendo mais de uma razão autônoma, cada uma é registrada em campo próprio, numeradas sequencialmente.
+Condições de aplicação.
+A variável se aplica nos seguintes casos:
+Um. Reclamação não conhecida por ausência de aderência (Variável 14, classe b). É a hipótese principal de aplicação: o Tribunal explicitou razão para não conhecer, e essa razão é tipicamente distinção material ou jurídica do caso em relação ao paradigma.
+Dois. Reclamação conhecida e julgada improcedente (Variável 15, classe b). Nessas hipóteses, o Tribunal reconheceu a aderência formal mas afastou a violação, o que exige distinção substantiva entre o ato reclamado e a orientação do paradigma. As razões dessa distinção também são objeto da variável.
+Três. Reclamação não conhecida por outra razão processual (Variável 14, classe c), quando o acórdão, ao decidir por preliminar processual, também tece considerações sobre eventual distinção material do caso em relação ao paradigma. Essas considerações, ainda que em obiter dictum, integram o discurso do Tribunal sobre as razões de distinguishing e são registradas.
+Nos demais casos — reclamação conhecida e julgada procedente, ou reclamação não conhecida sem qualquer discussão de distinção — a variável é registrada como não aplicável.
+Regras para a extração da razão de distinção.
+A razão de distinção deve ser extraída em sua formulação argumentativa concreta, e não reduzida a categoria genérica. A distinção entre boa e má extração está no grau de especificidade do que se registra. Comparação:
+Extração inadequada: "distinção fática".
+Extração adequada: "o ato reclamado incide sobre matéria de responsabilidade civil por danos morais, ao passo que o paradigma tratou de censura prévia veiculada por lei federal".
+A primeira formulação apenas classifica genericamente; a segunda registra a razão que o Tribunal efetivamente apresentou.
+Quando a razão de distinção envolve categorias jurídicas específicas mobilizadas pelo Tribunal (por exemplo, "ausência de identidade fática entre os casos", "não incidência da vedação constitucional à censura sobre restrições posteriores por meio de indenização"), essas categorias devem ser registradas na formulação usada pelo Tribunal, não reformuladas na linguagem do codificador. A fidelidade textual à formulação do Tribunal é essencial para a integridade do dado.
+Casos-fronteira e regras de resolução.
+Ausência de fundamentação específica para o não conhecimento por ausência de aderência. Situação em que o Tribunal afirma o não conhecimento por ausência de aderência sem articular razão substantiva. Registra-se como "razão não articulada", com indicação da passagem em que se afirma o não conhecimento.
+Fundamentação por referência a julgados anteriores. Situação em que o Tribunal fundamenta o não conhecimento invocando julgados anteriores que já haviam operado distinção análoga, sem articular razão própria. Registra-se a referência ao julgado e o teor da razão de distinção nele articulada, com indicação de que a razão é indireta.
+Distinção fundamentada em múltiplas razões cumulativas. Quando o Tribunal apresenta mais de uma razão como fundamento da distinção, todas são registradas em campos próprios e numeradas.
+Distinção suscitada apenas em voto divergente. Situação em que o voto condutor não articula distinção específica, mas voto divergente ou concorrente sustenta distinção. Registra-se a razão sustentada no voto que efetivamente decidiu (voto condutor); a distinção do voto divergente é registrada em campo secundário, com indicação de que se trata de razão sustentada em voto vencido ou concorrente.
+Bloco C.2 — Variáveis operacionalmente simples do pronunciamento colegiado
+Este subgrupo compreende as variáveis que registram dados objetivos do julgamento colegiado, extraíveis por conferência direta com o texto do acórdão. A codificação opera predominantemente sobre o cabeçalho do acórdão, sobre a assinatura do voto condutor e sobre o dispositivo, com consulta aos votos vencidos quando aplicável.
+Variável 8 (ORG). Órgão julgador.
+Definição conceitual.
+Captura o órgão colegiado do Supremo Tribunal Federal que julgou o acórdão.
+Definição operacional.
+Extrai-se do cabeçalho do acórdão, que identifica expressamente o órgão julgador.
+Classes.
+(a) Plenário. Aplica-se quando o acórdão foi proferido pelo Tribunal Pleno.
+(b) Primeira Turma. Aplica-se quando o acórdão foi proferido pela Primeira Turma do STF.
+(c) Segunda Turma. Aplica-se quando o acórdão foi proferido pela Segunda Turma do STF.
+Casos-fronteira e regras de resolução.
+Julgamento em sessão virtual. Sessões virtuais das Turmas ou do Plenário são codificadas conforme o órgão em cuja competência a sessão foi realizada, sem distinção de modalidade presencial ou virtual.
+Julgamento em plenário virtual do art. 21-B do RISTF. Codifica-se como (a) Plenário, na medida em que a sessão virtual do Plenário mantém a natureza colegiada plenária.
+Variável 9 (DATA). Data do julgamento.
+Definição conceitual.
+Captura a data em que o acórdão foi proferido pelo órgão colegiado.
+Definição operacional.
+Extrai-se do cabeçalho do acórdão, na indicação da data de julgamento. Registra-se em formato dia/mês/ano.
+Casos-fronteira e regras de resolução.
+Sessão virtual com período de julgamento. Sessões virtuais ocorrem em intervalo de dias (por exemplo, "Sessão Virtual de 4.3.2022 a 11.3.2022"). Nesses casos, registra-se a data final do período de julgamento, correspondendo ao encerramento da sessão.
+Divergência entre a data de julgamento e a data de publicação. Registra-se a data de julgamento, e não a data de publicação. A data de publicação, quando relevante, é registrada em campo próprio da base de dados, distinto da Variável 9.
+Variável 10 (REL). Ministro relator.
+Definição conceitual.
+Captura o ministro designado como relator do acórdão, isto é, o ministro a quem coube conduzir originariamente a análise do caso.
+Definição operacional.
+Extrai-se do cabeçalho do acórdão, na indicação "Rel. Min. [nome]". Registra-se o nome completo do ministro, na forma pela qual figura no acórdão.
+Casos-fronteira e regras de resolução.
+Substituição de relator ao longo do processo. Registra-se o relator identificado no acórdão em análise, ainda que ele tenha sucedido outro relator em momento processual anterior. A Variável 10 captura o relator do acórdão específico sob codificação, e não a história processual da relatoria.
+Relator para efeito da citação no cabeçalho versus relator originário. Quando o cabeçalho identifica um relator diferente do relator originário do processo (por exemplo, "Rel. Min. [X], Red. p/ o acórdão Min. [Y]"), a Variável 10 registra o relator identificado como tal no cabeçalho, e a Variável 11 (RED) registra o redator, conforme abaixo.
+Variável 11 (RED). Ministro redator do voto condutor.
+Definição conceitual.
+Captura o ministro responsável pela redação do voto condutor do acórdão. Quando o relator originário é vencido e o voto vencedor é redigido por outro ministro, este último figura como redator do acórdão.
+Definição operacional.
+Extrai-se do cabeçalho do acórdão, na indicação "Red. p/ o acórdão Min. [nome]", quando presente. Quando o cabeçalho não indica redator distinto do relator, entende-se que o relator conduziu a maioria e a Variável 11 é registrada como coincidente com a Variável 10.
+Classes.
+(a) Redator distinto do relator. Registra-se o nome completo do ministro redator, na forma pela qual figura no acórdão.
+(b) Redator coincidente com o relator. Registra-se a coincidência, sem preenchimento adicional. A informação equivale ao dado da Variável 10.
+Casos-fronteira e regras de resolução.
+Redação por ministro que não conduziu a maioria original. Situação rara em que, por sucessão de vencidos, o voto conduzente termina redigido por ministro distinto tanto do relator originário quanto do primeiro a divergir. Registra-se o ministro efetivamente designado como redator do acórdão, conforme identificação no cabeçalho.
+Ausência de indicação expressa de redator. Quando o cabeçalho não identifica redator e não há indicação de que o relator foi vencido, entende-se que a Variável 11 é coincidente com a Variável 10 (classe b).
+Variável 12 (VENCIDOS). Ministros vencidos.
+Definição conceitual.
+Captura os nomes dos ministros cujos votos foram vencidos no julgamento, isto é, aqueles cujos votos divergiram do dispositivo do voto condutor no ponto em questão.
+Definição operacional.
+Extrai-se da parte dispositiva do acórdão, que tipicamente identifica os ministros vencidos na fórmula "vencido(s) o(s) Ministro(s) [nomes]", ou de fórmula equivalente que registre a divergência de resultado. Registra-se o nome completo de cada ministro vencido, na forma pela qual figura no acórdão. Havendo mais de um ministro vencido, todos são registrados.
+Casos-fronteira e regras de resolução.
+Decisão unânime. Nas decisões unânimes (Variável 7, classe a), a Variável 12 é registrada como não aplicável, por inexistir voto vencido.
+Voto concorrente que não configura voto vencido. Ministros que acompanham o dispositivo do voto condutor por fundamentação distinta não são registrados como vencidos, na medida em que não divergem do resultado. Esses casos são capturados pela Variável 7 (classes b ou c), e não pela Variável 12.
+Ministros vencidos em pontos parciais do acórdão. Quando um ministro é vencido apenas em ponto específico do acórdão (por exemplo, vencido quanto à admissibilidade mas acompanhando o dispositivo quanto ao mérito), registra-se o ministro como vencido, com nota do ponto específico da divergência. A distinção fina entre voto vencido total e parcial pode ser objeto de campo adicional na base de dados.
+Ministros ausentes ou impedidos. Ministros ausentes, impedidos ou suspeitos não são registrados como vencidos. A Variável 12 captura apenas os ministros que efetivamente votaram e cujos votos divergiram do dispositivo.
+Parte 3 — Regras de agregação para reclamações com múltiplos acórdãos
+Esta parte do manual disciplina o tratamento das reclamações representadas na base por mais de um acórdão colegiado. A unidade de análise da pesquisa é a reclamação, de modo que a matriz consolidada apresenta um único registro por reclamação. Quando a reclamação tem mais de um acórdão na base, a codificação opera em duas etapas: primeiro, cada acórdão é codificado individualmente, segundo as regras da Parte 2 do manual; segundo, os dados dos acórdãos daquela reclamação são agregados em um único registro na matriz consolidada, segundo as regras desta Parte 3.
+Identificação de reclamações com múltiplos acórdãos
+Reclamações com múltiplos acórdãos são identificadas por coincidência do número do processo entre diferentes acórdãos da base. O codificador, ao iniciar a codificação de um acórdão, verifica se o número do processo aparece em outros registros da base; havendo coincidência, o conjunto dos acórdãos daquela reclamação é tratado como unidade para efeito de agregação.
+Composição típica dos conjuntos de acórdãos por reclamação
+As reclamações com múltiplos acórdãos, na base, apresentam tipicamente as seguintes configurações:
+Um. Acórdão principal (Rcl ou AgR) acompanhado de acórdão de embargos de declaração (Rcl-ED ou Rcl-AgR-ED). É a configuração mais frequente.
+Dois. Acórdão principal (Rcl ou AgR) acompanhado de acórdão em segundo agravo regimental (Rcl-AgR-segundo ou Rcl-AgR-segundo-AgR). Configuração rara e processualmente atípica.
+Três. Acórdão principal acompanhado de dois ou mais acórdãos supervenientes (por exemplo, embargos de declaração no acórdão da reclamação e embargos de declaração no acórdão do agravo regimental).
+Regra geral de agregação
+A matriz consolidada, para cada reclamação, reflete o pronunciamento colegiado exauriente definitivo do Tribunal sobre a admissibilidade daquela reclamação. Na regra geral, esse pronunciamento é o do acórdão principal (Rcl ou AgR), e os acórdãos supervenientes de natureza integrativa (embargos de declaração) não alteram o dado registrado na matriz. A codificação da matriz consolidada, para as Variáveis 1 a 15, opera sobre o acórdão principal.
+O acórdão superveniente altera o dado registrado na matriz consolidada apenas quando cumulativamente:
+Um. O acórdão superveniente tematiza a variável em questão. Isto é, o acórdão superveniente contém pronunciamento colegiado sobre a variável que se está codificando (por exemplo, sobre a aderência ao paradigma, sobre o conhecimento da reclamação, sobre o mérito).
+Dois. O acórdão superveniente modifica o pronunciamento do acórdão anterior sobre a variável. Isto é, o acórdão superveniente altera o desfecho ou a caracterização que o acórdão anterior havia fixado para aquela variável.
+Nessa hipótese cumulativa, a codificação da variável correspondente na matriz consolidada reflete o dado do acórdão superveniente, e as demais variáveis permanecem com o dado do acórdão anterior.
+Regras operacionais por natureza do acórdão superveniente
+Acórdãos de embargos de declaração. Os embargos de declaração têm natureza integrativa: em regra, integram o acórdão embargado para suprir omissão, contradição, obscuridade ou erro material, sem modificar-lhe o desfecho. Nas hipóteses excepcionais em que os embargos são acolhidos com efeitos modificativos que alcancem alguma variável, aplica-se a regra geral acima: a variável modificada reflete a solução dos embargos; as demais permanecem com o dado do acórdão embargado.
+Acórdãos em segundo ou terceiro agravo regimental. Segundos agravos regimentais são processualmente vedados, e a regra geral do STF é o não conhecimento por incabimento. Quando o acórdão do segundo agravo se limita a não conhecer o recurso por incabimento, ele não integra a matriz consolidada — permanece o dado do acórdão anterior. Nas hipóteses excepcionais em que o Tribunal conhece do segundo agravo e modifica o desfecho da admissibilidade ou do mérito, aplica-se a regra geral: a variável modificada reflete o dado do acórdão superveniente; as demais permanecem com o dado do acórdão anterior.
+Regras operacionais por variável específica
+A regra geral opera sobre as variáveis interpretativas e materiais (Variáveis 1 a 7, 13 a 16). Para as variáveis operacionalmente simples do Bloco C.2 (Variáveis 8 a 12), aplicam-se as seguintes especificações:
+Variável 8 (ORG). Registra-se o órgão julgador do acórdão principal, mesmo quando os acórdãos supervenientes tenham sido julgados por órgão distinto. A caracterização institucional da reclamação segue o pronunciamento principal.
+Variável 9 (DATA). Registra-se a data do acórdão principal, salvo quando um acórdão superveniente tenha modificado o desfecho da admissibilidade ou do mérito. Nessa hipótese, registra-se a data do acórdão superveniente modificativo, porque é ali que o pronunciamento definitivo se cristalizou.
+Variável 10 (REL). Registra-se o relator do acórdão principal.
+Variável 11 (RED). Registra-se o redator do acórdão principal.
+Variável 12 (VENCIDOS). Registra-se a composição dos ministros vencidos no acórdão principal.
+Regra sobre a Variável 16 em reclamações com múltiplos acórdãos
+A codificação aberta da Variável 16 (DIST) opera acórdão a acórdão, com as razões de distinção extraídas de cada acórdão em que a variável se aplique. Na agregação para a matriz consolidada, as razões de distinção extraídas dos diferentes acórdãos da mesma reclamação são registradas em conjunto, com identificação da origem (acórdão principal ou acórdão superveniente) e da data respectiva.
+Casos-fronteira e regras de resolução
+Reclamação com pluralidade de acórdãos, todos concordantes quanto à admissibilidade. Situação em que a reclamação tem acórdão principal e acórdão superveniente, e o superveniente reafirma o desfecho do principal sem modificar-lhe. Aplica-se a regra geral: a matriz consolidada reflete o acórdão principal, e o acórdão superveniente é registrado como confirmatório, sem alteração da codificação.
+Reclamação com pluralidade de acórdãos, com divergência de codificação em variável não relacionada à admissibilidade. Situação em que os acórdãos da mesma reclamação divergem quanto a variável periférica (por exemplo, a Variável 6 sobre menção à teoria da transcendência foi tematizada de modo distinto entre acórdão principal e superveniente). Aplica-se a regra geral: a matriz consolidada reflete o acórdão principal, e a divergência é registrada em campo secundário.
+Reclamação com acórdão principal ausente da base. Situação rara em que o acórdão principal (Rcl ou AgR) não figura na base de dados coletada, mas figura apenas o acórdão superveniente (por exemplo, apenas um acórdão de embargos de declaração). Nessa hipótese, a codificação da matriz consolidada opera sobre o acórdão superveniente disponível.
+Acórdão de embargos de declaração com efeitos modificativos que alteram substancialmente a fundamentação. Situação em que os embargos, ainda que sem alterar o desfecho, modificam substancialmente a fundamentação do acórdão embargado (por exemplo, o Tribunal esclarece que a aderência é reconhecida por outra razão que não a inicialmente apontada). Nessa hipótese, se a modificação alcança a codificação de alguma variável, aplica-se a regra geral: a variável correspondente reflete o dado dos embargos. A fundamentação anterior é registrada em campo secundário.

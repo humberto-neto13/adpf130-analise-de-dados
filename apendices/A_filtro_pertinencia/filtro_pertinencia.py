@@ -41,7 +41,7 @@ MODELO = "claude-opus-5"
 TEMPERATURA = 0
 MAX_TOKENS = 1024
 
-ARQUIVO_ENTRADA = "/mnt/user-data/uploads/export_acordaos_2026-08-17_11-19-17.csv"
+ARQUIVO_ENTRADA = "export_acordaos_2026-08-17_11-19-17.csv"
 ARQUIVO_SAIDA_ACORDAOS = "filtro_por_acordao.csv"
 ARQUIVO_SAIDA_RECLAMACOES = "filtro_por_reclamacao.csv"
 ARQUIVO_LOG = "log_execucao.txt"
@@ -52,51 +52,35 @@ CLASSES_SUMARIAS = {"Rcl-MC-Ref", "Rcl-MC-AgR", "Rcl-Ref"}
 # Prompt do filtro (cacheado)
 # -----------------------------------------------------------------------------
 
-SYSTEM_PROMPT = """Você é um assistente especializado em análise de decisões do Supremo
-Tribunal Federal. Sua tarefa é aplicar uma árvore de decisão sobre acórdãos de
-reclamações constitucionais, retornando classificação binária de pertinência.
+SYSTEM_PROMPT = """Você é um assistente especializado em análise de decisões do Supremo Tribunal Federal. Sua tarefa é aplicar uma árvore de decisão sobre acórdãos de reclamações constitucionais, retornando classificação binária de pertinência.
 
 ## Árvore de decisão
 
-Analise a Ementa e a Decisão do acórdão fornecido e responda à seguinte sequência de
-perguntas, na ordem indicada.
+Analise a Ementa e a Decisão do acórdão fornecido e responda à seguinte sequência de perguntas, na ordem indicada.
 
 Passo 1. A reclamação foi conhecida pelo Tribunal?
   - Se SIM: acórdão é PERTINENTE. Registrar passo_arvore = 1.
   - Se NÃO: prosseguir ao Passo 2.
 
-Passo 2. A ausência de aderência ao paradigma da ADPF nº 130 foi motivo do não
-conhecimento?
+Passo 2. A ausência de aderência ao paradigma da ADPF nº 130 foi motivo do não conhecimento?
   - Se SIM: acórdão é PERTINENTE. Registrar passo_arvore = 2.
   - Se NÃO: prosseguir ao Passo 3.
 
-Passo 3. O acórdão examinou a questão da aderência ao paradigma da ADPF nº 130 (ainda
-que não tenha conhecido por outra razão processual)?
+Passo 3. O acórdão examinou a questão da aderência ao paradigma da ADPF nº 130 (ainda que não tenha conhecido por outra razão processual)?
   - Se SIM: acórdão é PERTINENTE. Registrar passo_arvore = 3.
   - Se NÃO: acórdão é NÃO PERTINENTE. Registrar passo_arvore = 0.
 
 ## Convenções operacionais
 
-Considera-se "conhecimento" a decisão do Tribunal de admitir o processamento da
-reclamação. Frases típicas: "conheço da reclamação", "conheço da reclamação e a julgo
-procedente", "julgo procedente a reclamação" (que pressupõe conhecimento).
+Considera-se "conhecimento" a decisão do Tribunal de admitir o processamento da reclamação. Frases típicas: "conheço da reclamação", "conheço da reclamação e a julgo procedente", "julgo procedente a reclamação" (que pressupõe conhecimento).
 
-Considera-se "não conhecimento por ausência de aderência" a hipótese em que o Tribunal
-expressamente sustenta que o ato reclamado não guarda identidade material com o
-paradigma invocado, ou que a matéria discutida difere daquela decidida na ADPF nº 130.
-Frases típicas: "não se conhece por ausência de aderência estrita", "o ato reclamado
-não guarda aderência ao paradigma".
+Considera-se "não conhecimento por ausência de aderência" a hipótese em que o Tribunal expressamente sustenta que o ato reclamado não guarda identidade material com o paradigma invocado, ou que a matéria discutida difere daquela decidida na ADPF nº 130. Frases típicas: "não se conhece por ausência de aderência estrita", "o ato reclamado não guarda aderência ao paradigma".
 
-Considera-se "exame da aderência" a hipótese em que o Tribunal, ainda que não
-conhecendo da reclamação por razão diversa (perda de objeto, ilegitimidade, sucedâneo
-recursal, etc.), tece considerações substantivas sobre a compatibilidade material entre
-o ato reclamado e o paradigma. Não configura exame a mera menção formal ao paradigma
-sem análise substantiva.
+Considera-se "exame da aderência" a hipótese em que o Tribunal, ainda que não conhecendo da reclamação por razão diversa (perda de objeto, ilegitimidade, sucedâneo recursal, etc.), tece considerações substantivas sobre a compatibilidade material entre o ato reclamado e o paradigma. Não configura exame a mera menção formal ao paradigma sem análise substantiva.
 
 ## Formato de saída
 
-Responda EXCLUSIVAMENTE com um objeto JSON válido, sem qualquer texto adicional, no
-seguinte formato:
+Responda EXCLUSIVAMENTE com um objeto JSON válido, sem qualquer texto adicional, no seguinte formato:
 
 {
   "pertinente": "sim" ou "não",
@@ -126,8 +110,7 @@ def carregar_base(caminho):
     df["id_acordao"] = (
         df["Classe"] + " " + df["Número"].astype(str)
         + df.apply(
-            lambda r: f" (inc {r['Incidente']})" if pd.notna(r.get("Incidente")) and
-r.get("Incidente") else "",
+            lambda r: f" (inc {r['Incidente']})" if pd.notna(r.get("Incidente")) and r.get("Incidente") else "",
             axis=1
         )
     )
@@ -159,7 +142,6 @@ def classificar_acordao(client, row, tentativa=1, max_tentativas=3):
         resp = client.messages.create(
             model=MODELO,
             max_tokens=MAX_TOKENS,
-            temperature=TEMPERATURA,
             system=[
                 {
                     "type": "text",
@@ -169,7 +151,13 @@ def classificar_acordao(client, row, tentativa=1, max_tentativas=3):
             ],
             messages=[{"role": "user", "content": conteudo}],
         )
-        texto = resp.content[0].text.strip()
+        texto = None
+        for bloco in resp.content:
+            if bloco.type == "text":
+                texto = bloco.text.strip()
+                break
+        if texto is None:
+            raise ValueError("Nenhum bloco de texto encontrado na resposta")
 
         # Remover eventuais fences de código
         if texto.startswith("```"):
@@ -248,8 +236,7 @@ def agregar_por_reclamacao(resultados_df):
     ag = resultados_df.groupby("Número").agg(
         classes_acordaos=("Classe", lambda x: ", ".join(sorted(x.tolist()))),
         n_acordaos=("Classe", "count"),
-        pertinente=("pertinente", lambda x: "sim" if any(v == "sim" for v in x) else
-("não" if all(v == "não" for v in x) else "ERRO")),
+        pertinente=("pertinente", lambda x: "sim" if any(v == "sim" for v in x) else ("não" if all(v == "não" for v in x) else "ERRO")),
         passos_arvore=("passo_arvore", lambda x: ", ".join(str(v) for v in x)),
         justificativas=("justificativa", lambda x: " | ".join(x)),
     ).reset_index()
@@ -329,8 +316,7 @@ def main():
     total_output = resultados_df["output_tokens"].sum()
     total_cache_read = resultados_df["cache_read_tokens"].sum()
     total_cache_creation = resultados_df["cache_creation_tokens"].sum()
-    custo = estimar_custo(total_input, total_output, total_cache_read,
-total_cache_creation)
+    custo = estimar_custo(total_input, total_output, total_cache_read, total_cache_creation)
 
     log(f"Tokens input total: {total_input:,}")
     log(f"Tokens output total: {total_output:,}")
@@ -351,4 +337,3 @@ total_cache_creation)
 
 if __name__ == "__main__":
     main()
-

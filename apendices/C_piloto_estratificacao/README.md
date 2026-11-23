@@ -2,7 +2,7 @@
 
 Corresponde à nota 45 da monografia (subseção 4.5.1). Documenta o desenho **abandonado** de oito estratos (momento da restrição, meio e sujeito comunicativo), a codificação das Variáveis 3, 4 e 5 nos 137 acórdãos, sem acesso aos desfechos, e a escolha dos cortes temporais. A estratificação final é binária e usa só o momento da restrição.
 
-> **Origem do material.** Os scripts, prompts, manual e quadros desta pasta foram recuperados do PDF do esboço dos apêndices (`docs/esboco_apendices_A_B_C.pdf`) e validados por análise sintática e por contagem de linhas. Linhas de código que o PDF quebrou foram reunidas. Os arquivos originais, que estão na máquina do autor, devem substituir as reconstruções antes do depósito definitivo. As remissões internas do texto (antes `seção 8.x`) foram atualizadas para a numeração atual da monografia (4.x).
+> **Origem do material.** São originais do autor, idênticos byte a byte: `scripts/piloto_fase1.py` e o texto de `prompt_sistema.txt` (extraído dele). `scripts/submeter_batch_sonnet.py` e `scripts/processar_batch_sonnet.py` foram recuperados do PDF do esboço; no primeiro, o `SYSTEM_PROMPT` foi substituído pelo do script original, e os dois textos coincidem salvo as quebras de linha. Os quadros em `dados/` vêm do PDF.
 
 Cronologicamente, a Fase 1 (este apêndice) antecede a Fase 2 (Apêndice B). A ordem alfabética dos apêndices não é a ordem de execução.
 
@@ -10,7 +10,8 @@ Cronologicamente, a Fase 1 (este apêndice) antecede a Fase 2 (Apêndice B). A o
 
 | Arquivo | O que é | Seção do esboço |
 |---|---|---|
-| `scripts/submeter_batch_sonnet.py` | Preparação e submissão à Batch API | C.2.1 |
+| `scripts/piloto_fase1.py` | Versão síncrona do piloto, com Claude Opus 5 e requisição por acórdão (original) | |
+| `scripts/submeter_batch_sonnet.py` | Preparação e submissão à Batch API (Sonnet 5) | C.2.1 |
 | `scripts/processar_batch_sonnet.py` | Download e consolidação dos resultados | C.2.2 |
 | `prompt_sistema.txt` | Prompt de sistema da Fase 1 (Variáveis 3, 4 e 5) | C.2.3 |
 | `dados/C3_1_sinoptica_codificacao.csv` | Classes atribuídas a cada um dos 137 acórdãos | C.3.1 |
@@ -25,6 +26,7 @@ Os seis acórdãos não codificados por falha técnica (Rcl 9068, 9977 acórdão
 
 ## Pendências de conteúdo
 
+- **Esclarecer qual execução produziu os dados de `dados/`.** O esboço descreve a execução com Sonnet 5 via Batch API (`submeter_batch_sonnet.py`). Existe também `piloto_fase1.py`, com Opus 5, síncrono. Se esse script foi rodado, convém depositar a saída dele e dizer que papel teve (execução preliminar, descartada ou comparativa).
 - Depositar as saídas brutas (CSV e JSONL) e os textos de entrada usados. A justificativa do modelo para a Rcl 9428 informa que o arquivo continha apenas os títulos das seções. Convém conferir o arquivo de entrada.
 - Registrar expressamente o diagnóstico de massa insuficiente da partição de seis grupos, que a nota 45 invoca. C.7 só justifica a agregação de G4 e G6 (um caso cada). O Quadro C.3 já mostra a evidência (G_prev_trad com um caso no Período I, e 25 acórdãos não classificados).
 

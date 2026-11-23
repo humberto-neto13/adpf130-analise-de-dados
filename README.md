@@ -20,7 +20,7 @@ apendices/
 ├── D_codificacao/             # nota 47. Codificação integral e planilha de verificação (a depositar)
 └── E_analises/                # nota 49. Código das análises, dados e matriz consolidada (a depositar)
 docs/
-└── esboco_apendices_A_B_C.pdf # esboço em PDF a partir do qual A, B e C foram reconstruídos
+└── esboco_apendices_A_B_C.pdf # esboço em PDF a partir do qual os quadros de A, B e C foram recuperados
 testes.py                      # etapa confirmatória (a mover para apendices/E_analises/)
 ```
 

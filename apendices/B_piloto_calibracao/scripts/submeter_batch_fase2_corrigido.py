@@ -41,36 +41,21 @@ ARQUIVO_BATCH_ID = "batch_id_fase2.txt"
 # Construção do SYSTEM_PROMPT
 # -----------------------------------------------------------------------------
 
-INSTRUCOES_GERAIS = """Você é um assistente especializado em análise de decisões do
-Supremo Tribunal Federal. Sua tarefa é codificar dezesseis variáveis de um acórdão em
-reclamação constitucional fundada na ADPF nº 130, seguindo estritamente as definições
-operacionais do manual de codificação transcrito abaixo.
+INSTRUCOES_GERAIS = """Você é um assistente especializado em análise de decisões do Supremo Tribunal Federal. Sua tarefa é codificar dezesseis variáveis de um acórdão em reclamação constitucional fundada na ADPF nº 130, seguindo estritamente as definições operacionais do manual de codificação transcrito abaixo.
 
 ## Instruções para maximizar consistência
 
 Estas instruções são essenciais para a qualidade e a reprodutibilidade da codificação.
 
-Primeira. Aplique as definições operacionais literalmente. Não infira além do que o
-texto do acórdão sustenta explicitamente. Se o texto do acórdão não menciona um dado,
-ou o menciona de forma ambígua, prefira marcar "ND" (não determinável) em vez de forçar
-classificação a partir de indícios fracos.
+Primeira. Aplique as definições operacionais literalmente. Não infira além do que o texto do acórdão sustenta explicitamente. Se o texto do acórdão não menciona um dado, ou o menciona de forma ambígua, prefira marcar "ND" (não determinável) em vez de forçar classificação a partir de indícios fracos.
 
-Segunda. Não introduza raciocínio criativo ou associações que ultrapassem o que o
-manual autoriza. As classes das variáveis são exaustivas dentro do escopo de cada uma;
-se um caso parece não se encaixar em nenhuma classe, revise se você está lendo
-corretamente o manual antes de considerar a possibilidade de que o caso seja atípico.
+Segunda. Não introduza raciocínio criativo ou associações que ultrapassem o que o manual autoriza. As classes das variáveis são exaustivas dentro do escopo de cada uma; se um caso parece não se encaixar em nenhuma classe, revise se você está lendo corretamente o manual antes de considerar a possibilidade de que o caso seja atípico.
 
-Terceira. Antes de finalizar cada codificação, releia a classe atribuída e confirme que
-o caso satisfaz a definição operacional em todos os elementos. Verifique cada palavra
-da definição contra o caso, não apenas o sentido geral.
+Terceira. Antes de finalizar cada codificação, releia a classe atribuída e confirme que o caso satisfaz a definição operacional em todos os elementos. Verifique cada palavra da definição contra o caso, não apenas o sentido geral.
 
-Quarta. Preserve a linguagem do Tribunal quando pertinente. Nas variáveis com
-codificação aberta ou com registro textual (notadamente V16), reproduza a formulação
-empregada pelo Tribunal, sem reformulação em sua linguagem própria.
+Quarta. Preserve a linguagem do Tribunal quando pertinente. Nas variáveis com codificação aberta ou com registro textual (notadamente V16), reproduza a formulação empregada pelo Tribunal, sem reformulação em sua linguagem própria.
 
-Quinta. Trate cada acórdão como caso isolado. Não use informações que você poderia ter
-sobre outros acórdãos da mesma reclamação, ou sobre a jurisprudência do STF em geral,
-para codificar variáveis que devem ser extraídas do acórdão específico submetido.
+Quinta. Trate cada acórdão como caso isolado. Não use informações que você poderia ter sobre outros acórdãos da mesma reclamação, ou sobre a jurisprudência do STF em geral, para codificar variáveis que devem ser extraídas do acórdão específico submetido.
 
 ## Manual de codificação
 
@@ -79,8 +64,7 @@ O texto abaixo é o manual de codificação. Aplique-o na íntegra."""
 FORMATO_SAIDA = """
 ## Formato de saída
 
-Responda EXCLUSIVAMENTE com um objeto JSON válido, sem qualquer texto adicional (nem
-antes, nem depois), no seguinte formato:
+Responda EXCLUSIVAMENTE com um objeto JSON válido, sem qualquer texto adicional (nem antes, nem depois), no seguinte formato:
 
 {
   "V1_FUND": {
@@ -89,8 +73,7 @@ antes, nem depois), no seguinte formato:
   },
   "V2_MOD_REST": {
     "classes": ["a", "c"],
-    "justificativa": "frase breve indicando quais modalidades de restrição foram
-identificadas"
+    "justificativa": "frase breve indicando quais modalidades de restrição foram identificadas"
   },
   "V3_MOM_REST": {
     "classe": "a" | "b" | "c" | "ND",
@@ -133,8 +116,7 @@ identificadas"
     "aplicavel": true | false,
     "razoes": [
       {
-        "descricao": "razão de distinção em linguagem sintética preservando o núcleo
-argumentativo do Tribunal",
+        "descricao": "razão de distinção em linguagem sintética preservando o núcleo argumentativo do Tribunal",
         "citacao": "passagem literal do acórdão em que a razão é articulada",
         "localizacao": "página ou parágrafo, quando identificável"
       }
@@ -144,18 +126,13 @@ argumentativo do Tribunal",
 
 Observações sobre o formato:
 
-Para variáveis com codificação múltipla (V1, V2, V5, V7), o campo é "classes" (plural,
-lista); para variáveis com codificação única, o campo é "classe" (singular, string).
+Para variáveis com codificação múltipla (V1, V2, V5, V7), o campo é "classes" (plural, lista); para variáveis com codificação única, o campo é "classe" (singular, string).
 
 Para V8 a V12, não é necessária justificativa (dado autoevidente).
 
-Para V16, se a variável não for aplicável ao caso, retorne {"aplicavel": false,
-"razoes": []}. Se for aplicável, preencha as razões conforme o schema, com uma entrada
-por razão autônoma.
+Para V16, se a variável não for aplicável ao caso, retorne {"aplicavel": false, "razoes": []}. Se for aplicável, preencha as razões conforme o schema, com uma entrada por razão autônoma.
 
-Justificativas devem ser breves (uma frase) e apontar diretamente ao texto do acórdão
-que sustenta a classificação. Não repita a definição do manual; indique o elemento do
-caso concreto que faz a definição se aplicar."""
+Justificativas devem ser breves (uma frase) e apontar diretamente ao texto do acórdão que sustenta a classificação. Não repita a definição do manual; indique o elemento do caso concreto que faz a definição se aplicar."""
 
 
 def montar_system_prompt():
@@ -174,8 +151,7 @@ def main():
 
     if not Path(ARQUIVO_MANUAL).exists():
         print(f"ERRO: arquivo {ARQUIVO_MANUAL} não encontrado.", file=sys.stderr)
-        print("Coloque o manual de codificação na mesma pasta do script.",
-file=sys.stderr)
+        print("Coloque o manual de codificação na mesma pasta do script.", file=sys.stderr)
         sys.exit(1)
 
     print(f"[{time.strftime('%H:%M:%S')}] Preparando submissão à Batch API (Fase 2)")
@@ -216,8 +192,7 @@ file=sys.stderr)
 
 =================== FIM DO INTEIRO TEOR ===================
 
-Aplique o manual de codificação às dezesseis variáveis e responda no formato JSON
-especificado."""
+Aplique o manual de codificação às dezesseis variáveis e responda no formato JSON especificado."""
 
         custom_id = arquivo.stem.replace(".", "_")
 
@@ -261,4 +236,3 @@ especificado."""
 
 if __name__ == "__main__":
     main()
-

@@ -2,6 +2,10 @@
 
 Corresponde à nota 47 da monografia (seção 5.2). **Ainda vazio.** Segundo a monografia, deve documentar o processo de codificação em sua inteireza, incluindo o protocolo, os resultados do modelo e a planilha de verificação item a item.
 
+## Já depositado
+
+- `scripts/converter_pdfs.py`. Converte os PDFs do inteiro teor em `.txt` (pypdf), com aviso de extração escassa que pode exigir OCR. Original do autor, idêntico byte a byte. Exige `pypdf`, que deve constar do `requirements.txt` (a criar).
+
 ## A depositar
 
 - [ ] Script da rodada completa de codificação (Claude Sonnet 5, Batch API, semente de ordenação), com a versão do manual efetivamente usada (v3, ver `../B_piloto_calibracao/manual/`). Indicar se é o script de B.5.1.
