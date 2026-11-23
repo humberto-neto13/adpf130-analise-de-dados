@@ -48,14 +48,11 @@ def extrair_codificacao(resultado_json):
 
         return {
             "momento_restricao": dados.get("momento_restricao", "ERRO"),
-            "momento_restricao_justificativa":
-dados.get("momento_restricao_justificativa", ""),
+            "momento_restricao_justificativa": dados.get("momento_restricao_justificativa", ""),
             "sujeito_comunicativo": dados.get("sujeito_comunicativo", "ERRO"),
-            "sujeito_comunicativo_justificativa":
-dados.get("sujeito_comunicativo_justificativa", ""),
+            "sujeito_comunicativo_justificativa": dados.get("sujeito_comunicativo_justificativa", ""),
             "meio_comunicativo": dados.get("meio_comunicativo", []),
-            "meio_comunicativo_justificativa":
-dados.get("meio_comunicativo_justificativa", ""),
+            "meio_comunicativo_justificativa": dados.get("meio_comunicativo_justificativa", ""),
             "input_tokens": usage.get("input_tokens", 0),
             "output_tokens": usage.get("output_tokens", 0),
             "cache_read_tokens": usage.get("cache_read_input_tokens", 0) or 0,
@@ -128,22 +125,17 @@ def main():
                     "arquivo": nome_arquivo,
                     "momento_restricao": dados["momento_restricao"],
                     "sujeito_comunicativo": dados["sujeito_comunicativo"],
-                    "meio_comunicativo": ",".join(dados["meio_comunicativo"]) if
-isinstance(dados["meio_comunicativo"], list) else dados["meio_comunicativo"],
-                    "momento_restricao_justificativa":
-dados["momento_restricao_justificativa"],
-                    "sujeito_comunicativo_justificativa":
-dados["sujeito_comunicativo_justificativa"],
-                    "meio_comunicativo_justificativa":
-dados["meio_comunicativo_justificativa"],
+                    "meio_comunicativo": ",".join(dados["meio_comunicativo"]) if isinstance(dados["meio_comunicativo"], list) else dados["meio_comunicativo"],
+                    "momento_restricao_justificativa": dados["momento_restricao_justificativa"],
+                    "sujeito_comunicativo_justificativa": dados["sujeito_comunicativo_justificativa"],
+                    "meio_comunicativo_justificativa": dados["meio_comunicativo_justificativa"],
                     "input_tokens": dados["input_tokens"],
                     "output_tokens": dados["output_tokens"],
                     "cache_read_tokens": dados["cache_read_tokens"],
                     "cache_creation_tokens": dados["cache_creation_tokens"],
                     "erro": None,
                 })
-                log(f"  ✓ {custom_id}: mom={dados['momento_restricao']} suj={dados['sujeito_comunicativo']} meio={','.join(dados['meio_comunicativo']) if
-isinstance(dados['meio_comunicativo'], list) else '?'}")
+                log(f"  ✓ {custom_id}: mom={dados['momento_restricao']} suj={dados['sujeito_comunicativo']} meio={','.join(dados['meio_comunicativo']) if isinstance(dados['meio_comunicativo'], list) else '?'}")
             else:
                 resultados.append({
                     "arquivo": nome_arquivo,
@@ -193,8 +185,7 @@ isinstance(dados['meio_comunicativo'], list) else '?'}")
     total_output = sum(r["output_tokens"] for r in resultados)
     total_cache_read = sum(r["cache_read_tokens"] for r in resultados)
     total_cache_creation = sum(r["cache_creation_tokens"] for r in resultados)
-    custo = estimar_custo_batch(total_input, total_output, total_cache_read,
-total_cache_creation)
+    custo = estimar_custo_batch(total_input, total_output, total_cache_read, total_cache_creation)
 
     log(f"Tokens input total: {total_input:,}")
     log(f"Tokens output total: {total_output:,}")
@@ -213,4 +204,3 @@ total_cache_creation)
 
 if __name__ == "__main__":
     main()
-

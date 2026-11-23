@@ -222,4 +222,3 @@ Aplique as definições operacionais e responda no formato JSON especificado."""
 
 if __name__ == "__main__":
     main()
-

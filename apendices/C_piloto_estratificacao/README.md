@@ -45,6 +45,23 @@ Conferência feita neste repositório:
 - `Diagnóstico NC` documenta a causa de cada um dos 25 casos não classificados: 6 por erro técnico (11305, 38782, 65925, 83604, 9068 e 9977.1), 9 só por meio ND (V5), 1 só por momento ND (48882), 5 por ND em todas as três variáveis (48589, 59320, 71380, 9428 e 9977.2), 1 só por sujeito ND (82228) e 3 por sujeito e meio ND (49816, 67543 e 93341). Isso fornece o registro do "diagnóstico de massa insuficiente" que a nota 45 invoca, em parte: a causa dos NC está documentada, mas a análise da massa insuficiente por grupo continua só no Quadro C.3.
 - A Rcl 9.428 está entre os NC por ND em todas as variáveis, pela mesma falha de extração do texto digitalizado registrada no Apêndice D.
 
+## Execução dos lotes (originais)
+
+Os scripts `scripts/submeter_batch_sonnet.py` e `scripts/processar_batch_sonnet.py` foram substituídos pelos **originais do autor** (antes eram recuperações do PDF; coincidiam com eles, a menos de uma linha em branco final). `execucoes/log_piloto_fase1_sonnet_1-57.txt` e `execucoes/log_piloto_fase1_sonnet_58-137.txt` são os logs originais do processamento.
+
+| Lote | Identificador | Hora do log | Requisições | Sucesso na extração | Tokens de entrada | Tokens de saída | Custo estimado (Batch, 50%) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | `msgbatch_01SyG7Nmx6meoprCkFHGhRXj` | 09:04 | 57 | 55 | 2.230.106 | 45.221 | USD 3,93 |
+| 2 | `msgbatch_01YMy7CJZRUCGrPwkGwCqW2g` | 09:41 | 80 | 76 | 3.306.423 | 51.867 | USD 5,38 |
+
+Os dois lotes terminaram com todas as requisições bem-sucedidas na API (0 erros de lote). As seis falhas são de extração do JSON no `processar_batch_sonnet.py` (três sem bloco de texto e três com JSON inválido). Custo total estimado: USD 9,32. Os totais dos logs coincidem com os dos CSV (5.536.529 tokens de entrada e 97.088 de saída).
+
+Observações:
+- O script lê todos os `.txt` de `./textos` e embaralha com semente 42. Nada nele separa 57 de 80 arquivos, então a divisão em dois lotes foi feita pelo autor fora do script (por exemplo, rodando-o com subconjuntos da pasta `textos`). Convém registrar como foi feita.
+- O `custom_id` troca o ponto por sublinhado (`9977_1`), e as requisições depositadas trazem `custom_id` sem sufixo para os acórdãos únicos.
+- O script e o processador mencionam um `verificar_batch.py`, que não foi depositado.
+- O processador estima o custo com preços unitários fixos no código (USD 3, 15, 3,75 e 0,30 por milhão de tokens, com 50% de desconto). Os valores em dólar acima são essas estimativas, não faturamento.
+
 ## Requisições do Batch (Sonnet 5)
 
 `execucoes/requisicoes_batch_sonnet_1-57.jsonl.gz` e `execucoes/requisicoes_batch_sonnet_58-137.jsonl.gz` (originais do autor, compactados; o conteúdo descompactado é idêntico). São duas submissões à Batch API, de 57 e 80 requisições, que somam os 137 acórdãos sem repetição (`custom_id` = número do acórdão). Em todas: `claude-sonnet-5`, `max_tokens` 2048, sem `temperature` e sem `thinking`, e o mesmo prompt de sistema (6.265 caracteres). Esse prompt é igual, a menos de espaços e quebras de linha, ao `prompt_sistema.txt` extraído do `piloto_fase1.py` (Opus 5) e à constante `SYSTEM_PROMPT` de `scripts/submeter_batch_sonnet.py`. Portanto, as duas versões do script usam o mesmo prompt, e a diferença entre elas é o modelo e o modo de submissão.
@@ -53,7 +70,7 @@ Essas requisições confirmam que as classificações da Fase 1 vieram de **Sonn
 
 ## Pendências de conteúdo
 
-- **Script efetivamente usado.** A execução foi em lote (duas submissões ao Batch com Sonnet 5, `max_tokens` 2048). O `scripts/submeter_batch_sonnet.py` e o `processar_batch_sonnet.py` depositados foram recuperados do PDF; convém depositar os originais, se existirem, e os identificadores dos dois lotes. A execução do `piloto_fase1.py` com Opus 5 não deixou saída depositada, e convém dizer se chegou a rodar.
+- Registrar como se dividiu a pasta `textos` nos dois lotes (57 e 80), e depositar `verificar_batch.py`, se existir. A execução do `piloto_fase1.py` com Opus 5 não deixou saída depositada, e convém dizer se chegou a rodar.
 - Depositar o log da execução e, se existir, o JSONL bruto. O CSV das duas partes está depositado. A Rcl 9.428 tem como causa um PDF digitalizado (ver D). Os PDFs estão na pasta `piloto` do autor (137 arquivos, 70 MB) e não foram depositados.
 - Registrar expressamente o diagnóstico de massa insuficiente da partição de seis grupos, que a nota 45 invoca. C.7 só justifica a agregação de G4 e G6 (um caso cada). O Quadro C.3 já mostra a evidência (G_prev_trad com um caso no Período I, e 25 acórdãos não classificados).
 
