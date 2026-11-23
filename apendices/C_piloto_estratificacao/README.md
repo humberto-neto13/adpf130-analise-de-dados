@@ -24,6 +24,14 @@ Cronologicamente, a Fase 1 (este apêndice) antecede a Fase 2 (Apêndice B). A o
 
 Os seis acórdãos não codificados por falha técnica (Rcl 9068, 9977 acórdão 1, 11305, 38782, 65925 e 83604) constam da tabela sinóptica como `ERRO`, e não de `C3_2_justificativas.csv`.
 
+## README original da Fase 1
+
+`docs/README_original_fase1.md` e `docs/requirements_original_fase1.txt` (originais do autor, da pasta `piloto`). O README descreve a Fase 1 como dois scripts, `converter_pdfs.py` e `piloto_fase1.py`, com o modelo `claude-opus-5`, chamadas síncronas independentes, semente 42, até três tentativas por acórdão, codificação de V3, V4 e V5, e saídas `piloto_fase1.csv` e `log_piloto_fase1.txt`. `piloto_fase1.py` e `converter_pdfs.py` da pasta são idênticos, byte a byte, aos depositados neste repositório. Nenhuma das saídas (`piloto_fase1.csv`, log) estava na pasta.
+
+Observações a esclarecer:
+- O README fala em Opus 5 síncrono, e o esboço do Apêndice C em Sonnet 5 via Batch API. A pasta não traz scripts do Sonnet em lote. Se as duas execuções existiram, convém dizer qual produziu os quadros C.1 a C.4.
+- O README lista cinco reclamações com mais de um acórdão exauriente, entre elas a Rcl 43.110 (Rcl-AgR de 27/04/2021 e Rcl-AgR-ED de 16/08/2022). Na população final há quatro (9.977, 23.899, 45.682 e 46.059), e a Rcl 43.110 tem um só acórdão. As datas do README também diferem das da codificação da população final (por exemplo, Rcl 23.899: 02/10/2023 no README, 29/09/2023 na codificação), compatível com a diferença entre a data do cabeçalho e a do Extrato de Ata.
+
 ## Pendências de conteúdo
 
 - **Esclarecer qual execução produziu os dados de `dados/`.** O esboço descreve a execução com Sonnet 5 via Batch API (`submeter_batch_sonnet.py`). Existe também `piloto_fase1.py`, com Opus 5, síncrono. Se esse script foi rodado, convém depositar a saída dele e dizer que papel teve (execução preliminar, descartada ou comparativa).

@@ -63,7 +63,7 @@ Conferência feita neste repositório:
 
 ## Ressalva sobre o texto da Rcl 9.428
 
-O arquivo `dados/entrada/textos/9428.txt` tem 852 bytes e contém apenas os títulos das seções (Ementa e Acórdão, Relatório, Voto), sem o corpo. A conversão do PDF falhou nesse acórdão (o script `converter_pdfs.py` avisa de extração escassa, que pode exigir OCR). O modelo codificou, portanto, sem o inteiro teor, e 13 dos 16 itens dessa Rcl foram corrigidos na verificação humana. O mesmo vale para o piloto de estratificação (a justificativa do modelo para a Rcl 9.428 já registrava que só havia os títulos). Convém registrar isso no texto da monografia (seção 5.2) e, se possível, depositar o texto corrigido ou indicar que a verificação supriu a falha.
+O arquivo `dados/entrada/textos/9428.txt` tem 852 bytes e contém apenas os títulos das seções (Ementa e Acórdão, Relatório, Voto), sem o corpo. A conversão do PDF falhou nesse acórdão: `9428.pdf` tem 112 páginas e é um documento digitalizado (imagem), do qual o `pypdf` extrai apenas 397 caracteres, os títulos das seções. O `converter_pdfs.py` avisa de extração escassa, que exige OCR. O modelo codificou, portanto, sem o inteiro teor, e 13 dos 16 itens dessa Rcl foram corrigidos na verificação humana. O mesmo vale para o piloto de estratificação (a justificativa do modelo para a Rcl 9.428 já registrava que só havia os títulos). Convém registrar isso no texto da monografia (seção 5.2) e, se possível, depositar o texto corrigido ou indicar que a verificação supriu a falha.
 
 ## A depositar
 
