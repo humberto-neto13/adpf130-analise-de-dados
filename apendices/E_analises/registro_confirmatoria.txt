@@ -1,0 +1,41 @@
+Controle posterior: n=94  13-A=38  13-B=56  proporção=0.404
+Mediana das datas: 13-A 2024-06-07 | 13-B 2021-09-03
+
+Mann-Whitney exato: U=1304.5  p unilateral=0.0320  p bilateral=0.0640
+  probabilidade de superioridade=0.613  bisserial de postos=0.226
+
+Pettitt: K=562  posição=42  p permutação (10000)=0.0680  p aproximado=0.209
+  última antes: Rcl 49816 (2021-11-26) | primeira depois: Rcl 49506 (2022-02-18)
+  proporção antes=0.262 (11/42)  depois=0.519 (27/52)
+
+Empates: 24 unidades com data repetida; 300 ordenações -> K=[562], ponto=['2021-11-26']
+
+Sensibilidade (p unilateral do Mann-Whitney):
+  Rcl 23.899 com a data do 2º acórdão: 0.0268
+  Rcl 23.899 excluída:                 0.0323
+  Rcl 23.899 recodificada como 13-B:   0.0331
+  Rcl 9.068 incluída como posterior:   0.0243
+
+Controle prévio: n=20  13-A=11  13-B=9
+  13-A a partir de 2020: 10
+  Rcl       data          V3_MOM_REST        V13_ADER
+ 9428 2009-12-10             anterior não reconhecida
+19548 2015-06-30             anterior     reconhecida
+21724 2015-11-03 anterior e posterior não reconhecida
+28262 2018-09-27 anterior e posterior não reconhecida
+38201 2020-02-20             anterior     reconhecida
+35549 2020-03-12 anterior e posterior não reconhecida
+32052 2020-04-14             anterior não reconhecida
+40565 2021-04-26 anterior e posterior     reconhecida
+46032 2021-06-18             anterior não reconhecida
+20757 2021-12-03             anterior     reconhecida
+51153 2022-05-20             anterior     reconhecida
+56907 2023-03-24 anterior e posterior não reconhecida
+65002 2024-12-06 anterior e posterior     reconhecida
+70911 2025-03-28 anterior e posterior     reconhecida
+79907 2025-11-25 anterior e posterior     reconhecida
+86576 2026-02-24             anterior     reconhecida
+91384 2026-03-27 anterior e posterior     reconhecida
+93111 2026-05-11             anterior não reconhecida
+90161 2026-06-19 anterior e posterior     reconhecida
+86817 2026-06-26             anterior não reconhecida
