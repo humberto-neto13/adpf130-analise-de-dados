@@ -52,8 +52,16 @@ Operação manual, sem código, segundo o autor. Descreve-se aqui a regra tal co
 
 As datas e os valores acima são os da codificação bruta do modelo, antes da verificação humana; a planilha de verificação pode tê-los corrigido. A matriz consolidada (133 registros) ainda não foi depositada, e é ela que permite conferir a aplicação da regra.
 
+## Matriz de dados
+
+`dados/matriz/modelo_de_dados.xlsx` (original do autor, aba `Modelo`). Uma linha por acórdão (137), com as colunas Reclamação, Acórdão (1 ou 2) e Arquivo, seguidas das 16 variáveis já com as correções da verificação humana. Tem 133 reclamações distintas; a escolha do acórdão que representa cada uma das quatro reclamações duplas (seção anterior) não está marcada na planilha e se aplica sobre ela.
+
+Conferência feita neste repositório:
+- Contra a planilha de verificação: os valores finais (valor do modelo, ou valor correto quando corrigido) coincidem em todas as células, salvo diferenças de forma (caixa alta em nomes de ministros em V10 e V11, espaço depois da vírgula e ordem das letras em V2, V4 e V5, ponto e vírgula final em V16, e a data de 9428, que aparece em formatos distintos).
+- Contra o capítulo 5 da monografia, após aplicar a regra de agregação (133 unidades, de 10/12/2009 a 05/08/2026): batem V13 (76 não reconhecidas, 53 reconhecidas, 4 ND), a Tabela 4 (V13 × V14), a Tabela 5 (V13 por estrato de V3: 96 posteriores, 20 prévias, 17 ND), V14 (67/63/2/1), V15 (49 procedentes, 16 improcedentes, 7 ND, 61 NA), V8 (64, 63 e 6), V7 (86 unânimes e 31 com voto vencido quanto ao seguimento), 16 unidades com redator distinto, 109 unidades com julgados citados (V16) e a distribuição por ano da Tabela 1 (24 até 2019, 25 em 2020, 109 de 2020 a 2026).
+- O `testes.py` (raiz) lê `matriz_consolidada_v3.xlsx`, com outro nome e, ao que tudo indica, outro formato (uma linha por reclamação). Esse arquivo ainda não foi depositado.
+
 ## A depositar
 
 - [ ] Tipologia de erros e critérios de atribuição de categoria (sustenta a Figura 3 e as Tabelas 3 e 4).
-- [ ] Matriz consolidada (ou, se ficar em `E_analises`, referência cruzada).
 - [ ] Se algum passo usou embeddings (o README antigo citava uma chave da Voyage AI), documentar o uso.
