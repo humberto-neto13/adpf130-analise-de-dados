@@ -46,12 +46,25 @@ A 4ª tentativa sustenta o diagnóstico de B.3: a resposta consumiu exatamente o
 - O esboço descreve a 5ª tentativa como a que "encerra a rodada com os 23 acórdãos codificados". Isso procede apenas somando os êxitos das cinco tentativas, que cobrem os 23.
 - `execucoes/tentativa_4/piloto_fase2_completo(4).jsonl` tem 0 bytes, porque a tentativa não produziu codificação válida.
 
+## Cotejo item a item (piloto × verificação humana)
+
+`dados/cotejo/piloto_fase2_cotejo.xlsx` (original do autor). Aba `piloto_fase2`: codificação do modelo para os 23 acórdãos, já normalizada. Aba `Verificação Humana`: valores do verificador. Uma aba por variável (V1 a V16) com as duas respostas lado a lado e, em V1, V2, V3, V7, V8 e V9, observações do autor sobre o que a discordância revela no manual (fusão das classes b e c da V1, classe penal, proibição de republicação como controle prévio, desempate entre mérito e conhecimento na V7, data do Extrato de Ata na V9).
+
+Conferência feita neste repositório:
+- **Proveniência da codificação do cotejo.** Comparando a aba `piloto_fase2` com os CSV de `execucoes/`, a codificação de cada acórdão provém de uma ou mais tentativas: da 1ª tentativa, 12 acórdãos; da 3ª, 7; da última, a Rcl 45.682.1; três acórdãos têm saída idêntica em mais de uma tentativa (ver `dados/cotejo_origem_codificacao_derivado.csv`). Para os dois acórdãos codificados mais de uma vez com resultados distintos (23899.1 e 9977.2), a planilha usa a saída da 1ª tentativa. Isso indica que, havendo repetição, valeu a primeira codificação obtida.
+- **Contagem de discordâncias.** Recontadas, coincidem com o Quadro B.2 as variáveis V3 (8), V4 (6), V7 (7), V8 (2), V9 (8), V12 (1), V13 (1), V14 (2), V15 (3), V2 (14, descontando a anotação textual da classe h) e V6, V10 e V11 (0). Divergem por pouco V1 (13 pelo cotejo, 12 no quadro) e V5 (7 contra 5). As diferenças desaparecem se, na V1 da Rcl 91263 (modelo g, humano n/a) e na V5 das duas partes da Rcl 9.977 (modelo ND, humano n/a), os pares forem tratados como equivalentes. Convém confirmar esse critério e, se for o caso, dizê-lo no quadro.
+- A V16 não pode ser comparada por contagem simples: o modelo registra a razão de distinção em texto livre e o verificador registra outro texto. O quadro B.2 informa só um caso de aplicabilidade.
+
+Problemas na planilha:
+- Nas abas `piloto_fase2` e `Verificação Humana`, o Excel converteu os números `9977.1` e `9977.2` em datas (9977-01-01 e 9977-02-01). As demais abas trazem o texto correto. Convém corrigir a célula.
+- Na aba `piloto_fase2`, a coluna `erro` marca a Rcl 28262 com "sem bloco de texto", embora a codificação dela venha da 3ª tentativa, que teve sucesso. A marca parece resíduo da tentativa anterior.
+
 ## Pendências de conteúdo
 
-- Explicar por que a 2ª tentativa reenviou 5 acórdãos já codificados, e dizer qual critério escolheu, entre as codificações repetidas, a que foi comparada com a verificação humana.
+- Explicar por que a 2ª tentativa reenviou 5 acórdãos já codificados. Que codificação entrou no cotejo, já está respondido acima (a da 1ª tentativa, quando havia repetição com resultados distintos; falta o autor confirmar o critério).
 - **Manual v2 não existe mais.** Segundo o autor, o texto revisado depois do piloto (a "versão 2" do esboço) serviu de base para a redação da v3 e se perdeu. O registro de alterações (`manual/registro_alteracoes.md`) é o único documento remanescente das alterações V1 → V2. O texto de B.6 e o da monografia devem dizer isso expressamente, em vez de apresentar a v2 como reproduzida.
 - **Sorteio da amostra: procedimento a registrar como declaração do autor.** Segundo o autor, a população sorteada foi a dos 137 acórdãos, dispostos em ordem crescente de número, e o gerador de números aleatórios do random.org recebeu vários pedidos de números entre 1 e 137, até se completarem 20 reclamações (23 acórdãos). Não há registro da geração. Ordenados os 137 arquivos de `../D_codificacao/dados/entrada/textos/` por número da reclamação (o `.1` antes do `.2`), as posições da amostra são: 3 (9977.1); 4 (9977.2); 6 (15243); 10 (16329); 21 (21504); 27 (23899.1); 28 (23899.2); 31 (28262); 43 (35549); 54 (41768); 62 (44616); 64 (45682.1); 65 (45682.2); 76 (51153); 88 (61746); 91 (62174); 95 (65002); 97 (65925); 106 (70430); 109 (71028); 116 (79022); 119 (79907); 132 (91263). Os três pares (9977, 23899 e 45682) ocupam posições consecutivas. Quando o número sorteado correspondia a um acórdão de reclamação com dois acórdãos, ambos entraram na amostra (confirmado pelo autor), o que explica 23 acórdãos para 20 reclamações. O sorteio foi feito em 25/08/2026 (data informada pelo autor). Observe-se que, nesse desenho, a probabilidade de seleção de uma reclamação com dois acórdãos é um pouco maior que a das demais.
-- Depositar a planilha de confronto item a item com a verificação humana. Hoje existe só o quadro agregado (B.2).
+- ~~Planilha de confronto item a item~~ depositada (ver acima).
 - Acrescentar a fundamentação de cada alteração V2 → V3, que a nota 42 promete e o registro cobre só em parte.
 - O script efetivamente usado na codificação integral (a monografia o descreve em 4.4.1) deve constar do Apêndice D. O de B.5.1 é descrito como "destinado" a ela, e foi reconstruído por falta do original.
 
