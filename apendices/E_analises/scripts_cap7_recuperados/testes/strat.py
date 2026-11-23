@@ -8,8 +8,8 @@ ponderação por pares e p por permutação dentro dos estratos.
 Diferenças em relação ao original:
 - o original lia o DataFrame `p` de /tmp/w/lag2.py, que não foi recuperado; aqui `p` é
   montado de post.txt, como em org.py;
-- o original repetia o Passo 2 com a data de autuação (coluna `aut`, do Corte Aberta);
-  essa parte foi omitida, porque as datas de autuação não estão depositadas;
+- a repetição do Passo 2 com a data de autuação (coluna `aut`) usa `../../autuacao_133.csv`
+  (Corte Aberta, extraído em 23/11/2026);
 - caminhos relativos no lugar de /tmp/w/.
 Uso (de dentro desta pasta): python3 strat.py
 """
@@ -25,6 +25,8 @@ assert set(p.rcl)==set(m2)==set(m5)
 p['REM']=p.rcl.map(lambda r:'remoção' if 'b' in m2[r] else 'sem remoção')
 p['PROF']=p.rcl.map(lambda r:'ND' if m4[r]==['ND'] else ('profissional' if ({'a','b'}&set(m4[r])) else 'outro'))
 p['DIG']=p.rcl.map(lambda r:'ND' if m5[r]==['ND'] else ('digital' if ({'c','d','e','f'}&set(m5[r])) else 'não digital'))
+aut=pd.read_csv('../../autuacao_133.csv',parse_dates=['autuacao']).set_index('Reclamação').autuacao
+p['aut']=p.rcl.map(aut)
 p['per']=np.where(p.dt.dt.year<=2021,'até 2021','2022-26')
 # passo 1: sem desfecho
 print('=== Passo 1 (sem desfecho) ===')
@@ -58,7 +60,7 @@ def strat_test(df,keys,col='dt'):
     p_=sum(v for k,v in D.items() if k>=U2-1e-9)
     return round(U2/2/P,3),round(p_,4),P,rows
 print('\n=== Passo 2 ===')
-for col in ['dt']:
+for col in ['dt','aut']:
     print('\n### data:',col)
     for keys in ['REM','PROF','DIG',['REM','PROF'],['REM','DIG'],['PROF','DIG']]:
         ps,pv,P,rows=strat_test(p,keys,col)

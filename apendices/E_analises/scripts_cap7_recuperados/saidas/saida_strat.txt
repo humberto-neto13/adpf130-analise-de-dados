@@ -56,3 +56,38 @@ DIG PS 0.58 p 0.1247 pares 1091 efeito retido 0.71
      (('profissional', 'ND'), 7, 1, 6, 0.833)
      (('profissional', 'digital'), 47, 27, 540, 0.544)
      (('profissional', 'não digital'), 10, 4, 24, 1.0)
+
+### data: aut
+REM PS 0.534 p 0.2992 pares 1046 efeito retido 0.3
+     ('remoção', 55, 28, 756, 0.501)
+     ('sem remoção', 39, 10, 290, 0.621)
+PROF PS 0.609 p 0.0521 pares 1138 efeito retido 0.96
+     ('ND', 5, 0, 0, None)
+     ('outro', 25, 6, 114, 0.596)
+     ('profissional', 64, 32, 1024, 0.61)
+DIG PS 0.551 p 0.2331 pares 1091 efeito retido 0.45
+     ('ND', 15, 1, 14, 1.0)
+     ('digital', 64, 31, 1023, 0.533)
+     ('não digital', 15, 6, 54, 0.778)
+['REM', 'PROF'] PS 0.581 p 0.1316 pares 539 efeito retido 0.72
+     (('remoção', 'ND'), 4, 0, 0, None)
+     (('remoção', 'outro'), 14, 5, 45, 0.511)
+     (('remoção', 'profissional'), 37, 23, 322, 0.568)
+     (('sem remoção', 'ND'), 1, 0, 0, None)
+     (('sem remoção', 'outro'), 11, 1, 10, 0.8)
+     (('sem remoção', 'profissional'), 27, 9, 162, 0.611)
+['REM', 'DIG'] PS 0.557 p 0.2267 pares 654 efeito retido 0.5
+     (('remoção', 'ND'), 5, 1, 4, 1.0)
+     (('remoção', 'digital'), 47, 25, 550, 0.542)
+     (('remoção', 'não digital'), 3, 2, 2, 0.5)
+     (('sem remoção', 'ND'), 10, 0, 0, None)
+     (('sem remoção', 'digital'), 17, 6, 66, 0.53)
+     (('sem remoção', 'não digital'), 12, 4, 32, 0.812)
+['PROF', 'DIG'] PS 0.524 p 0.3814 pares 628 efeito retido 0.21
+     (('ND', 'ND'), 5, 0, 0, None)
+     (('outro', 'ND'), 3, 0, 0, None)
+     (('outro', 'digital'), 17, 4, 52, 0.615)
+     (('outro', 'não digital'), 5, 2, 6, 0.5)
+     (('profissional', 'ND'), 7, 1, 6, 1.0)
+     (('profissional', 'digital'), 47, 27, 540, 0.493)
+     (('profissional', 'não digital'), 10, 4, 24, 0.917)
