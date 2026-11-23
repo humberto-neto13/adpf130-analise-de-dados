@@ -61,6 +61,10 @@ Conferência feita neste repositório:
 - Contra o capítulo 5 da monografia, após aplicar a regra de agregação (133 unidades, de 10/12/2009 a 05/08/2026): batem V13 (76 não reconhecidas, 53 reconhecidas, 4 ND), a Tabela 4 (V13 × V14), a Tabela 5 (V13 por estrato de V3: 96 posteriores, 20 prévias, 17 ND), V14 (67/63/2/1), V15 (49 procedentes, 16 improcedentes, 7 ND, 61 NA), V8 (64, 63 e 6), V7 (86 unânimes e 31 com voto vencido quanto ao seguimento), 16 unidades com redator distinto, 109 unidades com julgados citados (V16) e a distribuição por ano da Tabela 1 (24 até 2019, 25 em 2020, 109 de 2020 a 2026).
 - A matriz consolidada usada nas análises, com a aba `Unidades` (uma linha por reclamação, 133) e o registro das normalizações de forma, está em `../E_analises/matriz_consolidada_v3.xlsx`. Sua aba `Matriz` é idêntica a `modelo_de_dados.xlsx`.
 
+## Ressalva sobre o texto da Rcl 9.428
+
+O arquivo `dados/entrada/textos/9428.txt` tem 852 bytes e contém apenas os títulos das seções (Ementa e Acórdão, Relatório, Voto), sem o corpo. A conversão do PDF falhou nesse acórdão (o script `converter_pdfs.py` avisa de extração escassa, que pode exigir OCR). O modelo codificou, portanto, sem o inteiro teor, e 13 dos 16 itens dessa Rcl foram corrigidos na verificação humana. O mesmo vale para o piloto de estratificação (a justificativa do modelo para a Rcl 9.428 já registrava que só havia os títulos). Convém registrar isso no texto da monografia (seção 5.2) e, se possível, depositar o texto corrigido ou indicar que a verificação supriu a falha.
+
 ## A depositar
 
 - [ ] Tipologia de erros e critérios de atribuição de categoria (sustenta a Figura 3 e as Tabelas 3 e 4).
