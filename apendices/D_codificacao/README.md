@@ -14,7 +14,6 @@ Corresponde à nota 47 da monografia (seção 5.2). Documenta a rodada completa 
   - `batch_id_v3.txt`: `msgbatch_01TajHJmYShqCoz3VhdgwQ3r`.
   - `log_codificacao_v3.txt`: log do processamento.
   - `codificacao_v3.csv`, `codificacao_v3_completo.jsonl`, `alertas_v3.csv`: saída do modelo, sem alteração humana.
-- `deepseek_v4_nao_integrado/`: ver adiante.
 
 ## Manual
 
@@ -29,10 +28,6 @@ O manual usado na rodada (`manual-codificacao-v3.md`) é idêntico byte a byte a
 ## Execução
 
 Dentro de uma pasta com os scripts, o manual e `textos/`: `py submeter_batch_v3.py`, depois `py processar_batch_v3.py`, com `ANTHROPIC_API_KEY` definida. Os scripts usam caminhos relativos a essa pasta.
-
-## `deepseek_v4_nao_integrado/`
-
-Scripts, mapa e requisições de uma versão da codificação com o modelo `deepseek-v4-pro` (mesmo prompt, mesma semente), mais um teste. Na pasta de origem não havia arquivo de respostas dessa versão. Material depositado apenas como registro; a monografia reporta somente a rodada com o Claude Sonnet 5. Situação a confirmar pelo autor (executada ou apenas preparada; se executada, onde estão os resultados; se não, se a pasta deve permanecer).
 
 ## A depositar
 
