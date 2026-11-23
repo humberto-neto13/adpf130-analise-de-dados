@@ -61,7 +61,7 @@ Os pilotos (B e C) estão preservados como registro e não precisam ser reexecut
 
 O filtro de pertinência foi executado com o modelo Claude Opus 5 (Anthropic), e a codificação, com o Claude Sonnet 5, por requisições independentes à API, com prompt caching e ordem de submissão aleatorizada. Modelos de linguagem não produzem respostas idênticas a cada execução, de modo que uma nova rodada pode gerar resultados ligeiramente diferentes. Por isso, as respostas brutas obtidas na pesquisa estão preservadas neste repositório, e são elas que fundamentam as análises do trabalho.
 
-O filtro foi conferido pelo pesquisador em todos os acórdãos classificados como não pertinentes (Apêndice A), e a codificação foi verificada integralmente (Apêndice D). Em divergência, prevaleceu a codificação do pesquisador.
+O filtro foi conferido pelo pesquisador em todos os acórdãos classificados como não pertinentes e nos três de Passo 3 (Apêndice A), e a codificação foi verificada integralmente (Apêndice D). Em divergência, prevaleceu a codificação do pesquisador.
 
 ## Como citar
 
