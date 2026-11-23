@@ -45,6 +45,6 @@ Segundo o autor, os scripts abaixo foram executados em outras sessões e precisa
 
 ## Observações sobre o arquivo do Corte Aberta
 
-- A nota 56 e a referência bibliográfica falam em arquivo `.csv`; o arquivo depositado é `.xlsx`. Convém conferir a redação.
-- Na aba de dados, a coluna `Número Único` está gravada como número de ponto flutuante (por exemplo `1.89e+18`), e perde precisão. Não é usada na Tabela 15.
+- A nota 56 e a referência bibliográfica falam em arquivo `.csv`, o gerado pelo painel. O arquivo depositado é uma conversão desse CSV para `.xlsx` feita pelo autor, com abas de resumo acrescentadas. O CSV original não foi localizado nesta pasta.
+- Na aba de dados, a coluna `Número Único` está como número de ponto flutuante (por exemplo `1.89e+18`), com perda de precisão, provavelmente efeito da conversão. Não é usada na Tabela 15.
 - O arquivo tem 13,8 MB. Se for preciso reduzir o repositório, ele pode ser substituído por um CSV compactado.
