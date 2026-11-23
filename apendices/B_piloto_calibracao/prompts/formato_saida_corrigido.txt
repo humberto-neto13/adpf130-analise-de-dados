@@ -1,0 +1,79 @@
+## Formato de saída
+
+Responda EXCLUSIVAMENTE com um objeto JSON válido, sem qualquer texto adicional (nem
+antes, nem depois), no seguinte formato:
+
+{
+  "V1_FUND": {
+    "classes": ["a", "b"],
+    "justificativa": "frase breve indicando quais fundamentos foram identificados"
+  },
+  "V2_MOD_REST": {
+    "classes": ["a", "c"],
+    "justificativa": "frase breve indicando quais modalidades de restrição foram
+identificadas"
+  },
+  "V3_MOM_REST": {
+    "classe": "a" | "b" | "c" | "ND",
+    "justificativa": "frase breve"
+  },
+  "V4_SUJ_COM": {
+    "classe": "a" | "b" | "c" | "d" | "e" | "f" | "g" | "ND",
+    "justificativa": "frase breve"
+  },
+  "V5_MEIO": {
+    "classes": ["a", "c"],
+    "justificativa": "frase breve indicando quais meios foram identificados"
+  },
+  "V6_TRANSC": {
+    "classe": "a" | "b" | "c" | "d" | "e" | "ND",
+    "justificativa": "frase breve; se houver menção, indicar a passagem em que aparece"
+  },
+  "V7_DIVERG": {
+    "classes": ["a"] | ["b", "d"] | etc,
+    "justificativa": "frase breve"
+  },
+  "V8_ORG": "a" | "b" | "c" | "ND",
+  "V9_DATA": "DD/MM/AAAA" ou "ND",
+  "V10_REL": "Nome completo do relator" ou "ND",
+  "V11_RED": "Nome completo do redator" ou "coincide" ou "ND",
+  "V12_VENCIDOS": ["Nome 1", "Nome 2"] ou [] (lista vazia se decisão unânime) ou "ND",
+  "V13_ADER": {
+    "classe": "a" | "b" | "c" | "ND",
+    "justificativa": "frase breve"
+  },
+  "V14_CONHEC": {
+    "classe": "a" | "b" | "c" | "ND",
+    "justificativa": "frase breve"
+  },
+  "V15_MERITO": {
+    "classe": "a" | "b" | "c" | "ND",
+    "justificativa": "frase breve"
+  },
+  "V16_DIST": {
+    "aplicavel": true | false,
+    "razoes": [
+      {
+        "descricao": "razão de distinção em linguagem sintética preservando o núcleo
+argumentativo do Tribunal",
+        "citacao": "passagem literal do acórdão em que a razão é articulada",
+        "localizacao": "página ou parágrafo, quando identificável"
+      }
+    ]
+  }
+}
+
+Observações sobre o formato:
+
+Para variáveis com codificação múltipla (V1, V2, V5, V7), o campo é "classes" (plural,
+lista); para variáveis com codificação única, o campo é "classe" (singular, string).
+
+Para V8 a V12, não é necessária justificativa (dado autoevidente).
+
+Para V16, se a variável não for aplicável ao caso, retorne {"aplicavel": false,
+"razoes": []}. Se for aplicável, preencha as razões conforme o schema, com uma entrada
+por razão autônoma.
+
+Justificativas devem ser breves (uma frase) e apontar diretamente ao texto do acórdão
+que sustenta a classificação. Não repita a definição do manual; indique o elemento do
+caso concreto que faz a definição se aplicar.

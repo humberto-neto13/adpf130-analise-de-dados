@@ -1,0 +1,11 @@
+estrato,periodo_I,periodo_II,periodo_III,total
+G1 — censura prévia + tradicional + profissional,0,3,3,6
+G2 — censura posterior + tradicional + profissional,1,9,7,17
+G3 — censura prévia + emergente + profissional,0,1,6,7
+G4 — censura prévia + tradicional + não profissional,0,1,0,1
+G5 — censura posterior + emergente + profissional,1,13,23,37
+G6 — censura posterior + tradicional + não profissional,0,0,1,1
+G7 — censura prévia + emergente + não profissional,1,2,8,11
+G8 — censura posterior + emergente + não profissional,1,12,19,32
+Não classificados,3,7,15,25
+Total,7,48,82,137
