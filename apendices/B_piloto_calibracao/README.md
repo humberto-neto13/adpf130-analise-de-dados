@@ -49,7 +49,7 @@ A 4ª tentativa sustenta o diagnóstico de B.3: a resposta consumiu exatamente o
 ## Pendências de conteúdo
 
 - Explicar por que a 2ª tentativa reenviou 5 acórdãos já codificados, e dizer qual critério escolheu, entre as codificações repetidas, a que foi comparada com a verificação humana.
-- Depositar o manual **v2**. A v1 e a v3 estão no repositório.
+- **Manual v2 não existe mais.** Segundo o autor, o texto revisado depois do piloto (a "versão 2" do esboço) serviu de base para a redação da v3 e se perdeu. O registro de alterações (`manual/registro_alteracoes.md`) é o único documento remanescente das alterações V1 → V2. O texto de B.6 e o da monografia devem dizer isso expressamente, em vez de apresentar a v2 como reproduzida.
 - Depositar a lista das 20 reclamações da amostra e o procedimento do sorteio. A lista, sem o procedimento, sai dos arquivos de requisição: Rcl 9977, 15243, 16329, 21504, 23899, 28262, 35549, 41768, 44616, 45682, 51153, 61746, 62174, 65002, 65925, 70430, 71028, 79022, 79907 e 91263 (23 acórdãos). O inteiro teor enviado está nas requisições, e a pasta `textos` da sua máquina estava vazia.
 - Depositar a planilha de confronto item a item com a verificação humana. Hoje existe só o quadro agregado (B.2).
 - Acrescentar a fundamentação de cada alteração V2 → V3, que a nota 42 promete e o registro cobre só em parte.
