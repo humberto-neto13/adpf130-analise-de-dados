@@ -17,11 +17,10 @@ apendices/
 ├── A_filtro_pertinencia/      # nota 40 e 41. Filtro de pertinência (Claude Opus 5) e verificação humana
 ├── B_piloto_calibracao/       # nota 42. Piloto de calibração e manual de codificação (v3)
 ├── C_piloto_estratificacao/   # nota 45. Piloto do desenho de oito estratos, abandonado
-├── D_codificacao/             # nota 47. Codificação integral e planilha de verificação (a depositar)
-└── E_analises/                # nota 49. Código das análises, dados e matriz consolidada (a depositar)
+├── D_codificacao/             # nota 47. Codificação integral, verificação humana e matriz de dados
+└── E_analises/                # nota 49. Matriz consolidada e código da etapa confirmatória (parcial)
 docs/
 └── esboco_apendices_A_B_C.pdf # esboço em PDF a partir do qual os quadros de A, B e C foram recuperados
-testes.py                      # etapa confirmatória (a mover para apendices/E_analises/)
 ```
 
 Cada pasta traz um `README.md` com o conteúdo, as pendências e as inconsistências conhecidas. A ordem alfabética dos apêndices não é a ordem cronológica de execução. O piloto de estratificação (C, Fase 1) antecede o piloto de calibração (B, Fase 2), e ambos antecedem a codificação integral (D).

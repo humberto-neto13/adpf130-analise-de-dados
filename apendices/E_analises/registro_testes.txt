@@ -1,0 +1,41 @@
+
+=== Teste da hipótese (controle posterior) ===
+Unidades: 94  reconhecida: 38  não reconhecida: 56
+       n  reconhecida  proporção  IC_inf  IC_sup
+ano                                             
+2014   3            0      0.000   0.000   0.561
+2015   1            1      1.000   0.207   1.000
+2016   2            0      0.000   0.000   0.658
+2017   3            0      0.000   0.000   0.561
+2018   3            2      0.667   0.208   0.939
+2019   2            1      0.500   0.095   0.905
+2020  21            5      0.238   0.106   0.451
+2021   7            2      0.286   0.082   0.641
+2022   4            3      0.750   0.301   0.954
+2023   7            4      0.571   0.250   0.842
+2024  18           10      0.556   0.337   0.754
+2025  15            6      0.400   0.198   0.643
+2026   8            4      0.500   0.215   0.785
+Mann-Whitney exato: U = 1304.5  (neutro = 1064.0)  p unilateral = 0.0320  p bilateral = 0.0640  prob. de superioridade = 0.613
+Pettitt: K = 562  p (permutação) = 0.0680  p (aproximação clássica) = 0.2092
+  mudança entre Rcl 49816 (2021-11-26) e Rcl 49506 (2022-02-18)
+  antes: 11/42 = 0.262   depois: 27/52 = 0.519
+
+=== Exploratório, fora do protocolo (controle prévio) ===
+Unidades: 20  reconhecida: 11  não reconhecida: 9
+      n  reconhecida  proporção  IC_inf  IC_sup
+ano                                            
+2009  1            0      0.000   0.000   0.793
+2015  2            1      0.500   0.095   0.905
+2018  1            0      0.000   0.000   0.793
+2020  3            1      0.333   0.061   0.792
+2021  3            2      0.667   0.208   0.939
+2022  1            1      1.000   0.207   1.000
+2023  1            0      0.000   0.000   0.793
+2024  1            1      1.000   0.207   1.000
+2025  2            2      1.000   0.342   1.000
+2026  5            3      0.600   0.231   0.882
+Mann-Whitney exato: U = 64.0  (neutro = 49.5)  p unilateral = 0.1474  p bilateral = 0.2947  prob. de superioridade = 0.646
+Pettitt: K = 39  p (permutação) = 0.3214  p (aproximação clássica) = 0.6748
+  mudança entre Rcl 46032 (2021-06-18) e Rcl 20757 (2021-12-03)
+  antes: 3/9 = 0.333   depois: 8/11 = 0.727
