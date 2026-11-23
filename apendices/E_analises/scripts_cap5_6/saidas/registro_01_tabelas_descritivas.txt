@@ -1,0 +1,57 @@
+Unidades: 133 | período: 2009-12-10 a 2026-08-05
+
+== Tabela 1
+Estrato  controle prévio  controle posterior  ND  Total
+ano                                                    
+2009                   1                   0   0      1
+2011                   0                   0   2      2
+2013                   0                   0   1      1
+2014                   0                   3   0      3
+2015                   2                   1   0      3
+2016                   0                   2   1      3
+2017                   0                   3   1      4
+2018                   1                   3   0      4
+2019                   0                   2   1      3
+2020                   3                  21   1     25
+2021                   3                   8   1     12
+2022                   1                   4   1      6
+2023                   1                   7   1      9
+2024                   1                  18   1     20
+2025                   2                  15   3     20
+2026                   5                   9   3     17
+Total                 20                  96  17    133
+
+== Tabela 4
+V14_SEGUIM       ND  dado  negado  prejudicada ou extinta  Total
+V13_ADER                                                        
+ND                1     1       2                       0      4
+não reconhecida   0    10      65                       1     76
+reconhecida       0    52       0                       1     53
+Total             1    63      67                       2    133
+
+== Tabela 5
+V13_ADER            ND  não reconhecida  reconhecida  Total  % de 13-A (V13 determinada)
+Estrato                                                                                 
+ND                   2               11            4     17                         26.7
+controle posterior   2               56           38     96                         40.4
+controle prévio      0                9           11     20                         55.0
+Total                4               76           53    133                         41.1
+
+== Tabela 6
+      Unidades  13-A  Proporção  IC 95% inf  IC 95% sup
+ano                                                    
+2014         3     0       0.00        0.00        0.56
+2015         1     1       1.00        0.21        1.00
+2016         2     0       0.00        0.00        0.66
+2017         3     0       0.00        0.00        0.56
+2018         3     2       0.67        0.21        0.94
+2019         2     1       0.50        0.09        0.91
+2020        21     5       0.24        0.11        0.45
+2021         7     2       0.29        0.08        0.64
+2022         4     3       0.75        0.30        0.95
+2023         7     4       0.57        0.25        0.84
+2024        18    10       0.56        0.34        0.75
+2025        15     6       0.40        0.20        0.64
+2026         8     4       0.50        0.22        0.78
+
+Gravado: tabelas_capitulos_5_6.xlsx
