@@ -59,7 +59,7 @@ Os dois lotes terminaram com todas as requisições bem-sucedidas na API (0 erro
 Observações:
 - O script lê todos os `.txt` de `./textos` e embaralha com semente 42. Nada nele separa 57 de 80 arquivos. Segundo o autor, a primeira submissão precisou ser interrompida por causa de um erro, e por isso as submissões ficaram divididas em dois lotes (1–57 e 58–137).
 - O `custom_id` troca o ponto por sublinhado (`9977_1`), e as requisições depositadas trazem `custom_id` sem sufixo para os acórdãos únicos.
-- O script e o processador mencionam um `verificar_batch.py`, que não foi depositado.
+- O script e o processador mencionam um `verificar_batch.py`, que o autor não conservou. O acompanhamento do lote não deixou script próprio, e o `processar_batch_sonnet.py` é o único que lida com o resultado.
 - O processador estima o custo com preços unitários fixos no código (USD 3, 15, 3,75 e 0,30 por milhão de tokens, com 50% de desconto). Os valores em dólar acima são essas estimativas, não faturamento.
 
 ## Requisições do Batch (Sonnet 5)
@@ -70,7 +70,7 @@ Essas requisições confirmam que as classificações da Fase 1 vieram de **Sonn
 
 ## Pendências de conteúdo
 
-- Depositar `verificar_batch.py`, se existir. O `piloto_fase1.py` (Opus 5) chegou a rodar, mas após poucas codificações (duas ou três) o script apresentou erros sistemáticos. Na correção, decidiu-se trocar o Opus pelo Sonnet 5 e migrar para a Batch API (scripts `submeter_batch_sonnet.py` e `processar_batch_sonnet.py`). Dessa execução inicial não há saída depositada.
+- O `piloto_fase1.py` (Opus 5) chegou a rodar, mas após poucas codificações (duas ou três) o script apresentou erros sistemáticos. Na correção, decidiu-se trocar o Opus pelo Sonnet 5 e migrar para a Batch API (scripts `submeter_batch_sonnet.py` e `processar_batch_sonnet.py`). Dessa execução inicial não há saída depositada.
 - Depositar o log da execução e, se existir, o JSONL bruto. O CSV das duas partes está depositado. A Rcl 9.428 tem como causa um PDF digitalizado (ver D). Os PDFs estão na pasta `piloto` do autor (137 arquivos, 70 MB) e não foram depositados.
 - Registrar expressamente o diagnóstico de massa insuficiente da partição de seis grupos, que a nota 45 invoca. C.7 só justifica a agregação de G4 e G6 (um caso cada). O Quadro C.3 já mostra a evidência (G_prev_trad com um caso no Período I, e 25 acórdãos não classificados).
 
