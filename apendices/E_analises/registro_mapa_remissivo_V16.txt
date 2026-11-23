@@ -1,0 +1,3 @@
+menções a reclamações: 558 | internas: 198 | unidades citadas: 61 de 133
+mais citadas na população: {22328: 15, 21504: 10, 28747: 10, 16074: 9, 23731: 9, 20757: 8}
+mais citadas fora da população: {18746: 10, 11292: 9, 18566: 9, 18638: 8, 18290: 8}

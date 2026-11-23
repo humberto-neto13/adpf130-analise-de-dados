@@ -1,0 +1,58 @@
+=== Passo 1 (sem desfecho) ===
+REM
+per          até 2021  2022-26
+REM                           
+remoção            22       33
+sem remoção        20       19
+ PS datas (indicador=1 posterior): 0.588  |PS-0.5|= 0.088
+PROF
+per           até 2021  2022-26
+PROF                           
+ND                   1        4
+outro               15       10
+profissional        26       38
+ PS datas (indicador=1 posterior): 0.571  |PS-0.5|= 0.071
+DIG
+per          até 2021  2022-26
+DIG                           
+ND                  8        7
+digital            26       38
+não digital         8        7
+ PS datas (indicador=1 posterior): 0.557  |PS-0.5|= 0.057
+
+=== Passo 2 ===
+
+### data: dt
+REM PS 0.575 p 0.1238 pares 1046 efeito retido 0.66
+     ('remoção', 55, 28, 756, 0.503)
+     ('sem remoção', 39, 10, 290, 0.76)
+PROF PS 0.655 p 0.0101 pares 1138 efeito retido 1.37
+     ('ND', 5, 0, 0, None)
+     ('outro', 25, 6, 114, 0.588)
+     ('profissional', 64, 32, 1024, 0.662)
+DIG PS 0.58 p 0.1247 pares 1091 efeito retido 0.71
+     ('ND', 15, 1, 14, 0.857)
+     ('digital', 64, 31, 1023, 0.562)
+     ('não digital', 15, 6, 54, 0.852)
+['REM', 'PROF'] PS 0.627 p 0.0371 pares 539 efeito retido 1.12
+     (('remoção', 'ND'), 4, 0, 0, None)
+     (('remoção', 'outro'), 14, 5, 45, 0.511)
+     (('remoção', 'profissional'), 37, 23, 322, 0.578)
+     (('sem remoção', 'ND'), 1, 0, 0, None)
+     (('sem remoção', 'outro'), 11, 1, 10, 0.8)
+     (('sem remoção', 'profissional'), 27, 9, 162, 0.747)
+['REM', 'DIG'] PS 0.579 p 0.1458 pares 654 efeito retido 0.7
+     (('remoção', 'ND'), 5, 1, 4, 0.75)
+     (('remoção', 'digital'), 47, 25, 550, 0.557)
+     (('remoção', 'não digital'), 3, 2, 2, 0.5)
+     (('sem remoção', 'ND'), 10, 0, 0, None)
+     (('sem remoção', 'digital'), 17, 6, 66, 0.606)
+     (('sem remoção', 'não digital'), 12, 4, 32, 0.875)
+['PROF', 'DIG'] PS 0.565 p 0.1977 pares 628 efeito retido 0.58
+     (('ND', 'ND'), 5, 0, 0, None)
+     (('outro', 'ND'), 3, 0, 0, None)
+     (('outro', 'digital'), 17, 4, 52, 0.558)
+     (('outro', 'não digital'), 5, 2, 6, 0.5)
+     (('profissional', 'ND'), 7, 1, 6, 0.833)
+     (('profissional', 'digital'), 47, 27, 540, 0.544)
+     (('profissional', 'não digital'), 10, 4, 24, 1.0)
