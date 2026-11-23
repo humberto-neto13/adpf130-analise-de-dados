@@ -68,5 +68,5 @@ O arquivo `dados/entrada/textos/9428.txt` tem 852 bytes e contém apenas os tít
 
 ## A depositar
 
-- [ ] Tipologia de erros e critérios de atribuição de categoria (sustenta a Figura 3 e as Tabelas 3 e 4).
-- [ ] Se algum passo usou embeddings (o README antigo citava uma chave da Voyage AI), documentar o uso.
+- ~~Tipologia de erros e critérios de atribuição de categoria~~ decisão do autor: os 87 erros sem categoria ficam registrados como **não classificados**. A tipologia cobre, portanto, 102 das 189 correções, e o texto da monografia deve dizê-lo (a observação da seção 5.2 já fala em categorização incompleta). Os critérios de atribuição das 102 categorias não estão documentados fora da planilha de verificação.
+- ~~Uso de embeddings (Voyage AI)~~ não há uso documentado. A única menção está na primeira versão do README raiz (um modelo com "Python [versão]" ainda em branco), que listava uma chave da Voyage AI entre os requisitos. Nenhum script, saída ou texto da monografia usa embeddings, e o autor não se lembra de uma finalidade para eles. Registrado como resíduo do modelo de README e retirado dos requisitos.
