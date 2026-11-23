@@ -2,7 +2,7 @@
 
 Corresponde à nota 45 da monografia (subseção 4.5.1). Documenta o desenho **abandonado** de oito estratos (momento da restrição, meio e sujeito comunicativo), a codificação das Variáveis 3, 4 e 5 nos 137 acórdãos, sem acesso aos desfechos, e a escolha dos cortes temporais. A estratificação final é binária e usa só o momento da restrição.
 
-> **Origem do material.** São originais do autor, idênticos byte a byte: `scripts/piloto_fase1.py` e o texto de `prompt_sistema.txt` (extraído dele). `scripts/submeter_batch_sonnet.py` e `scripts/processar_batch_sonnet.py` foram recuperados do PDF do esboço; no primeiro, o `SYSTEM_PROMPT` foi substituído pelo do script original, e os dois textos coincidem salvo as quebras de linha. Os quadros em `dados/` vêm do PDF.
+> **Origem do material.** São originais do autor, idênticos byte a byte: `scripts/piloto_fase1.py`, `scripts/submeter_batch_sonnet.py`, `scripts/processar_batch_sonnet.py`, o texto de `prompt_sistema.txt` (extraído do primeiro), os logs e as requisições em `execucoes/` e as planilhas e o CSV em `dados/originais/`. Os quadros C.1 a C.4 em `dados/` vêm do PDF do esboço. O C.1 e o C.3 foram conferidos com os dados originais (ver abaixo).
 
 Cronologicamente, a Fase 1 (este apêndice) antecede a Fase 2 (Apêndice B). A ordem alfabética dos apêndices não é a ordem de execução.
 
