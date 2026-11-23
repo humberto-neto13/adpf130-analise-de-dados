@@ -29,9 +29,18 @@ O manual usado na rodada (`manual-codificacao-v3.md`) é idêntico byte a byte a
 
 Dentro de uma pasta com os scripts, o manual e `textos/`: `py submeter_batch_v3.py`, depois `py processar_batch_v3.py`, com `ANTHROPIC_API_KEY` definida. Os scripts usam caminhos relativos a essa pasta.
 
+## Verificação humana
+
+`dados/verificacao_humana/verificacao_codificacao_v3.xlsx` (original do autor). Abas: `Verificação` (2.192 itens: variável, arquivo, valor IA, alerta automático, situação, valor correto, categoria do erro, observação), `Resumo` (fórmulas por variável), `Dados IA (CSV original)` e `Listas`. Os valores da coluna "Valor IA" coincidem integralmente com `codificacao_v3.csv`.
+
+Totais da planilha: 2.003 itens confirmados e 189 corrigidos (91,4%), em 97 dos 137 acórdãos. Por variável, ver `resumo_por_variavel_derivado.csv`; distribuição das categorias de erro em `categorias_erro_derivado.csv`. Os dois CSV são derivados da planilha por contagem, sem outra intervenção.
+
+Pontos de atenção:
+- O texto da seção 5.2 da monografia informa 2.000 confirmados e 192 corrigidos (91,2%). A planilha dá 2.003 e 189. Nas variáveis citadas no texto, V15 aparece com 96,4% na planilha (5 correções) e 94,9% no texto (que corresponde a 7 correções).
+- Das 189 correções, 102 têm categoria de erro preenchida e 87 não têm. A tipologia, portanto, cobre pouco mais da metade das correções (ver a observação da seção 5.2 sobre categorização "ainda incompleta").
+
 ## A depositar
 
-- [ ] Planilha de verificação humana, item a item (137 acórdãos × 16 variáveis = 2.192 itens), com valor do modelo, valor final, decisão e categoria do erro.
 - [ ] Tipologia de erros e critérios de atribuição de categoria (sustenta a Figura 3 e as Tabelas 3 e 4).
 - [ ] Regra e procedimento de agregação de 137 acórdãos em 133 reclamações (subseção 4.2.1 e nota 46), com o código ou o registro da operação manual.
 - [ ] Matriz consolidada (ou, se ficar em `E_analises`, referência cruzada).
