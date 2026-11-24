@@ -1,6 +1,6 @@
 # Apêndice E. Análises
 
-Corresponde à nota 49 da monografia (subseção 6.1.2.1). Contém os scripts e a matriz da etapa confirmatória (seção 6.1). O resto das análises ainda não foi depositado.
+Corresponde à nota 49 da monografia (subseção 6.1.2.1). Contém a matriz consolidada e os scripts das análises dos capítulos 5 a 7. Para localizar o script de uma tabela ou figura específica, use o mapa na [raiz do repositório](../../README.md#mapa-por-tabela-e-figura).
 
 ## Conteúdo
 
@@ -45,13 +45,13 @@ Com os arquivos na mesma pasta: `py -m pip install -r requirements.txt`, `py tes
 
 ## O que não está nesta pasta
 
-Segundo o autor, os scripts abaixo foram executados em outras sessões e precisam ser recuperados ou reconstruídos:
+Itens listados como pendentes em rodadas anteriores. Os marcados com `[x]` foram resolvidos, e os demais seguem em aberto:
 
 - [ ] Figura 5 (proporção anual em barras).
 - [ ] Capítulo 5: Tabela 2 (verificação humana, que sai da planilha de verificação), Tabelas 7 e 8 (conferir se a 7 sai de `02_analise_confirmatoria.py`; a 8 não foi localizada). As Tabelas 1, 3, 4, 5 e 6 e as Figuras 3 e 4 saem dos scripts originais depositados.
-- [ ] Capítulo 7 (etapa exploratória; as tabelas e figuras eram listadas aqui como das "seções 6.2 e 6.3", o que estava errado). Depositados: testes por órgão, relator, cadeira, reclamante e meio, `strat.py` (Mann-Whitney estratificado, pela data do acórdão e pela data de autuação), o controle negativo da seção 7.4.1, as séries da seção 7.1.1, o mapa remissivo e as contagens de citações da V16. As datas de autuação foram obtidas e reproduzem os valores do texto (7.1.2 e 7.4.1). Nada resta pendente quanto aos scripts do capítulo 7. Todos são reconstruções, conferidas contra os números do texto (o original não foi conservado).
-- [ ] Datas de autuação das reclamações (Tabela 21 e datação por autuação). O arquivo do Corte Aberta depositado traz só a data das decisões, não a de autuação; indicar a fonte das datas de autuação.
-- [ ] Classe processual de cada acórdão, extraída da planilha do filtro (A).
+- [x] Capítulo 7 (etapa exploratória; as tabelas e figuras eram listadas aqui como das "seções 6.2 e 6.3", o que estava errado). Depositados: testes por órgão, relator, cadeira, reclamante e meio, `strat.py` (Mann-Whitney estratificado, pela data do acórdão e pela data de autuação), o controle negativo da seção 7.4.1, as séries da seção 7.1.1, o mapa remissivo e as contagens de citações da V16. As datas de autuação foram obtidas e reproduzem os valores do texto (7.1.2 e 7.4.1). Nada resta pendente quanto aos scripts do capítulo 7. Todos são reconstruções, conferidas contra os números do texto (o original não foi conservado).
+- [x] Datas de autuação das reclamações (Tabela 21 e datação por autuação). O arquivo do Corte Aberta depositado traz só a data das decisões, não a de autuação; indicar a fonte das datas de autuação.
+- [x] Classe processual de cada acórdão, extraída da planilha do filtro (A). Resolvido: a classe de cada acórdão está em `../A_filtro_pertinencia/dados/saidas_originais/filtro_por_acordao.csv`.
 - [ ] Matriz de citações (Variável 16 invertida, subseção 6.3, nota 70), com a conferência do pesquisador.
 - [ ] Registro da leitura dirigida dos acórdãos com menção à transcendência em votos distintos do condutor (subseção 4.5.2).
 - [ ] Programa da etapa exploratória, com os critérios de veredito e data anterior aos cálculos.
