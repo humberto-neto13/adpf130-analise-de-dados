@@ -1,4 +1,4 @@
-"""Figuras 8 a 10 do capítulo 7 (rede de citações internas da V16).
+"""Figuras 8 a 10 da seção 6.3 (rede de citações internas da V16).
 
 RECONSTRUÇÃO escrita neste repositório a partir da descrição da conversa "Hipóteses rivais para
 padrão confirmatório" (claude.ai, 19/11/2026); os scripts originais não foram conservados, e o

@@ -1,4 +1,4 @@
-# Sensibilidade aproximada (data = ano) excluindo 2020/2021; contagens (n, reconhecidas) da Tabela 6.
+# Sensibilidade aproximada (data = ano) excluindo 2020/2021; contagens (n, reconhecidas) da Tabela 10.
 # Recuperado de outra conversa (claude.ai) desta mesma pesquisa. Versão exata, com datas, usa post.txt + org.py.
 import numpy as np
 from scipy.stats import mannwhitneyu

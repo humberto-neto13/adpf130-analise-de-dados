@@ -1,4 +1,4 @@
-"""Fundamentação em série (seção 7.1.1): agrupa unidades em séries e refaz o Mann-Whitney exato.
+"""Fundamentação em série (análise que não consta do texto da versão atual da monografia; antiga seção 7.1.1): agrupa unidades em séries e refaz o Mann-Whitney exato.
 
 RECONSTRUÇÃO escrita neste repositório, a partir da regra descrita na conversa "Hipóteses
 rivais para padrão confirmatório" (claude.ai, 19/11/2026); o script original não foi conservado.

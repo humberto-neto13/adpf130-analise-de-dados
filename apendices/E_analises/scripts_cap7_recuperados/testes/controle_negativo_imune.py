@@ -1,4 +1,4 @@
-"""Controle negativo da rival 4 (seção 7.4.1): Mann-Whitney exato no subconjunto imune à ressignificação.
+"""Controle negativo da rival 4 (subseção 6.2.2.2, Tabela 21): Mann-Whitney exato no subconjunto imune à ressignificação.
 
 RECONSTRUÇÃO escrita neste repositório, a partir da descrição da conversa "Hipóteses rivais
 para padrão confirmatório" (claude.ai, 19/11/2026). Subconjunto: reclamações de empresa

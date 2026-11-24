@@ -1,5 +1,5 @@
-"""Tabela de sensibilidade sem 2020 / sem 2020-2021 (seção 7.1) e ligação dos reconhecimentos
-posteriores a setembro de 2023 com os julgados que aderiram à teoria (seção 7.4.3).
+"""Tabela de sensibilidade sem 2020 / sem 2020-2021 (subseção 6.2.1.1, Tabela 13) e ligação dos reconhecimentos
+posteriores a setembro de 2023 com os julgados que aderiram à teoria (seção 6.3, Tabela 24).
 
 RECONSTRUÇÃO escrita neste repositório a partir da descrição da conversa "Hipóteses rivais para
 padrão confirmatório" (claude.ai, 19/11/2026). Julgados com adesão à teoria no voto condutor

@@ -1,9 +1,9 @@
-"""Figura 7 (provisória): decisões colegiadas por ano e taxa de provimento dos agravos (seção 7.1.2).
+"""Figura 7: decisões colegiadas por ano e taxa de provimento dos agravos (subseção 6.2.1.1).
 
 RECONSTRUÇÃO escrita neste repositório a partir da descrição da conversa "Hipóteses rivais para
 padrão confirmatório" (claude.ai, 19/11/2026). Fonte: exportação do Corte Aberta com as decisões da
 classe Rcl (colunas Processo, Data, Descrição, Subgrupo, Tipo Decisão), baixada em 23/11/2026.
-Definições, conferidas contra a tabela da seção 7.1.2: decisões colegiadas = 'Tipo Decisão'
+Definições, conferidas contra a Tabela 15 da subseção 6.2.1.1: decisões colegiadas = 'Tipo Decisão'
 COLEGIADA; agravos julgados = colegiadas com Subgrupo 'Decisão em recurso interno' e Descrição
 iniciada por 'Agravo regimental' (provido, provido em parte, não provido e não conhecido); taxa de
 provimento = (providos + providos em parte) / (providos + providos em parte + não providos), sem os

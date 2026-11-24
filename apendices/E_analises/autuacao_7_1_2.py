@@ -1,4 +1,4 @@
-"""Julgamento represado e datação pela autuação (seção 7.1.2) e sensibilidade do controle negativo (7.4.1).
+"""Julgamento represado e datação pela autuação (antiga seção 7.1.2; no texto atual, só as datações pela autuação das subseções 6.2.1.2 e 6.2.2.2) e sensibilidade do controle negativo (subseção 6.2.2.2).
 
 RECONSTRUÇÃO escrita neste repositório. Usa as datas de autuação da base de processos da classe
 Rcl do Corte Aberta (autuacao_133.csv, extraída em 23/11/2026) e a matriz consolidada.

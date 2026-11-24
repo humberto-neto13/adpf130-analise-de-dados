@@ -1,4 +1,4 @@
-"""Contagens das citações internas da V16 (seção 7.4): rede de citações entre unidades da população.
+"""Contagens das citações internas da V16 (seção 6.3): rede de citações entre unidades da população.
 
 RECONSTRUÇÃO escrita neste repositório. Os scripts originais dos Figuras 8 a 10 e das contagens
 não foram conservados. Reproduz os números do texto da conversa "Hipóteses rivais para padrão
