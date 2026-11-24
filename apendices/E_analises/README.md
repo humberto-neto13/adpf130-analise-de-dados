@@ -1,7 +1,5 @@
 # Apêndice E. Análises
 
-> **Atenção à numeração.** As tabelas e figuras citadas nesta pasta seguem versões anteriores da monografia. A correspondência com a numeração final está no [mapa da raiz do repositório](../../README.md#mapa-por-tabela-e-figura).
-
 Corresponde à nota 49 da monografia (subseção 6.1.2.1). Contém a matriz consolidada e os scripts das análises dos capítulos 5 a 7. Para localizar o script de uma tabela ou figura específica, use o mapa na [raiz do repositório](../../README.md#mapa-por-tabela-e-figura).
 
 ## Conteúdo
