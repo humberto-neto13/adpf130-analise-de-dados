@@ -39,27 +39,28 @@ Cada pasta traz um `README.md` com o conteúdo, as pendências e as inconsistên
 
 ## Mapa por tabela e figura
 
-A numeração segue a versão da monografia depositada. Os scripts originais do autor (`scripts_cap5_6/`) rotulam algumas tabelas com a numeração de uma versão anterior, indicada na coluna "Rótulo no script".
+A numeração segue a versão final da monografia, com tabelas e figuras numeradas em sequência. Os scripts, as saídas e os registros do repositório foram escritos com a numeração de versões anteriores, indicada na coluna "Numeração anterior". Por exemplo, o script `tabela15_corte_aberta.py` gera a atual Tabela 14.
 
-| Monografia | Origem | Rótulo no script |
+| Monografia | Origem | Numeração anterior |
 |---|---|---|
 | Figura 1 (árvore de decisão do filtro) | `apendices/A_filtro_pertinencia/prompt_sistema.txt` (a árvore está descrita no prompt) | |
 | Quadro 3 (síntese das variáveis) | `apendices/B_piloto_calibracao/manual/manual_codificacao_v3.md` | |
 | Tabela 1 (unidades por ano e estrato) | `apendices/E_analises/scripts_cap5_6/01_tabelas_descritivas.py` | Tabela 1 |
-| Tabelas 2, 3, 4 e Figura 3 (verificação humana) | Calculadas diretamente da planilha `apendices/D_codificacao/dados/verificacao_humana/verificacao_codificacao_v3.xlsx`. Não há script próprio depositado | |
+| Tabelas 2, 3, 4 e Figura 2 (verificação humana) | Calculadas diretamente da planilha `apendices/D_codificacao/dados/verificacao_humana/verificacao_codificacao_v3.xlsx`. Não há script próprio depositado | Figura 3 |
 | Tabela 5 (frequência das classes das V1, V2, V4 e V5) | `scripts_cap5_6/01_tabelas_descritivas.py` | Tabela 3 |
 | Tabelas 6, 7 e 8 (demais variáveis) | `scripts_cap5_6/01_tabelas_descritivas.py` (abas `Contagens univariadas` e `Tabela 4` da saída). A Variável 12 (votos vencidos) não está nessa saída | |
 | Tabela 9 (V13 por estrato) | `scripts_cap5_6/01_tabelas_descritivas.py` | Tabela 5 |
-| Tabela 10 e Figuras 4 e 5 (proporção anual com Wilson) | `scripts_cap5_6/01_tabelas_descritivas.py`, `figuras.py` e `scripts_cap5_6/03_figuras.py` | Tabela 6, Figura 3 |
+| Tabela 10 e Figuras 3 e 4 (proporção anual com Wilson) | `scripts_cap5_6/01_tabelas_descritivas.py`, `figuras.py` e `scripts_cap5_6/03_figuras.py` | Tabela 6; Figuras 4 e 5 (nos scripts, Figura 3) |
+| Tabela 11 (escala de Fisher) | Reprodução de tabela de livro (Fisher, 1954 apud Morettin e Bussab, 2010). Não há cálculo | |
 | Tabela 12 (síntese da etapa confirmatória) | `testes.py` e `scripts_cap5_6/02_analise_confirmatoria.py` | Tabela 7 |
-| Figura 6 (controle prévio, caso a caso) | `figuras.py` e `scripts_cap5_6/03_figuras.py` | Figura 4 |
+| Figura 5 (controle prévio, caso a caso) | `figuras.py` e `scripts_cap5_6/03_figuras.py` | Figura 6 (em `figuras.py`) e Figura 4 (em `03_figuras.py`) |
 | Tabela 13 (sensibilidade sem 2020 e 2021) | `apendices/E_analises/sensibilidade_e_ligacao_cap7.py` | |
-| Tabela 15 e Figura 7 (agravos, virtualização e taxa de provimento) | `apendices/E_analises/tabela15_corte_aberta.py` e `figura7_colegiadas_provimento.py` | |
-| Tabelas 16 e 18 (Mann-Whitney estratificado) | `apendices/E_analises/scripts_cap7_recuperados/testes/strat.py` e `bloco_cmd15_a.py` | |
-| Tabela 19 (voto do relator por cadeira) | `scripts_cap7_recuperados/testes/bloco_cmd17_c.py` | |
-| Tabela 21 (controle negativo) | `scripts_cap7_recuperados/testes/controle_negativo_imune.py` | |
-| Figuras 8, 9 e 10 (rede de remissões) | `apendices/E_analises/figuras_V16_8_10.py` | |
-| Tabela 24 (ligação dos reconhecimentos posteriores a 2023) | `apendices/E_analises/sensibilidade_e_ligacao_cap7.py` | |
+| Tabela 14 e Figura 6 (agravos, virtualização e taxa de provimento) | `apendices/E_analises/tabela15_corte_aberta.py` e `figura7_colegiadas_provimento.py` | Tabela 15 e Figura 7 |
+| Tabelas 15 e 16 (Mann-Whitney estratificado) | `apendices/E_analises/scripts_cap7_recuperados/testes/strat.py` (Tabela 15), `bloco_cmd15_a.py` e `org.py` (Tabela 16) | Tabelas 16 e 18 |
+| Tabela 17 (voto do relator por cadeira) | `scripts_cap7_recuperados/testes/bloco_cmd17_c.py` | Tabela 19 |
+| Tabela 18 (controle negativo) | `scripts_cap7_recuperados/testes/controle_negativo_imune.py` | Tabela 21 |
+| Figuras 7, 8 e 9 (rede de remissões) | `apendices/E_analises/figuras_V16_8_10.py` | Figuras 8, 9 e 10 |
+| Tabela 19 (ligação dos reconhecimentos posteriores a 2023) | `apendices/E_analises/sensibilidade_e_ligacao_cap7.py` | Tabela 24 |
 
 Os scripts de `scripts_cap7_recuperados/` são originais do autor recuperados de conversas anteriores. Os demais scripts do capítulo 7 são reconstruções escritas neste repositório e conferidas contra os números da monografia. Cada `README.md` das pastas indica o que é original e o que é reconstrução.
 
